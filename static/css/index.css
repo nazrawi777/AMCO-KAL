@@ -11,7 +11,7 @@ html,body
 
 .arrow{
   position: fixed;
-  bottom: 30px;
+  bottom: 80px;
   right: 30px;
   z-index: 99;
   border-radius: 50%;
@@ -34,7 +34,7 @@ html,body
 }
 .arrow1{
   position: fixed;
-  bottom: 80px;
+  bottom: 30px;
   right: 30px;
   z-index: 99;
   border-radius: 50%;
@@ -1631,7 +1631,7 @@ html {
   position: sticky;
   top: 0;
   color: #fff;
-  height: 90px;
+  height: 75px;
   background-color: #11474D;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   text-decoration: none;
@@ -1651,7 +1651,7 @@ nav {
 }
 
 .logo {
-  width: 140px;
+  width: 120px;
   position: relative;
   left: -10px;
   top: 0px;
@@ -2364,7 +2364,6 @@ a {
   font-family: poppins, sans-serif;
   width: 100%;
   height: 640px;
-  background-color: #000;
   position: relative;
   bottom: 42.9px;
   z-index: -1;
@@ -2374,7 +2373,7 @@ a {
 .homeslider{
 	position: relative;
 	width: 100%;
-	background: #01060c; /* darckblue */
+
 }
 .myslide{
 	height: 655px;
@@ -2490,7 +2489,7 @@ a {
 }
 .ct{
   cursor: pointer;
-  height: 40px;
+  height: 30px;
   background-color: teal;
   text-align: center;
   border-radius: 25px;
@@ -2500,7 +2499,7 @@ a {
 .ct h2{
   border-radius: 10px;
   margin-left: 430px;
-  margin-top: 30px;
+  margin-top: 35px;
   background-color: teal;
   width: 120px;
   height: 40px;
@@ -4399,6 +4398,11 @@ display: none;
   font-family: poppins, sans-serif;
   top: 170px;
   text-align: center;
+  -webkit-text-stroke: 0.03vw white;
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
 }
 .nity{
   width: 100%;
@@ -4622,11 +4626,13 @@ iframe {
   
   .slide21 {
     flex: 0 0 30%; /* Each slide takes up 20% of the width since there are 5 slides */
+    cursor: pointer;
   }
   
   .slide21 iframe {
     width: 100%;
     height: 230px;
+    cursor: pointer;
   }
   
   /* Hide radio buttons */
@@ -4958,8 +4964,28 @@ iframe {
     margin-top: -1200px;
     height: 800px;
     position: relative;
+    background-color: transparent;
     bottom: 100px;
+    z-index: -1;
   }
+  .custom-slider-container11{
+    z-index: 40;
+  }
+  .slide22{
+    z-index: 300;
+    display: block;
+  }
+  .slide21{
+    z-index: 30;
+  }
+  .slide21 iframe {
+    width: 100% !important;
+    height: 200px !important;
+    z-index: 99;
+    display: block;
+    position: relative;
+    top: 0px;
+}
   
   .portfolio-section h1 {
     text-align: center;
@@ -4999,6 +5025,10 @@ iframe {
     order: -1; /* Move the first two images to the beginning */
   }
 
+  .portfolio-section{
+    z-index: 10;
+    height: 100px;
+  }
 }
 @media (min-width: 400px) and (max-width: 442px) {
   .portfolio-section1 {
@@ -5433,9 +5463,18 @@ iframe {
   }
   .section5{
     position: relative !important;
-    height: 380px;
-    top: 4rem!important;
+    height: 300px !important;
+    top: -500px !important;
   }
+  .visme_d{
+    position: relative;
+    bottom: 200px;
+  }
+  iframe {
+    position: relative;
+    bottom: 130px;
+  }
+
   .ourpro{
     font: bold;
     font-size: 33px;
@@ -5483,7 +5522,7 @@ iframe {
   }
   
   .scroll img {
-    max-width: 200px;
+    max-width: 300px;
     transform: scale(0.8);
     filter: grayscale(1);
   }
@@ -5638,7 +5677,7 @@ iframe {
     }
     
     .scroll img {
-      max-width: 200px;
+      max-width: 300px;
       transform: scale(0.8);
       filter: grayscale(1);
     }
@@ -5963,10 +6002,13 @@ iframe {
         }
         .section5{
           position: relative;
-          top: -40px !important;
+          top: -100px !important;
         }
         .footer{
-          height: 500px;
+          height: 370px;
+          position: relative;
+          bottom: 100px !important;
+         
         }
         .ourclients{
           position: relative;
@@ -7765,10 +7807,18 @@ input[type=text]::placeholder, textarea::placeholder {
     display: flex;
     font-family: poppins, sans-serif;
     position: relative;
-    top: 470px;
+    top: 540px;
     width: 100%;
     max-height: 390px;
     z-index: 4;
+    }
+    iframe {
+      position: relative;
+      bottom: 180px;
+    }
+    .footer{
+      position: relative !important;
+      top: 50px !important;
     }
     .image22{
       position: relative;
@@ -7967,7 +8017,7 @@ input[type=text]::placeholder, textarea::placeholder {
     display: flex;
     font-family: poppins, sans-serif;
     position: relative;
-    top: 365px;
+    top: 500px;
     width: 100%;
     max-height: 300px;
     z-index: 4;
@@ -8568,10 +8618,14 @@ input[type=text]::placeholder, textarea::placeholder {
         display: flex;
         font-family: poppins, sans-serif;
         position: relative;
-        top: 428px;
+        top: 477px;
         width: 100%;
-        max-height: 300px;
+        max-height: 260px;
         z-index: 4;
+        }
+        .slider1-container video{
+          position: relative;
+          left: 5px;
         }
         .custom-slider-container1{
           position: relative;
@@ -8962,7 +9016,7 @@ input[type=text]::placeholder, textarea::placeholder {
             max-width: 147px;
             position: relative;
             top: 230px;
-            left: 860px;
+            left: 970px;
             max-height: 210px;
             z-index: 42;
           }
@@ -9035,7 +9089,7 @@ input[type=text]::placeholder, textarea::placeholder {
       color: white;
       position: relative;
       bottom: 170px;
-      left: 150px;
+      left: 130px;
     }
     
     .text-co1umn p {
@@ -9045,7 +9099,7 @@ input[type=text]::placeholder, textarea::placeholder {
       color: white;
       bottom: 170px;
       line-height: 12px;
-      left: 150px;
+      left: 130px;
     }
     
     
@@ -9053,18 +9107,46 @@ input[type=text]::placeholder, textarea::placeholder {
     .image220{
       max-width: 107px;
       position: relative;
-      top: 110px;
-      left: 0px;
+      top: 113px;
+      left: 5px;
       max-height: 90px;
     }
-  
+    .header{
+      z-index: 1000;
+    }
+    .slider1-container video {
+      position: relative;
+      top: -47px;
+    }
+    .uf #next1,#prev1{
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      z-index: 100;
+      background-color: lightblue;
+      color: teal;
+      font-weight: bold;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      line-height: 30px;
+      font-size: 20px;
+      cursor: pointer;
+      text-align: center;
+   }
+   .uf #next1{
+     right: 0;
+   }
+   .uf #prev1{
+     left: 0;
+   }
     /*uf*/
     .uf {
       position: relative;
       display: flex;
       font-family: poppins, sans-serif;
       position: relative;
-      top: 305px;
+      top: 335px;
       width: 100%;
       max-height: 250px;
       z-index: 4;
@@ -9151,7 +9233,7 @@ input[type=text]::placeholder, textarea::placeholder {
         width: 370px;
         position: relative;
         bottom: -20px;
-        right: -90px;
+        right: -70px;
       }
       
       .text-co1umn20 p {
@@ -9159,7 +9241,7 @@ input[type=text]::placeholder, textarea::placeholder {
         position: relative;
         color: white;
         bottom: -10px;
-        right: -90px;
+        right: -70px;
       }
       .imagec1220{
         max-width: 107px;
@@ -9267,7 +9349,32 @@ input[type=text]::placeholder, textarea::placeholder {
         left: 0px;
         max-height: 90px;
       }
-    
+      .slider1-container video {
+        position: relative;
+        top: -16px;
+      }
+      .uf #next1,#prev1{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+        color: teal;
+        font-weight: bold;
+        border-radius: 50%;
+        line-height: 30px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+     }
+     .uf #next1{
+       right: 0;
+     }
+     .nity{
+      max-height: 200px !important;
+     }
+     .uf #prev1{
+       left: 0;
+     }
       /*uf*/
       .uf {
         position: relative;
@@ -9356,7 +9463,7 @@ input[type=text]::placeholder, textarea::placeholder {
         }
         
         .text-co1umn20 h1 {
-          font-size: 13px;
+          font-size: 11.5px;
           color: white;
           width: 370px;
           position: relative;
@@ -9383,117 +9490,284 @@ input[type=text]::placeholder, textarea::placeholder {
       
     
   
-     
       @media (min-width: 972px) and (max-width: 1199px) {
-        .feature{
+.feature{
+  position: relative;
+  bottom: 0rem;
+  max-height: 500px;
+  font-family: poppins, sans-serif;
+  padding-top: -220px;
+  z-index: 7;
+}
+.feature h1{
+  color: white;
+  text-align: center;
+  font-size: 80px;
+  font-weight: 600;
+}
+.feature h2{
+  font-size: 80px;
+  position: relative;
+  left: 35rem;
+  bottom: 50px;
+  color: white;
+  font-weight: 600;
+}
+.rec4{
+  background-color: teal;
+  max-width: 350px;
+  max-height: 350px;
+  position: relative;
+  bottom: -10px;
+  left: 40px;
+  border-bottom: 2px solid;
+  border-color: white;
+}
+.rec4 img{
+  width: 95%;
+  height: 94%;
+  position: relative;
+  top: 11px;
+  left: 11px;
+}
+.rec5{
+  max-width: 490px;
+  max-height: 350px;
+  background-color: teal;
+  position: relative;
+  bottom: 21.5rem;
+  left: 25rem;
+  border-bottom: 2px solid;
+  border-color: white;
+}
+.hy{
+display: none;
+}
+.rec5 img{
+  width: 96%;
+  height: 94%;
+  position: relative;
+  top: 9px;
+  left: 10px;
+}
+
+.niw{
+  max-width: 900px;
+  height: 100px;
+  left: 0px;
+  position: relative;
+  bottom: 14rem;
+}
+.niw .rec7{
+  max-width: 300px;
+  height: 4px;
+  background-color: teal;
+  position: relative;
+  left: 70px;
+  bottom: 80px;
+}
+.niw h1{
+  font-size: 20px;
+  width: 300px;
+  color: teal;
+  text-align: left;
+  position: relative;
+  right: -64px;
+  bottom: 80px;
+}
+
+.niw .rec8{
+  Max-width: 400px;
+  height: 4px;
+  background-color: teal;
+  position: relative;
+  left: 26rem;
+  bottom: 140px;
+ 
+}
+
+.hiv {
+  display: flex;
+  align-items: center;
+  bottom: 730px;
+  position: relative;
+  background-color: teal;
+  border-radius: 20px;
+  width: 10%;
+  left: 870px;
+  height: 40px;
+  justify-content: space-between;
+  z-index: 99;
+  cursor: pointer;
+  white-space: wrap;
+}
+.hiv:hover {
+  animation: neon-glow 1.5s infinite alternate;
+  box-shadow: 0 0 20px rgb(134, 27, 27), 0 0 40px rgb(134, 27, 27), 0 0 60px rgb(134, 27, 27) 0 0 80px rgb(134, 27, 27);
+}
+
+@keyframes neon-glow {
+  from {
+      box-shadow: 0 0 10px rgb(155, 207, 207), 0 0 20px rgb(110, 224, 224), 0 0 30px rgb(62, 216, 216), 0 0 40px rgb(16, 167, 167);
+  }
+  to {
+      box-shadow: 0 0 20px #2196f3, 0 0 40px #1da1f2, 0 0 60px #0088cc, 0 0 80px #2196f3;
+  }
+}
+@keyframes scale-rotate {
+  0% {
+      transform: scale(1) rotate(0deg);
+  }
+  50% {
+      transform: scale(1.1) rotate(180deg);
+  }
+  100% {
+      transform: scale(1) rotate(360deg);
+  }
+}
+
+.hiv h2 {
+  font-family: poppins, sans-serif;
+  margin: 5px;
+  font-size: 9px;
+  color: #fff;
+  white-space: wrap;
+}
+
+.next-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.ntyr a{
+  color: white;
+  text-decoration: none;
+}
+.ntyr{
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 45px;
+  left: 86%;
+  background-color: teal;
+  z-index: 88;
+  text-align: center;
+  font-size: 17px;
+  position: relative;
+  bottom: 250px;
+  border-radius: 20px;
+}
+.ntyr:hover {
+  animation: neon-glow-other 1.5s infinite alternate;
+  box-shadow: 0 0 20px black, 0 0 40px lightblue, 0 0 60px lightgreen, 0 0 80px lightslategray;
+}
+.narrow {
+  margin-left: 10px;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.ntyr:hover .nextrrow {
+  transform: translateX(5px);
+}
+
+.rec8 h2{
+  font-size: 20px;
+  width: 300px;
+  color: teal;
+  text-align: left;
+  position: relative;
+  left: 0rem;
+  top: 16px;
+
+}
+.dot-container {
+  display: flex;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: teal;
+  position: relative;
+  left: 23rem;
+  border-radius: 50%;
+  margin-right: 10px;
+  bottom: 88px; /* Adjust spacing between dots as needed */
+}
+.dot1{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 23rem;
+  border-radius: 50%;
+  margin-right: 10px; 
+  background-color: gray;
+  bottom: 88px;
+}
+
+
+.rec219{
+  background-color: teal;
+  max-width: 900px;
+  height: 10px;
+  position: relative;
+  right: -70px;
+  top: -39rem;
+}
+.nnnn{
+  max-width:200px;
+  height: 65px;
+  position: relative;
+  left: 450px;
+  top: -41.5rem;
+  color: white;
+  background-color: teal;
+  font-size: 17px;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white; /* Adjust the shadow as needed */
+}
+.text-co1umn p {
+  font-size: 17px;
+  width: 100%;
+  position: relative;
+  color: white;
+  bottom: 90px;
+  line-height: 26px;
+  left: 150px;
+}
+      }
+
+      @media (min-width: 1200px) and (max-width: 1400px){
+        .text-co1umn p {
+          font-size: 18px;
+          width: 100%;
           position: relative;
-          bottom: 0rem;
-          max-height: 500px;
-          font-family: poppins, sans-serif;
-          padding-top: -220px;
-          z-index: 7;
-        }
-        .feature h1{
           color: white;
-          text-align: center;
-          font-size: 80px;
-          font-weight: 600;
-        }
-        .feature h2{
-          font-size: 80px;
-          position: relative;
-          left: 35rem;
-          bottom: 50px;
-          color: white;
-          font-weight: 600;
-        }
-        .rec4{
-          background-color: teal;
-          max-width: 350px;
-          max-height: 350px;
-          position: relative;
-          bottom: -10px;
-          left: 40px;
-          border-bottom: 2px solid;
-          border-color: white;
-        }
-        .rec4 img{
-          width: 95%;
-          height: 94%;
-          position: relative;
-          top: 11px;
-          left: 11px;
-        }
-        .rec5{
-          max-width: 490px;
-          max-height: 350px;
-          background-color: teal;
-          position: relative;
-          bottom: 21.5rem;
-          left: 25rem;
-          border-bottom: 2px solid;
-          border-color: white;
-        }
-        .hy{
-        display: none;
-        }
-        .rec5 img{
-          width: 96%;
-          height: 94%;
-          position: relative;
-          top: 9px;
-          left: 10px;
-        }
-        
-        .niw{
-          max-width: 900px;
-          height: 100px;
-          left: 0px;
-          position: relative;
-          bottom: 14rem;
-        }
-        .niw .rec7{
-          max-width: 300px;
-          height: 4px;
-          background-color: teal;
-          position: relative;
-          left: 70px;
-          bottom: 80px;
-        }
-        .niw h1{
-          font-size: 20px;
-          width: 300px;
-          color: teal;
-          text-align: left;
-          position: relative;
-          right: -64px;
-          bottom: 80px;
-        }
-        
-        .niw .rec8{
-          Max-width: 400px;
-          height: 4px;
-          background-color: teal;
-          position: relative;
-          left: 26rem;
-          bottom: 140px;
-         
-        }
-        
+          bottom: 90px;
+          line-height: 26px;
+          left: 150px;
+      } 
         .hiv {
           display: flex;
           align-items: center;
-          bottom: 730px;
+          bottom: 780px;
           position: relative;
           background-color: teal;
           border-radius: 20px;
           width: 10%;
-          left: 870px;
+          left: 1070px;
           height: 40px;
           justify-content: space-between;
           z-index: 99;
           cursor: pointer;
-          white-space: wrap;
+          white-space: nowrap;
         }
         .hiv:hover {
           animation: neon-glow 1.5s infinite alternate;
@@ -9523,181 +9797,11 @@ input[type=text]::placeholder, textarea::placeholder {
         .hiv h2 {
           font-family: poppins, sans-serif;
           margin: 5px;
-          font-size: 9px;
+          font-size: 10px;
           color: #fff;
-          white-space: wrap;
-        }
-        
-        .next-button {
-          background-color: transparent;
-          border: none;
-          color: white;
-          font-size: 18px;
-          cursor: pointer;
-        }
-        
-        .ntyr a{
-          color: white;
-          text-decoration: none;
-        }
-        .ntyr{
-          width: 150px;
-          justify-content: center;
-          align-items: center;
-          align-content: center;
-          height: 45px;
-          left: 86%;
-          background-color: teal;
-          z-index: 88;
-          text-align: center;
-          font-size: 17px;
-          position: relative;
-          bottom: 250px;
-          border-radius: 20px;
-        }
-        .ntyr:hover {
-          animation: neon-glow-other 1.5s infinite alternate;
-          box-shadow: 0 0 20px black, 0 0 40px lightblue, 0 0 60px lightgreen, 0 0 80px lightslategray;
-        }
-        .narrow {
-          margin-left: 10px;
-          font-size: 20px;
-          transition: transform 0.3s ease;
-        }
-        
-        .ntyr:hover .nextrrow {
-          transform: translateX(5px);
-        }
-        
-        .rec8 h2{
-          font-size: 20px;
-          width: 300px;
-          color: teal;
-          text-align: left;
-          position: relative;
-          left: 0rem;
-          top: 16px;
-        
-        }
-        .dot-container {
-          display: flex;
-        }
-        
-        .dot {
-          width: 20px;
-          height: 20px;
-          background-color: teal;
-          position: relative;
-          left: 23rem;
-          border-radius: 50%;
-          margin-right: 10px;
-          bottom: 88px; /* Adjust spacing between dots as needed */
-        }
-        .dot1{
-          width: 20px;
-          height: 20px;
-          position: relative;
-          left: 23rem;
-          border-radius: 50%;
-          margin-right: 10px; 
-          background-color: gray;
-          bottom: 88px;
-        }
-        
-        
-        .rec219{
-          background-color: teal;
-          max-width: 900px;
-          height: 10px;
-          position: relative;
-          right: -70px;
-          top: -39rem;
-        }
-        .nnnn{
-          max-width:200px;
-          height: 65px;
-          position: relative;
-          left: 450px;
-          top: -41.5rem;
-          color: white;
-          background-color: teal;
-          font-size: 17px;
-          border-top: 3px solid white;
-          border-left: 3px solid white;
-          border-right: 3px solid white;
-          border-bottom: 3px solid white; /* Adjust the shadow as needed */
-        }
-        .text-co1umn p {
-          font-size: 17px;
-          width: 100%;
-          position: relative;
-          color: white;
-          bottom: 90px;
-          line-height: 26px;
-          left: 150px;
-        }
-              }
-        
-              @media (min-width: 1200px) and (max-width: 1400px){
-                .text-co1umn p {
-                  font-size: 18px;
-                  width: 100%;
-                  position: relative;
-                  color: white;
-                  bottom: 90px;
-                  line-height: 26px;
-                  left: 150px;
-              } 
-                .hiv {
-                  display: flex;
-                  align-items: center;
-                  bottom: 780px;
-                  position: relative;
-                  background-color: teal;
-                  border-radius: 20px;
-                  width: 10%;
-                  left: 1070px;
-                  height: 40px;
-                  justify-content: space-between;
-                  z-index: 99;
-                  cursor: pointer;
-                  white-space: nowrap;
-                }
-                .hiv:hover {
-                  animation: neon-glow 1.5s infinite alternate;
-                  box-shadow: 0 0 20px rgb(134, 27, 27), 0 0 40px rgb(134, 27, 27), 0 0 60px rgb(134, 27, 27) 0 0 80px rgb(134, 27, 27);
-                }
-                
-                @keyframes neon-glow {
-                  from {
-                      box-shadow: 0 0 10px rgb(155, 207, 207), 0 0 20px rgb(110, 224, 224), 0 0 30px rgb(62, 216, 216), 0 0 40px rgb(16, 167, 167);
-                  }
-                  to {
-                      box-shadow: 0 0 20px #2196f3, 0 0 40px #1da1f2, 0 0 60px #0088cc, 0 0 80px #2196f3;
-                  }
-                }
-                @keyframes scale-rotate {
-                  0% {
-                      transform: scale(1) rotate(0deg);
-                  }
-                  50% {
-                      transform: scale(1.1) rotate(180deg);
-                  }
-                  100% {
-                      transform: scale(1) rotate(360deg);
-                  }
-                }
-                
-                .hiv h2 {
-                  font-family: poppins, sans-serif;
-                  margin: 5px;
-                  font-size: 10px;
-                  color: #fff;
-                  white-space: nowrap;
-                }        
-              }
-
-
+          white-space: nowrap;
+        }        
+      }
 
       @media (min-width: 972px) and (max-width: 1199px) {
       .aboutr{
@@ -10856,7 +10960,16 @@ input[type=text]::placeholder, textarea::placeholder {
                         }
                       }
 
+                      @media (min-width: 400px) and (max-width: 420px) {
+                        iframe {
+                          position: relative;
+                          bottom: 380px !important;
+                        }
+                         .section5{
+                          height: 340px !important;
+                         }
 
+                      }
                       @media (min-width: 350px) and (max-width: 420px) {
                       .aboutr{
                         background-color: teal;
@@ -10870,7 +10983,7 @@ input[type=text]::placeholder, textarea::placeholder {
                         max-width:80px;
                         height: 30px;
                         position: relative;
-                        left: 150px;
+                        left: 140px;
                         top: -0.4rem;
                         color: white;
                         background-color: teal;
@@ -10893,8 +11006,8 @@ input[type=text]::placeholder, textarea::placeholder {
                         max-width:80px;
                         height: 30px;
                         position: relative;
-                        left: 150px;
-                        top: -0.3rem;
+                        left: 135px;
+                        top: -0.4rem;
                         color: teal;
                         background-color: white;
                         font-size: 8px;
@@ -10911,12 +11024,23 @@ input[type=text]::placeholder, textarea::placeholder {
                         right: -40px;
                         top: 6rem;
                       }
+                      iframe {
+                        position: relative;
+                        bottom: 320px;
+                      }
+                       .section5{
+                        height: 370px;
+                       }
+
+                      .portfolio-section{
+                        height: 900px;
+                      }
                       .sern{
                         max-width:80px;
                         height: 30px;
                         position: relative;
-                        left: 150px;
-                        top: 4.8rem;
+                        left: 140px;
+                        top: 4.5rem;
                         color: white;
                         background-color: teal;
                         font-size: 8px;
@@ -10962,7 +11086,11 @@ input[type=text]::placeholder, textarea::placeholder {
   position: relative;
   font-family: poppins, sans-serif;
   top: 200px;
-  text-align: center;
+  -webkit-text-stroke: 0.03vw white;
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
 }
 .nity{
   width: 100%;
@@ -10991,6 +11119,11 @@ input[type=text]::placeholder, textarea::placeholder {
     font-family: poppins, sans-serif;
     top: 90px;
     text-align: center;
+    -webkit-text-stroke: 0.03vw white;
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
   }
   .nity{
     width: 100%;
@@ -11021,6 +11154,11 @@ input[type=text]::placeholder, textarea::placeholder {
       font-family: poppins, sans-serif;
       top: 90px;
       text-align: center;
+      -webkit-text-stroke: 0.03vw white;
+      background-size: cover;
+      background-clip: text;
+      color: transparent;
+      -webkit-background-clip: text;
     }
     .nity{
       width: 100%;
@@ -11052,10 +11190,25 @@ input[type=text]::placeholder, textarea::placeholder {
       font-family: poppins, sans-serif;
       top: 30px;
       text-align: center;
+      -webkit-text-stroke: 0.03vw white;
+      background-size: cover;
+      background-clip: text;
+      color: transparent;
+      -webkit-background-clip: text;
     }
     .nity{
       width: 100%;
       max-height: 240px;
+      padding-bottom: 0px;
+      margin-top: -150px;
+      z-index: 90;
+    }
+  }
+
+  @media (min-width: 421px) and (max-width: 441px) {
+    .nity{
+      width: 100%;
+      max-height: 200px;
       padding-bottom: 0px;
       margin-top: -150px;
       z-index: 90;
@@ -11211,14 +11364,23 @@ input[type=text]::placeholder, textarea::placeholder {
       
   }
     }
+   
     @media(max-width: 576px){
       /*repcaed */
       .footer{
         position: relative;
         background-color: #000;
-        top: -3px;
-          padding: 70px 0;
       }
+      .slide22{
+        z-index: 30;
+      }
+      iframe {
+        position: relative;
+        bottom: 300px !important;
+      }
+       .section5{
+        height: 76px !important;
+       }
       /*repcaed */
       .footer-col{
         width: 100%;
@@ -11259,7 +11421,258 @@ input[type=text]::placeholder, textarea::placeholder {
 
     }
 
+    @media screen and (min-width: 414px) and (max-width: 420px) {
+      iframe {
+          position: relative;
+          bottom: 380px !important;
+          height: 430px;
+      }
 
+      .howr{
+        background-color: white;
+        max-width: 285px;
+        height: 8px;
+        position: relative;
+        right: -60px;
+        top: 1rem;
+      }
+      .hown{
+        max-width:80px;
+        height: 30px;
+        position: relative;
+        left: 155px;
+        top: -0.4rem;
+        color: teal;
+        background-color: white;
+        font-size: 8px;
+        border-top: 3px solid teal;
+        border-left: 3px solid teal;
+        border-right: 3px solid teal;
+        border-bottom: 3px solid teal; /* Adjust the shadow as needed */
+      }
+      .serr{
+        background-color: teal;
+        max-width: 285px;
+        height: 8px;
+        position: relative;
+        right: -60px;
+        top: 6rem;
+      }
+                 .aboutr{
+                        background-color: teal;
+                        max-width: 285px;
+                        height: 8px;
+                        position: relative;
+                        right: -35px;
+                        top: 3rem;
+                      }
+                      .aboutn{
+                        max-width:80px;
+                        height: 30px;
+                        position: relative;
+                        left: 130px;
+                        top: 1.6rem;
+                        color: white;
+                        background-color: teal;
+                        font-size: 8px;
+                        border-top: 3px solid white;
+                        border-left: 3px solid white;
+                        border-right: 3px solid white;
+                        border-bottom: 3px solid white; /* Adjust the shadow as needed */
+                      }
+      .sern{
+        max-width:80px;
+        height: 30px;
+        position: relative;
+        left: 160px;
+        top: 4.5rem;
+        color: white;
+        background-color: teal;
+        font-size: 8px;
+        border-top: 3px solid white;
+        border-left: 3px solid white;
+        border-right: 3px solid white;
+        border-bottom: 3px solid white; /* Adjust the shadow as needed */
+      }
+      .section5 {
+          height: 0px !important;
+          position: relative;
+      }
+      .rec219 {
+        background-color: teal;
+        max-width: 300px;
+        height: 8px;
+        position: relative;
+        right: -70px;
+        top: -14rem;
+    }
+    .nnnn {
+      max-width: 80px;
+      height: 30px;
+      position: relative;
+      left: 170px;
+      top: -15.5rem;
+      color: white;
+      background-color: teal;
+      font-size: 8px;
+      border-top: 3px solid white;
+      border-left: 3px solid white;
+      border-right: 3px solid white;
+      border-bottom: 3px solid white;
+  }
+
+      .footer{
+      position: relative;
+    
+     }
+     .hiv{
+      position: relative;
+      bottom: 544px !important;
+     }
+     .feature {
+      position: relative;
+      bottom: 1rem;
+      max-height: 400px;
+      font-family: poppins, sans-serif;
+      padding-top: -220px;
+      z-index: 7;
+  }
+  .nity{
+  width: 100%;
+  height: 180px;
+  padding-bottom: 0px;
+  margin-top: -240px;
+  z-index: 90;
+}
+}
+
+
+@media screen and (min-width: 421px) and (max-width: 430px) {
+      iframe {
+          position: relative;
+          bottom: 180px !important;
+          height: 430px;
+      }
+       
+       .aboutr{
+                        background-color: teal;
+                        max-width: 285px;
+                        height: 8px;
+                        position: relative;
+                        right: -30px;
+                        top: 3rem;
+                      }
+                      .aboutn{
+                        max-width:80px;
+                        height: 30px;
+                        position: relative;
+                        left: 120px;
+                        top: 1.6rem;
+                        color: white;
+                        background-color: teal;
+                        font-size: 8px;
+                        border-top: 3px solid white;
+                        border-left: 3px solid white;
+                        border-right: 3px solid white;
+                        border-bottom: 3px solid white; /* Adjust the shadow as needed */
+                      }
+      .howr{
+        background-color: white;
+        max-width: 285px;
+        height: 8px;
+        position: relative;
+        right: -60px;
+        top: 1rem;
+      }
+      .hown{
+        max-width:80px;
+        height: 30px;
+        position: relative;
+        left: 155px;
+        top: -0.4rem;
+        color: teal;
+        background-color: white;
+        font-size: 8px;
+        border-top: 3px solid teal;
+        border-left: 3px solid teal;
+        border-right: 3px solid teal;
+        border-bottom: 3px solid teal; /* Adjust the shadow as needed */
+      }
+      .serr{
+        background-color: teal;
+        max-width: 285px;
+        height: 8px;
+        position: relative;
+        right: -60px;
+        top: 6rem;
+      }
+      .sern{
+        max-width:80px;
+        height: 30px;
+        position: relative;
+        left: 160px;
+        top: 4.5rem;
+        color: white;
+        background-color: teal;
+        font-size: 8px;
+        border-top: 3px solid white;
+        border-left: 3px solid white;
+        border-right: 3px solid white;
+        border-bottom: 3px solid white; /* Adjust the shadow as needed */
+      }
+      .section5 {
+          height: 1200px !important;
+          position: relative;
+          top: 800px !important;
+      }
+      .rec219 {
+        background-color: teal;
+        max-width: 300px;
+        height: 8px;
+        position: relative;
+        right: -70px;
+        top: -14rem;
+    }
+    .nnnn {
+      max-width: 80px;
+      height: 30px;
+      position: relative;
+      left: 170px;
+      top: -15.5rem;
+      color: white;
+      background-color: teal;
+      font-size: 8px;
+      border-top: 3px solid white;
+      border-left: 3px solid white;
+      border-right: 3px solid white;
+      border-bottom: 3px solid white;
+  }
+
+      .footer{
+      position: relative;
+    
+     }
+     .hiv{
+      position: relative;
+      bottom: 544px !important;
+     }
+     .feature {
+      position: relative;
+      bottom: 1rem;
+      max-height: 400px;
+      font-family: poppins, sans-serif;
+      padding-top: -220px;
+      z-index: 7;
+  }
+  .nity{
+  width: 100%;
+  height: 180px;
+  padding-bottom: 0px;
+  margin-top: -240px;
+  z-index: 90;
+}
+}
+     
     @media (min-width: 350px) and (max-width: 487px) {
     .footer-col2 .social-links a{
       display: inline-block;
@@ -11372,14 +11785,15 @@ input[type=text]::placeholder, textarea::placeholder {
 
 .scroll .scrolling-content {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   animation: scrollAnim 25s linear infinite;
 }
 
 .scroll img {
-  max-width: 200px;
+  max-width: 250px;
   transform: scale(0.8);
   filter: grayscale(1);
+  height: auto;
 }
 
 .scroll img:hover {
@@ -11633,25 +12047,30 @@ input[name="slider2"]:checked + .custom-dots1 label {
   width: 100%;
   overflow: hidden;
   top: 20px;
+  
 }
 
 .slides22 {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 100%; /* Adjust this width if you add more slides */
- gap: 50px;
- position: relative;
- top: 30px;
- margin-left: 90px;
+  width: 100%;
+  gap: 50px;
+  position: relative;
+  top: 30px;
+  margin-left: 90px;
+  z-index: 20;
 }
 
 .slide21 {
-  flex: 0 0 26%; /* Each slide takes up 20% of the width since there are 5 slides */
+  flex: 0 0 26%;
+  z-index: 22;
 }
 
 .slide21 iframe {
   width: 100%;
   height: 230px;
+  pointer-events: auto;
+  z-index: 24; /* Ensure pointer events are enabled */
 }
 
 /* Hide radio buttons */
@@ -11773,9 +12192,14 @@ body.vacancy-page #vacancy {
 }
 
 @media (max-width: 768px) {
-  .arrow, .arrow1 {
-    bottom: 20px;
+  .arrow{
+    bottom: 60px;
   }
+  .arrow1 {
+  bottom: 0px;
+  right: 60px;
+  }
+  
   .txt{
     width: 100%;
   }
@@ -11799,7 +12223,7 @@ body.vacancy-page #vacancy {
   }
 
   .arrow1 {
-    right: 80px;
+    right: 20px;
   }
 
   .arrow a, .arrow1 a {
@@ -11851,7 +12275,8 @@ body.vacancy-page #vacancy {
   }
 
   .arrow1 {
-    right: 60px;
+    right: 15px;
+    bottom: 10px;
   }
 
   .arrow a, .arrow1 a {
