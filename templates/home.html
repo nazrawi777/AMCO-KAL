@@ -21,13 +21,13 @@
     <a href="#" title="Back to Top"><span class="fas fa-angle-up"></span></a>
   </div>
   <div class="arrow1">
-    <a href="#contact" title="Scroll to Bottom" onclick="scrollToBottom()"><span class="fas fa-angle-down"></span></a>
+    <a href="#footer" title="Scroll to Bottom" onclick="scrollToBottom()"><span class="fas fa-angle-down"></span></a>
   </div>
   <!-- Header -->
   <header class="header">
     <nav>
       <div class="logo-container">
-        <a href="/"><img src="/static/images/byd.png" alt="Your Logo" class="logo"></a>
+        <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
       </div>
       <ul id="menuList">
         <li><a id="home" href="/">Home</a></li>
@@ -128,7 +128,7 @@
             <h1>Exemplary Craftsmanship</h1>
           </div>
           <img src="/static/images/photo_2024-05-22_10-14-32.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
-        </div -->>
+        </div -->
       </div>
       <!--crud homeslider-->
     </section>
@@ -821,49 +821,59 @@
     });
 
     /* hoMEjs*/
-    const myslide = document.querySelectorAll('.myslide'),
-      dot = document.querySelectorAll('.dot');
-    let counter = 1;
-    slidefun(counter);
+    document.addEventListener("DOMContentLoaded", function() {
+            let slideIndex = 0;
+            const slides = document.getElementsByClassName("myslide");
 
-    let timer = setInterval(autoSlide, 3000);
-    function autoSlide() {
-      counter += 1;
-      slidefun(counter);
-    }
-    function plusSlides(n) {
-      counter += n;
-      slidefun(counter);
-      resetTimer();
-    }
-    function currentSlide(n) {
-      counter = n;
-      slidefun(counter);
-      resetTimer();
-    }
-    function resetTimer() {
-      clearInterval(timer);
-      timer = setInterval(autoSlide, 8000);
-    }
+            function showSlide(index) {
+                if (slides.length === 0) {
+                    console.error("No elements with class 'myslide' found.");
+                    return;
+                }
 
-    function slidefun(n) {
+                for (let i = 0; i < slides.length; i++) {
+                    if (slides[i] && slides[i].classList) {
+                        slides[i].classList.remove("active");
+                    }
+                }
 
-      let i;
-      for (i = 0; i < myslide.length; i++) {
-        myslide[i].style.display = "none";
-      }
-      for (i = 0; i < dot.length; i++) {
-        dot[i].className = dot[i].className.replace(' active', '');
-      }
-      if (n > myslide.length) {
-        counter = 1;
-      }
-      if (n < 1) {
-        counter = myslide.length;
-      }
-      myslide[counter - 1].style.display = "block";
-      dot[counter - 1].className += " active";
-    }
+                if (slides[index] && slides[index].classList) {
+                    slides[index].classList.add("active");
+                } else {
+                    console.error(`Slide at index ${index} does not exist or has no classList.`);
+                }
+            }
+
+            function slidefun() {
+                if (slides.length === 0) {
+                    console.error("No elements with class 'myslide' found.");
+                    return;
+                }
+
+                for (let i = 0; i < slides.length; i++) {
+                    if (slides[i] && slides[i].classList) {
+                        slides[i].className = slides[i].className.replace(" active", "");
+                    }
+                }
+
+                if (slides[slideIndex] && slides[slideIndex].classList) {
+                    slides[slideIndex].className += " active";
+                } else {
+                    console.error(`Slide at index ${slideIndex} does not exist or has no classList.`);
+                }
+
+                slideIndex = (slideIndex + 1) % slides.length;
+            }
+
+            function autoSlide() {
+                slidefun();
+                setInterval(slidefun, 3000); // Change slide every 3 seconds
+            }
+
+            autoSlide();
+        }, { passive: true }); // Adding the passive option to the event listener
+
+        
     /*email */
 
     emailjs.init('D3VuuvmzMea1ZpQ3l');

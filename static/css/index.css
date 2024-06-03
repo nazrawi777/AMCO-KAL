@@ -1666,7 +1666,6 @@ nav {
 nav ul {
   display: flex;
   gap: 30px;
-  background-color: #000;
   align-items: center;
   position: relative;
   right: -250px;
@@ -1758,7 +1757,6 @@ nav ul li a:hover{
   nav ul{
       position: absolute;
       top: 70px;
-      color: #000;
       left: 0;
       right: 0;
       flex-direction: column;
@@ -1772,6 +1770,10 @@ nav ul li a:hover{
       gap: 0;
       overflow: hidden;
   }
+  .dropdown-content a{
+    font-size: 10px;
+    padding: 0px 10px !important;
+  }
   nav ul li{
       padding: 4px;
       height: 900px;
@@ -1779,7 +1781,7 @@ nav ul li a:hover{
      color: transparent;
   }
   nav ul li a{
-    color: teal;
+    color: teal !important;
   }
   .menu-icon{
       display: block;
@@ -1787,13 +1789,23 @@ nav ul li a:hover{
   }
   #menuList{
       transition: all 0.5s;
-      color: teal;
+      color: teal !important;
   }
 
   .header{
     z-index: 10;
     max-height: 50px;
   }
+   /* Active link styles for mobile */
+   body.home-page #home,
+   body.about-page #about,
+   body.service-page #service,
+   body.product-page #products,
+   body.contact-page #contact,
+   body.vacancy-page #vacancy {
+       color: black !important;
+       font-weight: bold;
+   }
 }
 .rectangle{
   position: relative;
@@ -5254,7 +5266,7 @@ iframe {
   position: relative;
   top: 129px;
   padding-top: 70px;
-  height: 548px;
+  height: 563px;
   background-color: #0C7885;
 
 }
@@ -5730,7 +5742,8 @@ iframe {
     }
     .section5{
       position: relative;
-      height: 380px;
+      height: 370px;
+
     }
     
     .cr1 h1{
@@ -9345,8 +9358,8 @@ input[type=text]::placeholder, textarea::placeholder {
       .image220{
         max-width: 80px;
         position: relative;
-        top: 113px;
-        left: 0px;
+        top: 112px;
+        left: 10px;
         max-height: 90px;
       }
       .slider1-container video {
@@ -11421,7 +11434,7 @@ display: none;
 
     }
 
-    @media screen and (min-width: 414px) and (max-width: 420px) {
+    @media screen and (min-width: 412px) and (max-width: 420px) {
       iframe {
           position: relative;
           bottom: 380px !important;
@@ -11686,6 +11699,10 @@ display: none;
       color: #ffffff;
       transition: all 0.5s ease;
     }
+    .footer-col2{
+      margin-left: 50px;
+      margin-bottom: 10px;
+    }
     .copy{
       text-align: center;
       color: teal;
@@ -11696,10 +11713,10 @@ display: none;
    
 
     .footer-col ul li a{
-      font-size: 13px;
+      font-size: 11px;
       text-transform: capitalize;
       color: #ffffff;
-      margin-left: -40px;
+      margin-left: -35px;
       text-decoration: none;
       font-weight: 300;
       color: #bbbbbb;
@@ -11714,6 +11731,7 @@ display: none;
     .footer-col2 .social-links{
       display: flex;
       position: relative;
+      font-size: 10px;
 
     }
    
@@ -11725,8 +11743,8 @@ display: none;
       width: 100%;
       max-height: 130px;
       position: relative;
-      top: 199px;
-      left: -320px;
+      top: 190px;
+      left: -350px;
   }
   }
 
@@ -12169,7 +12187,7 @@ body.about-page #portfolio {
 
 /* Service page active link */
 body.service-page #service {
-  color: red; /* Active color for Service link */
+  color: black; /* Active color for Service link */
   font-weight: bold;
 }
 
@@ -12181,7 +12199,7 @@ body.product-page #products {
 
 /* Contact page active link */
 body.contact-page #contact {
-  color: red; /* Active color for Contact link */
+  color: black; /* Active color for Contact link */
   font-weight: bold;
 }
 
@@ -12247,16 +12265,21 @@ body.vacancy-page #vacancy {
     bottom: 15p
   }
   .ct h2{
-    border-radius: 10px;
+    border-radius: 14px;
     margin-left: 250px;
-    text-align: center;
+    text-align: center !important;
+    align-items: center !important;
+    align-content: center !important;
+    justify-content: center !important;
     margin-top: 0px;
+    padding-bottom: 17px;
     background-color: teal;
     width: 80px;
-    font-size: 7px !important;
-    padding-bottom: 4px;
-    height: 20px;
+    font-size: 9px !important;
+    height: 10px;
     cursor: pointer;
+    bottom: 10px !important;
+    position: relative;
   }
   .txt{
     width: 100%;
