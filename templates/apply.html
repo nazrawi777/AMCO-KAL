@@ -22,6 +22,7 @@
             margin: 0;
             padding: 0;
         }
+ 
         .footer{
   position: relative;
   top: 30px;
@@ -47,6 +48,7 @@
       position: relative;
 
     }
+    
    
     .footer-col2 .social-links a:hover{
       color: #24262b;
@@ -142,44 +144,47 @@
   </div>
     <!-- Header -->
    <!-- Header -->
-<header class="header" id="header">
-  <nav>
-    <div class="logo-container">
-      <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
-    </div>
-    <ul id="menuList">
-      <li><a id="home" href="/">Home</a></li>
-      <li class="dropdown">
-        <a class="dropbtn" href="#" onclick="toggleDropdown()" onmouseover="showDropdown()">About
-          <span class="fas fa-angle-down"></span>
-        </a>
-        <div class="dropdown-content" id="dropdownMenu">
-          <a id="about" href="/about">About Us</a>
-          <a href="#portfolio">Portfolio</a>
+   <header class="header">
+    <nav>
+      <div class="logo-container">
+        <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
+      </div>
+      <ul id="menuList">
+        <li><a id="home" href="/">Home</a></li>
+        <li class="dropdown">
+          <a class="dropbtn" href="#" onclick="toggleDropdown()" onmouseover="showDropdown()">About
+            <span class="fas fa-angle-down"></span>
+          </a>
+          <div class="dropdown-content" id="dropdownMenu">
+            <a id="about" href="/about">About Us</a>
+            <a href="#portfolio">Portfolio</a>
+          </div>
+        </li>
+        <li><a href="#service">Service</a></li>
+        <li><a id="products" href="/prod">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
+        <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
+      </ul>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+      <a href="tel:+1234567890">
+        <div class="call">
+          <h2>Call Us</h2>
+          <div class="phone">
+            <img src="/static/images/call.png" alt="Call Icon">
+          </div>
+          <div class="circle1"></div>
+          <div class="circle2"></div>
         </div>
-      </li>
-      <li><a href="#service">Service</a></li>
-      <li><a id="products" href="/prod">Products</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
-      <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
-    </ul>
-    <div class="menu-icon">
-      <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-    </div>
-  </nav>
-</header>
+      </a>
+      <!--call button-->
+    </nav>
+    
+  </header>
   
-<a href="tel:+1234567890">
-  <div class="call">
-    <h2>Call Us</h2>
-    <div class="phone">
-      <img src="/static/images/call.png" alt="Call Icon">
-    </div>
-    <div class="circle1"></div>
-    <div class="circle2"></div>
-  </div>
-</a>
+
   
   <div class="social-widget">
     <a href="#" class="social-icon " data-social="Telegram"><i class="fab fa-telegram"></i><span class="social-name">Telegram</span></a>
