@@ -199,9 +199,9 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
 
 # Set Cloudinary credentials
-app.config['CLOUDINARY_CLOUD_NAME'] = 'docffnxmn'
-app.config['CLOUDINARY_API_KEY'] = '286586623763179'
-app.config['CLOUDINARY_API_SECRET'] = 'BsAon9wDapIjYR0zMBQ_pWKzzAc'
+app.config['CLOUDINARY_CLOUD_NAME'] = ''
+app.config['CLOUDINARY_API_KEY'] = ''
+app.config['CLOUDINARY_API_SECRET'] = ''
 
 # Initialize Cloudinary with the credentials
 cloudinary.config(
@@ -215,9 +215,7 @@ cloudinary.config(
 def admin():
     if 'admin_logged_in' not in session or not session['admin_logged_in']:
         return redirect(url_for('login'))
-    SliderDb.query.delete()
-    SlideVideoDb.query.delete()
-    db.session.commit()
+    
     if request.method == 'POST':
         if 'file' not in request.files:
             flash('No file part')
