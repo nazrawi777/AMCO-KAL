@@ -215,7 +215,9 @@ cloudinary.config(
 def admin():
     if 'admin_logged_in' not in session or not session['admin_logged_in']:
         return redirect(url_for('login'))
-    
+    SliderDb.query.delete()
+    SlideVideoDb.query.delete()
+    db.session.commit()
     if request.method == 'POST':
         if 'file' not in request.files:
             flash('No file part')

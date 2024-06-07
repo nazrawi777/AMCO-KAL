@@ -12174,6 +12174,47 @@
     .add-product-btn:hover {
       background-color: #0a2c2f;
     }
+
+
+
+    .toast {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      display: none;
+      /* hide by default */
+    }
+
+    .toast-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toast-message {
+      font-size: 16px;
+      color: #333;
+      padding: 10px;
+    }
+
+    .toast-close {
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .success {
+      color: green;
+
+    }
   </style>
 </head>
 
@@ -12496,6 +12537,12 @@
 
     </div>
 
+    <div class="toast">
+      <div class="toast-content">
+        <span class="toast-message">Toast message goes here!</span>
+        <button class="toast-close">&times;</button>
+      </div>
+    </div>
 
   </main>
   <script>
@@ -12514,6 +12561,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <script>
+
+    const toast = document.querySelector('.toast');
+    const toastMessage = document.querySelector('.toast-message');
+    const toastClose = document.querySelector('.toast-close');
+
+    toastClose.addEventListener('click', () => {
+      toast.classList.remove('show');
+    });
+
+    function showNotice(message, type) {
+      toastMessage.textContent = message;
+      if (type === 'success') {
+        toast.classList.add('success');
+      } else if (type === 'error') {
+        toast.classList.add('error');
+      }
+      toast.classList.add('show');
+      toast.style.display = "block";
+      setTimeout(() => {
+        //toast.classList.remove('show');
+        toast.style.display = "none";
+      }, 3000); // Hide after 3 seconds
+    }
+
     $(document).ready(function () {
 
       $("#uploadForm").on("submit", function (event) {
@@ -12529,8 +12600,9 @@
           contentType: false,
           processData: false,
           success: function (response) {
-
             $("#messages").html("<li>" + response.message + "</li>");
+            showNotice('Image uploaded successfully!', 'success');
+
             if (response.filename) {
               $("#uploadedImage").attr("../uploads/" + response);
 
@@ -12538,6 +12610,8 @@
           },
           error: function (xhr, status, error) {
             $("#messages").html("<li>Error: " + xhr.responseText + "</li>");
+            // or
+            showNotice('Error uploading image', 'error');
           },
         });
 
@@ -12558,12 +12632,13 @@
           success: function (response) {
             $("#messagesvideo").html("<li>" + response.message + "</li>");
             if (response.filename) {
-              //$(this).hide()
+              showNotice('Video uploaded successfully!', 'success');
               $("#uploadedImage").attr(response);
             }
           },
           error: function (xhr, status, error) {
             $("#messagesvideo").html("<li>Error: " + xhr.responseText + "</li>");
+            showNotice('Error uploading video', 'error');
           },
         });
 
@@ -12579,16 +12654,15 @@
           type: $(this).data('type'),
         },
         success: function (response) {
-          //$(this).hide()
+          showNotice(`#${$(this).data('id')}` + ' deleted successfully!', 'success');
           console.log(response)
         },
         error: function (xhr, status, error) {
-          console.log(error)
+          showNotice('Error deleting image', 'error');
         },
       });
 
     })
-
   </script>
 
   <script>
