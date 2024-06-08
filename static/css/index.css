@@ -746,7 +746,7 @@ html,body
   .social-widget {
     font-family: poppins, sans-serif;
     position: fixed;
-    top: 40%;
+    top: 34% !important;
     width: 40px;
     left: 20px; /* Adjust the left distance as needed */
     transform: translateY(-50%);
@@ -954,7 +954,7 @@ html,body
   .social-widget {
     font-family: poppins, sans-serif;
     position: fixed;
-    top: 40% ;
+    top: 34% !important;
     width: 40px;
     left: 20px; /* Adjust the left distance as needed */
     transform: translateY(-50%);
@@ -987,7 +987,7 @@ html,body
     .social-widget {
       font-family: poppins, sans-serif;
       position: fixed;
-      top: 40%;
+      top: 34% !important;
       width: 40px;
       left: 20px; /* Adjust the left distance as needed */
       transform: translateY(-50%);
@@ -1197,7 +1197,7 @@ html,body
       .social-widget {
         font-family: poppins, sans-serif;
         position: fixed;
-        top: 43%;
+        top: 34% !important;
         width: 20px;
         left: 20px; /* Adjust the left distance as needed */
         transform: translateY(-50%);
@@ -1411,7 +1411,7 @@ html,body
   
       
 
-      @media (min-width: 360px) and (max-width: 421px) {
+      @media (min-width: 340px) and (max-width: 421px) {
         /*our team*/
         /*project*/
         
@@ -2059,7 +2059,7 @@ a {
   }
   }
 
-  @media (min-width: 360px) and (max-width: 501px) {
+  @media (min-width: 340px) and (max-width: 501px) {
     /*change2*/
     nav ul li a{
       text-decoration: none;
@@ -3147,7 +3147,31 @@ i#next {
   }
 
 
-  @media (min-width: 356px) and (max-width: 405px) {
+  @media (min-width: 336px) and (max-width: 405px) {
+    .content100 {
+      margin-left: 10pX;
+      margin-top: 100px;
+      max-width: 500px;
+      font-family: poppins , sans-serif;
+    }
+    
+    .content100 h1{
+      font-size: 20px;
+      position: relative;
+      bottom: 30px;
+    }
+    .content100 h2{
+      font-size: 15px;
+      position: relative;
+      bottom: 50px;
+    }
+    .content100 p {
+      margin: 0;
+      position: relative;
+      bottom: 60px;
+      line-height: 25px;
+      font-size: 7px;
+    }
   .aboutusreal{
     width: 100%;
     max-height: 150px;
@@ -3244,7 +3268,7 @@ i#next {
     margin: 0;
     position: relative;
     bottom: 60px;
-    line-height: 7px;
+    line-height: 10px;
     font-size: 6px;
   }
   }
@@ -3366,7 +3390,7 @@ i#next {
 
 }
 /* Styles for iPhone (width up to 375px) */
-@media (min-width: 360px) and (max-width: 395px) {
+@media (min-width: 340px) and (max-width: 395px) {
   .trail189 {
     margin-left: -80px;
     height: 10px; /* Adjust height for iPhone */
@@ -4637,15 +4661,20 @@ iframe {
   }
   
   .slide21 {
-    flex: 0 0 30%; /* Each slide takes up 20% of the width since there are 5 slides */
+    flex: 0 0 30% !important; /* Each slide takes up 20% of the width since there are 5 slides */
     cursor: pointer;
   }
   
   .slide21 iframe {
-    width: 100%;
-    height: 230px;
-    cursor: pointer;
-  }
+    width: 100% !important;
+    height: 300px !important;
+    z-index: 99;
+    display: block;
+    position: relative;
+    top: 0px;
+    right: 70px !important;
+}
+
   
   /* Hide radio buttons */
   input[name="slider22"] {
@@ -4739,14 +4768,139 @@ iframe {
 }
 
 @media (min-width: 753px) and (max-width: 770px) {
+  .aboutr{
+    background-color: teal;
+    max-width: 660px;
+    height: 10px;
+    position: relative;
+    right: -80px !important;
+    top: 3rem;
+  }
+  .aboutn{
+    max-width:170px;
+    height: 65px;
+    position: relative;
+    left: 325px !important;
+    top: .5rem;
+    color: white;
+    background-color: teal;
+    font-size: 17px;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    z-index: 20; /* Adjust the shadow as needed */
+  }
+
+
+
+
+  .serr{
+    background-color: teal;
+    max-width: 660px;
+    height: 10px;
+    position: relative;
+    right: -80px !important;
+    top: 5rem;
+  }
+  .sern{
+    max-width:170px;
+    height: 65px;
+    position: relative;
+    left: 325px !important;
+    top: 2.5rem;
+    color: white;
+    background-color: teal;
+    font-size: 17px;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    z-index: 20; /* Adjust the shadow as needed */
+  }
+
+
+
+
+  .howr{
+    background-color: white;
+    max-width: 660px;
+    height: 10px;
+    position: relative;
+    right: -80px !important;
+    top: 3rem;
+  }
+
+  .hown{
+    max-width:170px;
+    height: 65px;
+    position: relative;
+    left: 325px !important;
+    top: .5rem;
+    color: teal;
+    background-color: white;
+    font-size: 17px;
+    border-top: 3px solid teal;
+    border-left: 3px solid teal;
+    border-right: 3px solid teal;
+    border-bottom: 3px solid teal;
+    z-index: 20; /* Adjust the shadow as needed */
+  }
   .portfolio-section1 {
     width: 100%;
     margin-top: -0px;
-    height: 800px;
+    height: 880px;
     position: relative;
-    bottom: 0px;
+    bottom: 400px;
   }
-  
+  .slide21 iframe {
+    width: 100% !important;
+    height: 300px !important;
+    z-index: 99;
+    display: block;
+    position: relative;
+    top: 0px;
+}
+.slide21 {
+  flex: 0 0 30%;
+  z-index: 22;
+}
+.hiv{
+  position: relative;
+  bottom: 700px !important;
+}
+.section5{
+  height: 467px !important;
+} 
+.ourpro {
+  font: bold;
+  font-size: 30px;
+  height: 40px;
+  color: teal;
+  position: relative;
+  text-align: center;
+  bottom: -480px !important;
+  width: 100%;
+  z-index: 20;
+}
+.ourclients {
+  position: relative;
+  top: 390px !important;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.chu {
+  font-family: poppins, sans-serif;
+  position: relative;
+  width: 100%;
+  top: 970px !important;
+  height: 650px;
+  background-color: #0C7885;
+}
   .portfolio-section h1 {
     text-align: center;
     font-size: 34px;
@@ -5129,13 +5283,13 @@ iframe {
   }
 
 }
-@media (min-width: 350px) and (max-width: 399px) {
+@media (min-width: 340px) and (max-width: 399px) {
   .slide22{
     gap: 0px !important;
   }
 
 }
-@media (min-width: 350px) and (max-width: 399px) {
+@media (min-width: 340px) and (max-width: 399px) {
   .portfolio-section1 {
     width: 100%;
     margin-top: -1300px;
@@ -5460,11 +5614,6 @@ iframe {
    font-size: 28px;
 }
 }
-
-
-
-
-
 @media (min-width: 992px) and (max-width: 1162px) {
   .chu{
     font-family: poppins, sans-serif;
@@ -5482,6 +5631,20 @@ iframe {
     position: relative;
     bottom: 200px;
   }
+  .text-co1umn p {
+    font-size: 14px !important;
+    width: 100%;
+    position: relative;
+    color: white;
+    bottom: 90px;
+    line-height: 26px;
+    left: 100px !important;
+  }
+  
+  .footer{
+    position: relative;
+    top: 380px !important;
+  }
   iframe {
     position: relative;
     bottom: 130px;
@@ -5498,9 +5661,17 @@ iframe {
     width: 100%;
     z-index: 20; 
   }
+  .slide21 iframe {
+    width: 100% !important;
+    height: 280px !important;
+    z-index: 99;
+    display: block;
+    position: relative;
+    top: 0px;
+}
   .ourclients {
     position: relative;
-    bottom: -100px;
+    bottom: -65px !important;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -5742,7 +5913,8 @@ iframe {
     }
     .section5{
       position: relative;
-      height: 370px;
+      top: 230px !important;
+      height: 330px !important;
 
     }
     
@@ -6138,7 +6310,7 @@ iframe {
         }
       
 
-      @media (min-width: 360px) and (max-width: 421px) {
+      @media (min-width: 340px) and (max-width: 421px) {
 
         
         
@@ -6173,7 +6345,6 @@ iframe {
           font-family: poppins, sans-serif;
           position: relative !important;
           width: 100%;
-
           height: 700px;
           z-index: 20;
         }
@@ -6197,7 +6368,7 @@ iframe {
           color: teal;
           position: relative;
           text-align: center;
-          bottom: -45px;
+          bottom: -45px !important;
           width: 100%;
           z-index: 20; 
         }
@@ -6206,9 +6377,9 @@ iframe {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          margin-top: -450px;
+          margin-top: -450px !important;
           position: relative;
-          top: 30px;
+          top: 30px !important;
           padding-top: 70px;
           height: 470px;
           background-color: #0C7885;
@@ -7827,11 +7998,11 @@ input[type=text]::placeholder, textarea::placeholder {
     }
     iframe {
       position: relative;
-      bottom: 180px;
+      bottom: 120px;
     }
     .footer{
       position: relative !important;
-      top: 50px !important;
+      top: 370px !important;
     }
     .image22{
       position: relative;
@@ -9274,7 +9445,7 @@ input[type=text]::placeholder, textarea::placeholder {
 
 
 
-    @media (min-width: 360px) and (max-width: 412px){
+    @media (min-width: 340px) and (max-width: 412px){
       .tri19 {
         background-color: teal;
         height: 6px;
@@ -9987,7 +10158,10 @@ display: none;
           left: 31rem;
           bottom: 140px;
         }
-
+      
+        .header{
+          z-index: 9999;
+        }
            
         .hiv {
           display: flex;
@@ -10000,7 +10174,7 @@ display: none;
           left: 330px;
           height: 40px;
           justify-content: space-between;
-          z-index: 99;
+          z-index: 9;
           cursor: pointer;
           white-space: wrap;
         }
@@ -10763,7 +10937,7 @@ display: none;
 
 
 
-                      @media (min-width: 350px) and (max-width: 420px) {
+                      @media (min-width: 340px) and (max-width: 420px) {
 
                            
                         
@@ -10983,7 +11157,7 @@ display: none;
                          }
 
                       }
-                      @media (min-width: 350px) and (max-width: 420px) {
+                      @media (min-width: 340px) and (max-width: 420px) {
                       .aboutr{
                         background-color: teal;
                         max-width: 285px;
@@ -11560,11 +11734,44 @@ display: none;
 }
 
 
-@media screen and (min-width: 421px) and (max-width: 430px) {
-      iframe {
+@media screen and (min-width: 431px) and (max-width: 575px) {
+ .ourpro{
+  position: relative;
+  top: 40px;
+ }
+ .cti h1{
+  position: relative;
+  top: 100px;
+ }
+ .text-co1umn20 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  right: -10px;
+}
+.text-co1umn20 h1{
+  font-size: 20px;
+  right: -10px;
+}
+.text-co1umn20 p{
+  font-size: 8px;
+  right: -10px;
+}
+.text-co1umn h1{
+  font-size: 20px;
+  right: -100px;
+}
+.text-co1umn p{
+  font-size: 8px;
+  right: -100px ;
+}
+  iframe {
           position: relative;
           bottom: 180px !important;
-          height: 430px;
+          height: 380px;
       }
        
        .aboutr{
@@ -11572,14 +11779,14 @@ display: none;
                         max-width: 285px;
                         height: 8px;
                         position: relative;
-                        right: -30px;
+                        right: -150px;
                         top: 3rem;
                       }
                       .aboutn{
                         max-width:80px;
                         height: 30px;
                         position: relative;
-                        left: 120px;
+                        left: 240px;
                         top: 1.6rem;
                         color: white;
                         background-color: teal;
@@ -11594,14 +11801,14 @@ display: none;
         max-width: 285px;
         height: 8px;
         position: relative;
-        right: -60px;
+        right: -150px;
         top: 1rem;
       }
       .hown{
         max-width:80px;
         height: 30px;
         position: relative;
-        left: 155px;
+        left: 240px;
         top: -0.4rem;
         color: teal;
         background-color: white;
@@ -11616,14 +11823,14 @@ display: none;
         max-width: 285px;
         height: 8px;
         position: relative;
-        right: -60px;
+        right: -150px;
         top: 6rem;
       }
       .sern{
         max-width:80px;
         height: 30px;
         position: relative;
-        left: 160px;
+        left: 240px;
         top: 4.5rem;
         color: white;
         background-color: teal;
@@ -11634,7 +11841,7 @@ display: none;
         border-bottom: 3px solid white; /* Adjust the shadow as needed */
       }
       .section5 {
-          height: 1200px !important;
+          height: 1300px !important;
           position: relative;
           top: 800px !important;
       }
@@ -11679,14 +11886,37 @@ display: none;
   }
   .nity{
   width: 100%;
-  height: 180px;
+  height: 250px;
   padding-bottom: 0px;
-  margin-top: -240px;
+  margin-top: -80px  !important;
   z-index: 90;
 }
+.slide21{
+  height: 100px !important;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-left: 30px;
+}
+.slide21 iframe {
+  width: 100%;
+  background-color: white;
+  height: 130px !important;
+}
+}
+.ourpro{
+  font: bold;
+  font-size: 25px;
+  height: 40px;
+  color: teal;
+  position: relative;
+  text-align: center;
+  bottom: 240px !important;
+  width: 100%;
+  z-index: 20; 
 }
      
-    @media (min-width: 350px) and (max-width: 487px) {
+    @media (min-width: 340px) and (max-width: 487px) {
     .footer-col2 .social-links a{
       display: inline-block;
       height: 30px;
