@@ -330,6 +330,29 @@
 
 
 
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 0px 16px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  z-index: 999;
+  cursor: pointer;
+  background-color: gray;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: lightblue !important;
+  width: 95% !important;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 @media (min-width: 1163px) and (max-width: 1199px) {
 /*our team*/
@@ -11423,6 +11446,10 @@ body.home-page #home {
   color: black; /* Active color for Home link */
   font-weight: bold;
 }
+body.login-page #login {
+  color: black; /* Active color for Home link */
+  font-weight: bold;
+}
 
 /* About Us page active link */
 body.about-page #about {
@@ -11542,7 +11569,7 @@ body.vacancy-page #vacancy {
         }
     </style>
 </head>
-<body>
+<body class="login-page">
     <!-- Header -->
     <header class="header" id="header">
       <nav>
@@ -11556,15 +11583,15 @@ body.vacancy-page #vacancy {
               <span class="fas fa-angle-down"></span>
             </a>
             <div class="dropdown-content" id="dropdownMenu">
-              <a id="about" href="/about">About Us</a>
-              <a href="#portfolio">Portfolio</a>
+              <a id="about" href="/about">Who We Are</a>
+              <a href="/">Portfolio</a>
             </div>
           </li>
-          <li><a href="#service">Service</a></li>
+          <li><a href="/">Service</a></li>
           <li><a id="products" href="/prod">Products</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
-          <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
+          <li><a href="/">Contact</a></li>
+          <li><a id="vacancy" href="/">Vacancy</a></li>
+          <li><a id="login" href="/lagin"><i class="fas fa-user"></i></a></li>
         </ul>
         <div class="menu-icon">
           <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>

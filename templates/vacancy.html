@@ -585,7 +585,7 @@ a{
   nav ul li{
       padding: 4px;
       height: 900px;
-      padding-top: 0;
+      padding-top: 27px;;
      color: transparent;
   }
   nav ul li a{
@@ -634,12 +634,19 @@ a{
   position: relative;
   top: 0;
 }
-@media (min-width: 350px) and (max-width: 487px) {
+@media (min-width: 350px) and (max-width: 576px) {
   .footer{
     position: relative;
     top: 10px !important;
     height: 340px;
   }
+  .footer-col2 .social-links a i {
+        display: flex;
+        position: relative;
+        top: 25%;
+        left: 25%;
+        
+    }
   .copy{
     position: relative;
     top: 90px;
@@ -655,13 +662,13 @@ a{
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body class="vacancy-page" id="vacancy1">
   <div class="arrow">
-    <a href="#header" title="Back to Top"><span class="fas fa-angle-up"></span></a>
+    <a href="#top" title="Back to Top"><span class="fas fa-angle-up"></span></a>
   </div>
   <div class="arrow1">
     <a href="#footer" title="Scroll to Bottom" onclick="scrollToBottom()"><span class="fas fa-angle-down"></span></a>
 </div>
 <!-- Header -->
-<header class="header">
+<header class="header" id="header">
   <nav>
     <div class="logo-container">
       <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
@@ -673,14 +680,14 @@ a{
           <span class="fas fa-angle-down"></span>
         </a>
         <div class="dropdown-content" id="dropdownMenu">
-          <a id="about" href="/about">About Us</a>
-          <a href="#portfolio">Portfolio</a>
+          <a id="about" href="/about">Who We Are</a>
+          <a href="/">Portfolio</a>
         </div>
       </li>
-      <li><a href="#service">Service</a></li>
+      <li><a href="/">Service</a></li>
       <li><a id="products" href="/prod">Products</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
+      <li><a href="/">Contact</a></li>
+      <li><a id="vacancy" href="/">Vacancy</a></li>
       <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
     </ul>
     <div class="menu-icon">
@@ -746,22 +753,23 @@ a{
             <h4>Amco</h4>
             <ul>
               <li><a href="/prod">Our furniture </a></li>
-              <li><a href="/bloog">Blog</a></li>
-              <li><a href="/c">News</a></li>
-              <li><a href="/c">Event</a></li>
+              <li><a href="/bloog" id="blog">Blog</a></li>
+              <li><a href="/bloog" id="blog">News</a></li>
+              <li><a href="/bloog" id="blog">Event</a></li>
   
-            </ul>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Contact</h4>
             <ul>
-              <li><a href="#">email<br>
-              nazrawigirma598@gmail.com</a></li>
+              <li>
+                <a href="mailto:amco18630@gmail.com">email<br>
+                amco18630@gmail.com</a>
+              </li>
               <li><a href="#">Location<br>
-              Meskelflower infront of Dreamlinerhotel </a></li>
-              <li><a href="#">phone <br/>
-                091020304050</a>
+                  Meskelflower infront of Dreamlinerhotel </a></li>
+              <li><a href="tel:0945371779">phone <br />
+                0945371779</a>
               </li>
             </ul>
           </div>
@@ -769,16 +777,19 @@ a{
             <h4>follow us</h4>
             <div class="social-links">
               <a href="https://www.facebook.com/profile.php?id=61559804274395"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/amco_interiorfurniture/?igsh=MTR5b3dubWJibm9qdw%3D%3D"><i class="fab fa-instagram"></i></a>
               <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.tiktok.com/@amco_interiorfurniture?_t=8mXEfzKb4HV&_r=1"><i class="fab fa-tiktok"></i></a>
             </div>
           </div>
         </div>
         <div class="copy">
-          Copyright 2024 © || NAMIK DEVELOPMENT
+          Copyright 2024 © || 
+          <a href="https://www.instagram.com/namikdevelopment/?igsh=dG5pbzIxdDdzaTUz" class="namik">Designed By NAMIK DEVELOPMENT</a>
+            
         </div>
       </div>
-   </footer>
+    </footer>
   
   
     <script>
@@ -1012,9 +1023,8 @@ a{
         // Define your social media URLs
         const socialUrls = {
           'Telegram': 'https://telegram.org/',
-          'Instagram': 'https://www.instagram.com/',
+          'Instagram': 'https://www.instagram.com/amco_interiorfurniture/?igsh=MTR5b3dubWJibm9qdw%3D%3D',
           'Facebook': 'https://www.facebook.com/profile.php?id=61559804274395',
-          'Twitter': 'https://twitter.com/',
           'LinkedIn': 'https://www.linkedin.com/',
           'YouTube': 'https://www.youtube.com/@Amco-kv7zz',
           'TikTok': 'https://www.tiktok.com/@amco_interiorfurniture?_t=8mXEfzKb4HV&_r=1'

@@ -633,6 +633,10 @@ a{
         color: black; /* Active color for Vacancy link */
         font-weight: bold;
       }
+      body.login-page #login {
+        color: black; /* Active color for Vacancy link */
+        font-weight: bold;
+      }
       #top{
   position: relative;
   top: 0;
@@ -12982,18 +12986,37 @@ body.vacancy-page #vacancy {
     font-size: 8px; 
   }
 }
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 0px 16px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  z-index: 999;
+  cursor: pointer;
+  background-color: gray;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: lightblue !important;
+  width: 95% !important;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
     </style>
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<body class="about-page" id="vacancy1">
-  <div class="arrow">
-    <a href="#header" title="Back to Top"><span class="fas fa-angle-up"></span></a>
-  </div>
-  <div class="arrow1">
-    <a href="#footer" title="Scroll to Bottom" onclick="scrollToBottom()"><span class="fas fa-angle-down"></span></a>
-</div>
+<body class="login-page">
+ 
 <!-- Header -->
-<header class="header">
+<header class="header" id="header">
   <nav>
     <div class="logo-container">
       <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
@@ -13005,14 +13028,14 @@ body.vacancy-page #vacancy {
           <span class="fas fa-angle-down"></span>
         </a>
         <div class="dropdown-content" id="dropdownMenu">
-          <a id="about" href="/about">About Us</a>
-          <a href="#portfolio">Portfolio</a>
+          <a id="about" href="/about">Who We Are</a>
+          <a href="/">Portfolio</a>
         </div>
       </li>
-      <li><a href="#service">Service</a></li>
+      <li><a href="/">Service</a></li>
       <li><a id="products" href="/prod">Products</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
+      <li><a href="/">Contact</a></li>
+      <li><a id="vacancy" href="/">Vacancy</a></li>
       <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
     </ul>
     <div class="menu-icon">

@@ -1661,6 +1661,7 @@ nav ul{
   display: flex;
   gap: 30px;
   align-items: center;
+  right: 100px;
 }
 
 nav ul li{
@@ -11550,30 +11551,53 @@ body.vacancy-page #vacancy {
             margin-bottom: 10px;
             text-align: center;
         }
+        /* Links inside the dropdown */
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 0px 16px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  z-index: 999;
+  cursor: pointer;
+  background-color: gray;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: lightblue !important;
+  width: 80% !important;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
     </style>
 </head>
-<body>
-    <header class="header" id="blog1">
-        <nav>
-          <nav>
-            <div class="logo-container">
-              <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
+<body class="login-page">
+  <header class="header" id="header">
+    <nav>
+      <div class="logo-container">
+        <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
+      </div>
+      <ul id="menuList">
+        <li><a id="home" href="/">Home</a></li>
+        <li class="dropdown">
+          <a class="dropbtn" href="#" onclick="toggleDropdown()" onmouseover="showDropdown()">About
+            <span class="fas fa-angle-down"></span>
+          </a>
+          <div class="dropdown-content" id="dropdownMenu">
+            <a id="about" href="/about">Who We Are</a>
+            <a href="/">Portfolio</a>
           </div>
-        <ul id="menuList">
-          <li><a id="home" href="/">Home</a></li>
-          <li class="dropdown">
-              <a class="dropbtn">About
-                  <span class="fas fa-angle-down"></span>
-              </a>
-              <div class="dropdown-content">
-                  <a id="about" href="/about">About Us</a>
-                  <a  href="#portfolio">Portfolio</a>
-              </div>
-          </li>
-          <li><a href="#service">Service</a></li>
-          <li><a id="products" href="/prod">Products</a></li>
-          <li><a  href="#contact">Contact</a></li>
-          <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
+        </li>
+        <li><a href="/">Service</a></li>
+        <li><a id="products" href="/prod">Products</a></li>
+        <li><a href="/">Contact</a></li>
+        <li><a id="vacancy" href="/">Vacancy</a></li>
           <li><a id="login" href="/bagin"><i class="fas fa-user"></i></a></li>
       </ul>
           <div class="menu-icon">
