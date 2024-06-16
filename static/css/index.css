@@ -69,7 +69,7 @@ html,body
 .social-icon {
   display: block;
   font-size: 30px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   transition: transform 0.3s ease-in-out;
   position: relative;
 }
@@ -601,6 +601,13 @@ html,body
     transform: translateY(-50%);
     z-index: 90;
   }
+  .social-icon {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+  }
    /*change1*/
    .aa{
     font-family: poppins,sans-serif;
@@ -984,6 +991,7 @@ html,body
       margin-right: 10px;
       bottom: -140px; /* Adjust spacing between dots as needed */
     }
+
     .social-widget {
       font-family: poppins, sans-serif;
       position: fixed;
@@ -1206,7 +1214,7 @@ html,body
       .social-icon {
         display: block;
         font-size: 24px;
-        margin-bottom: 2px;
+        margin-bottom: 10px;
         right: 10px;
         transition: transform 0.3s ease-in-out;
         position: relative;
@@ -11455,28 +11463,7 @@ display: none;
 
 
 
-     .footer{
-      position: relative;
-      top: 310px;
-      background-color: #24262b;
-        padding: 70px 0;
-    }
-    .footer-col{
-       width: 25%;
-       padding: 0 15px;
-    }
-    .footer-col2{
-      width: 25%;
-      padding: 0 15px;
-   }
-    .footer-col h4{
-      font-size: 18px;
-      color: #ffffff;
-      text-transform: capitalize;
-      margin-bottom: 35px;
-      font-weight: 500;
-      position: relative;
-    }
+    
     .ntyr a{
       color: white;
       text-decoration: none;
@@ -11523,6 +11510,28 @@ display: none;
 
 
 
+    }
+    .footer{
+      position: relative;
+      top: 310px;
+      background-color: #24262b;
+        padding: 70px 0;
+    }
+    .footer-col{
+       width: 25%;
+       padding: 0 15px;
+    }
+    .footer-col2{
+      width: 25%;
+      padding: 0 15px;
+   }
+    .footer-col h4{
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
     }
     .footer-col2 h4{
       font-size: 18px;
@@ -11607,7 +11616,9 @@ display: none;
       /*repcaed */
       .footer{
         position: relative;
-        background-color: #000;
+      }
+      .footer ul li{
+        list-style-type: none;
       }
       .slide22{
         z-index: 30;
