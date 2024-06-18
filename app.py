@@ -188,6 +188,16 @@ def home():
     videos = SlideVideoDb.query.all()
     return render_template('home.html',slideImg=slideImg,videoSlides=videos,i=0)
 
+@app.route('/product/<int:product_id>')
+def product_detail(product_id):
+    product = Product.query.get_or_404(product_id)
+    related_products = Product.query.filter(
+        Product.id != product.id,
+        Product.name.like(f'%{product.name.split()[0]}%')
+    ).limit(4).all()
+    return render_template('product_detail.html', product=product, related_products=related_products)
+
+
 @app.route('/prod')
 def p_page():
     products = Product.query.all()

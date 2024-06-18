@@ -632,7 +632,9 @@ a{
       }
       #top{
   position: relative;
-  top: 0;
+  height: 15px;
+  z-index: -100;
+  bottom: 10px;
 }
 @media (min-width: 340px) and (max-width: 576px) {
   .footer{
@@ -732,7 +734,7 @@ a{
 
      <div id="top"></div>
 
-    <div class="container">
+    <div class="container" >
         <h1>Job Vacancies</h1>
 
         <form action="{{ url_for('search') }}" method="post">
@@ -779,7 +781,7 @@ a{
                 <a href="mailto:amco18630@gmail.com">email<br>
                 amco18630@gmail.com</a>
               </li>
-              <li><a href="https://maps.app.goo.gl/J4CjWG4xNGg5QtnW6?g_st=atm" id="locate">Location<br>
+              <li><a href="https://maps.app.goo.gl/J4CjWG4xNGg5QtnW6?g_st=atm" class="bte">Location<br>
                 New Bata Complex, next to Getfam Hotel 
                 @ Zemen Bank Branch 4th floor </a>
               </li>

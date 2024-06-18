@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AMCO</title>
     <link rel="icon" type="image/png" href="/static/images/logo.png">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/index.css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
@@ -224,12 +224,11 @@
             margin-top: 5px;
             
         }
-        #top{
-  position: relative;
-  height: 15px;
-  z-index: -100;
-  bottom: 10px;
-}
+        #topp{
+          font-size: 20px;
+          position: relative;
+          top: 0px;
+        }
         
         @media (min-width: 340px) and (max-width: 476px) {
   .footer{
@@ -243,7 +242,7 @@
       
       line-height: 40px !important;
     }
-   
+
 
     .copy{
       text-align: center;
@@ -266,12 +265,14 @@
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body class="product-page">
+  
   <div class="arrow">
-    <a href="#top" title="Back to Top"><span class="fas fa-angle-up"></span></a>
+    <a href="#topp" title="Back to Top"><span class="fas fa-angle-up"></span></a>
   </div>
   <div class="arrow1">
     <a href="#footer" title="Scroll to Bottom" onclick="scrollToBottom()"><span class="fas fa-angle-down"></span></a>
 </div>
+  
   <!-- Header -->
   <header class="header" id="header">
     <nav>
@@ -323,25 +324,82 @@
   </div>
    
    
-    <div id="top"> </div>
+    <div id="topp"> </div>
 
     <div class="container">
         <div class="title" >PRODUCT LIST</div>
-        <div class="listProduct">
-            {% for product in products %}
-            <div class="item">
-              <div class="image">
-                <a href="{{ url_for('product_detail', product_id=product.id) }}">
-                  <img src="{{ url_for('uploaded_file', filename=product.image) }}" alt="{{ product.name }}" width="100">
-              </a>
-              
-              </div>
-                <div class="name">{{ product.name }}</div>
-                <div class="price">{{ product.price }} Birr</div>
-               
-            </div>
-            {% endfor %}
+      <div class="listProduct">
+            
+        <div class="item">
+          <div class="image">
+            <a href="{{ url_for('product_detail', product_id=product.id) }}">
+              <img src="https://www.visionplusbusiness.it/materiale/header-about.jpg" alt="{{ product.name }}" width="100">
+          </a>
+          
+          </div>
+            <div class="name">bledge</div>
+            <div class="price">5000 Birr</div>
+           
         </div>
+        <div class="item">
+          <div class="image">
+            <a href="{{ url_for('product_detail', product_id=product.id) }}">
+              <img src="https://www.visionplusbusiness.it/materiale/header-about.jpg" alt="{{ product.name }}" width="100">
+          </a>
+          
+          </div>
+            <div class="name">bledge</div>
+            <div class="price">5000 Birr</div>
+           
+        </div>
+        <div class="item">
+          <div class="image">
+            <a href="{{ url_for('product_detail', product_id=product.id) }}">
+              <img src="https://www.visionplusbusiness.it/materiale/header-about.jpg" alt="{{ product.name }}" width="100">
+          </a>
+          
+          </div>
+            <div class="name">bledge</div>
+            <div class="price">5000 Birr</div>
+           
+        </div>
+        <div class="item">
+          <div class="image">
+            <a href="{{ url_for('product_detail', product_id=product.id) }}">
+              <img src="https://www.visionplusbusiness.it/materiale/header-about.jpg" alt="{{ product.name }}" width="100">
+          </a>
+          
+          </div>
+            <div class="name">bledge</div>
+            <div class="price">5000 Birr</div>
+           
+        </div>
+        <div class="item">
+          <div class="image">
+            <a href="{{ url_for('product_detail', product_id=product.id) }}">
+              <img src="https://www.visionplusbusiness.it/materiale/header-about.jpg" alt="{{ product.name }}" width="100">
+          </a>
+          
+          </div>
+            <div class="name">bledge</div>
+            <div class="price">5000 Birr</div>
+           
+        </div>
+        <div class="item">
+          <div class="image">
+            <a href="{{ url_for('product_detail', product_id=product.id) }}">
+              <img src="https://www.visionplusbusiness.it/materiale/header-about.jpg" alt="{{ product.name }}" width="100">
+          </a>
+          
+          </div>
+            <div class="name">bledge</div>
+            <div class="price">5000 Birr</div>
+           
+        </div>
+        
+    </div>
+
+
     </div>
     <footer class="footer" id="footer">
       <div class="container">

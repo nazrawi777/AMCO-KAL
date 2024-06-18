@@ -22,15 +22,57 @@
             margin: 0;
             padding: 0;
         }
- 
+        #top{
+  position: relative;
+  height: 15px;
+  z-index: -100;
+  bottom: 10px;
+}
         .footer{
   position: relative;
   top: 30px;
+}
+@media (max-width:820px) {
+  nav ul{
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px); /* Blur effect */
+      -webkit-backdrop-filter: blur(10px); /* For Safari */
+      z-index: 7;
+      gap: 0;
+      overflow: hidden;
+  }
+  .dropdown-content a{
+    font-size: 10px !important;
+    padding: 0px 10px !important;
+    background: linear-gradient(to right, gray 50%, rgba(128, 128, 128, 0) 50%) !important;
+   
+  }
+  nav ul li{
+      padding: 4px;
+      height: 900px;
+      padding-top: 20px;
+      position: relative;
+      bottom: 25px;
+     color: transparent;
+  }
+#login{
+    position: relative;
+    bottom: 20px;
+  }
 }
         @media (min-width: 350px) and (max-width: 487px) {
             .footer{
                 top: 120px;
             }
+            
     .footer-col2 .social-links a{
       display: inline-block;
       height: 30px;
@@ -49,7 +91,14 @@
 
     }
     
-   
+   .footer-col{
+    width: 32%;
+    
+   }
+   .copy{
+    position: relative;
+    top: 60px !important;
+   }
     .footer-col2 .social-links a:hover{
       color: #24262b;
       background-color: #ffffff;
@@ -59,14 +108,13 @@
       max-height: 130px;
       position: relative;
       top: 199px;
-      left: -520px;
   }
   }
         .call h2 {
     position: relative;
     font-size: 16px;
-    left: 46px;
-    bottom: 3.3px;
+    left: 43px;
+    bottom: 1.7px;
     color: lightgreen;
   }
         .navbar-default {
@@ -135,9 +183,9 @@
         }
     </style>
 </head>
-<body class="vacancy">
+<body class="vacancy-page">
     <div class="arrow">
-      <a href="#menuList" title="Back to Top"><span class="fas fa-angle-up"></span></a>
+      <a href="#top" title="Back to Top"><span class="fas fa-angle-up"></span></a>
     </div>
     <div class="arrow1">
       <a href="#footer" title="Scroll to Bottom" onclick="scrollToBottom()"><span class="fas fa-angle-down"></span></a>
@@ -156,7 +204,7 @@
             <span class="fas fa-angle-down"></span>
           </a>
           <div class="dropdown-content" id="dropdownMenu">
-            <a id="about" href="/about">WHO WE ARE</a>
+            <a id="about" href="/about">Who We Are</a>
             <a href="/">Portfolio</a>
           </div>
         </li>
@@ -164,7 +212,7 @@
         <li><a id="products" href="/prod">Products</a></li>
         <li><a href="/">Contact</a></li>
         <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
-        <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
+        <li><a id="login" href="/login"><i class="fas fa-user"></i></a></li>
       </ul>
       <div class="menu-icon">
         <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
@@ -195,6 +243,7 @@
     <a href="https://www.tiktok.com/@amco_interiorfurniture?_t=8mXEfzKb4HV&_r=1" class="social-icon " data-social="TikTok"><i class="fab fa-tiktok"></i><span class="social-name">TikTok</span></a>
   </div>
   
+  <div id="top"></div>
     <h1>Job Application - {{ job.title }}</h1>
 
     {% if job.deadline < current_time %}
@@ -256,9 +305,9 @@
                 <a href="mailto:amco18630@gmail.com">email<br>
                 amco18630@gmail.com</a>
               </li>
-              <li><a href="https://maps.app.goo.gl/J4CjWG4xNGg5QtnW6?g_st=atm">Location<br>
+               <li><a href="https://maps.app.goo.gl/J4CjWG4xNGg5QtnW6?g_st=atm" class="bte">Location<br>
                 New Bata Complex, next to Getfam Hotel 
-                <br/>@ Zemen Bank Branch 4th floor </a>
+                @ Zemen Bank Branch 4th floor </a>
               </li>
               <li><a href="tel:0945371779">phone <br />
                 0945371779</a>
