@@ -1431,7 +1431,7 @@ html,body
   
       
 
-      @media (min-width: 340px) and (max-width: 421px) {
+      @media (min-width: 320px) and (max-width: 421px) {
         /*our team*/
         /*project*/
         
@@ -1673,7 +1673,7 @@ nav {
 .logo {
   width: 120px;
   position: relative;
-  left: -10px;
+  left: 10px;
   top: 0px;
   height: auto;
   transition: transform 0.3s ease;
@@ -1814,6 +1814,8 @@ nav ul li a:hover{
   .menu-icon{
       display: block;
       z-index: 999;
+      position: relative;
+      top: 10px;
   }
   #login{
     position: relative;
@@ -2093,7 +2095,7 @@ a {
   }
   }
 
-  @media (min-width: 340px) and (max-width: 501px) {
+  @media (min-width: 320px) and (max-width: 501px) {
     /*change2*/
     nav ul li a{
       text-decoration: none;
@@ -2112,8 +2114,9 @@ a {
       position: relative;
       align-items: center;  /* Center vertically */
       justify-content: space-between;  /* Space between elements */ 
-      right: -40px;
-      bottom: 74px;
+      margin-right: -20px;
+      bottom: 70px;
+      margin-top: 15px;
       border-radius: 25px;
       display: flex;
       cursor: pointer;
@@ -3180,8 +3183,109 @@ i#next {
   }
   }
 
+  @media (min-width: 320px) and (max-width: 339px) {
 
-  @media (min-width: 336px) and (max-width: 405px) {
+  .aboutusreal{
+    width: 100%;
+    max-height: 150px;
+    background-color: #ffffff;
+    position: relative;
+    display: flex;
+  }
+  .wrapper10 {
+    flex: 1;
+    margin-top:30px;
+    max-width: 600px;
+    margin-left: 20px;
+    width: 100%;
+    max-height: 230px;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+  }
+  
+  .wrapper10 i.button {
+    position: absolute;
+    top: 38%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    background-color: #8194b1;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s linear;
+    z-index: 100;
+    cursor: pointer;
+  }
+  i.button:active {
+    transform: scale(0.94) translateY(-50%);
+  }
+  i#prev {
+    left: 10px;
+  }
+  i#next {
+    right: 10px;
+  }
+  .image-container {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+    -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+  }
+  .image-container .carousel {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s ease;
+  }
+  .carousel img {
+    height: 100%;
+    width: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+  }
+  .content-container100 {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .content100 {
+    margin-left: 10pX;
+    margin-top: 40px;
+    max-width: 500px;
+    max-height: 200px;
+    font-family: poppins , sans-serif;
+  }
+  
+  .content100 h1{
+    font-size: 12px !important;
+    position: relative;
+    bottom: 50px;
+  }
+  .content100 h2{
+    font-size: 10px !important;
+    position: relative;
+    bottom: 60px;
+  }
+  .content100 p {
+    margin: 0;
+    position: relative;
+    bottom: 70px;
+    line-height: 10px;
+    font-size: 5px !important;
+  }
+  }
+  @media (min-width: 340px) and (max-width: 405px) {
     .content100 {
       margin-left: 10pX;
       margin-top: 100px;
@@ -3190,7 +3294,7 @@ i#next {
     }
     
     .content100 h1{
-      font-size: 20px;
+      font-size: 15px;
       position: relative;
       bottom: 30px;
     }
@@ -3426,7 +3530,7 @@ i#next {
 
 }
 /* Styles for iPhone (width up to 375px) */
-@media (min-width: 340px) and (max-width: 395px) {
+@media (min-width: 320px) and (max-width: 395px) {
   .trail189 {
     margin-left: -80px;
     height: 10px; /* Adjust height for iPhone */
@@ -5320,13 +5424,13 @@ iframe {
   }
 
 }
-@media (min-width: 340px) and (max-width: 399px) {
+@media (min-width: 320px) and (max-width: 399px) {
   .slide22{
     gap: 0px !important;
   }
 
 }
-@media (min-width: 340px) and (max-width: 399px) {
+@media (min-width: 320px) and (max-width: 399px) {
   .portfolio-section1 {
     width: 100%;
     margin-top: -1300px;
@@ -6379,7 +6483,7 @@ iframe {
         }
       }
 
-      @media (min-width: 340px) and (max-width: 399px) {
+      @media (min-width: 320px) and (max-width: 399px) {
         .cr1{
           display: flex;
           flex-direction: column;
@@ -6393,7 +6497,7 @@ iframe {
           background-color: #0C7885;
         }
       }
-      @media (min-width: 340px) and (max-width: 421px) {
+      @media (min-width: 320px) and (max-width: 421px) {
 
         
         
@@ -6855,7 +6959,7 @@ input[type=text]::placeholder, textarea::placeholder {
 
  
  
-  @media (min-width: 355px) and (max-width: 421px) {
+  @media (min-width: 320px) and (max-width: 421px) {
   /*contactboxjs*/
 .container26 {
   border-radius: 5px;
@@ -9512,12 +9616,29 @@ input[type=text]::placeholder, textarea::placeholder {
   
 
 
+    @media (min-width: 320px) and (max-width: 339px){
+    .text-co1umn h1 {
+      font-size: 12px !important;
+      color: white;
+      position: relative;
+      bottom: 170px;
+      left: 120px;
+    }
+    
+    .text-co1umn p {
+      font-size: 4px !important;
+      width: 100%;
+      position: relative;
+      color: white;
+      bottom: 180px !important;
+      line-height: 10px !important;
+      left: 120px;
+    }
+  }
 
 
 
-
-
-    @media (min-width: 340px) and (max-width: 412px){
+    @media (min-width: 320px) and (max-width: 412px){
       .tri19 {
         background-color: teal;
         height: 6px;
@@ -11009,7 +11130,7 @@ display: none;
 
 
 
-                      @media (min-width: 340px) and (max-width: 420px) {
+                      @media (min-width: 320px) and (max-width: 420px) {
 
                            
                         
@@ -11229,7 +11350,7 @@ display: none;
                          }
 
                       }
-                      @media (min-width: 340px) and (max-width: 420px) {
+                      @media (min-width: 361px) and (max-width: 420px) {
                       .aboutr{
                         background-color: teal;
                         max-width: 285px;
@@ -11299,6 +11420,88 @@ display: none;
                         height: 30px;
                         position: relative;
                         left: 140px;
+                        top: 4.5rem;
+                        color: white;
+                        background-color: teal;
+                        font-size: 8px;
+                        border-top: 3px solid white;
+                        border-left: 3px solid white;
+                        border-right: 3px solid white;
+                        border-bottom: 3px solid white; /* Adjust the shadow as needed */
+                      }
+                    }
+
+
+                    @media (min-width: 320px) and (max-width: 360px) {
+                      .aboutr{
+                        background-color: teal;
+                        max-width: 285px;
+                        height: 8px;
+                        position: relative;
+                        right: -30px !important;
+                        top: 1rem;
+                      }
+                      .aboutn{
+                        max-width:80px;
+                        height: 30px;
+                        position: relative;
+                        left: 130px !important;
+                        top: -0.4rem;
+                        color: white;
+                        background-color: teal;
+                        font-size: 8px;
+                        border-top: 3px solid white;
+                        border-left: 3px solid white;
+                        border-right: 3px solid white;
+                        border-bottom: 3px solid white; /* Adjust the shadow as needed */
+                      }
+
+                      .howr{
+                        background-color: white;
+                        max-width: 285px;
+                        height: 8px;
+                        position: relative;
+                        right: -30px !important;
+                        top: 1rem;
+                      }
+                      .hown{
+                        max-width:80px;
+                        height: 30px;
+                        position: relative;
+                        left: 130px !important;
+                        top: -0.4rem;
+                        color: teal;
+                        background-color: white;
+                        font-size: 8px;
+                        border-top: 3px solid teal;
+                        border-left: 3px solid teal;
+                        border-right: 3px solid teal;
+                        border-bottom: 3px solid teal; /* Adjust the shadow as needed */
+                      }
+                      .serr{
+                        background-color: teal;
+                        max-width: 285px;
+                        height: 8px;
+                        position: relative;
+                        right: -30px !important;
+                        top: 6rem;
+                      }
+                      iframe {
+                        position: relative;
+                        bottom: 320px;
+                      }
+                       .section5{
+                        height: 370px;
+                       }
+
+                      .portfolio-section{
+                        height: 900px;
+                      }
+                      .sern{
+                        max-width:80px;
+                        height: 30px;
+                        position: relative;
+                        left: 135px !important;
                         top: 4.5rem;
                         color: white;
                         background-color: teal;
@@ -11837,7 +12040,7 @@ display: none;
 /*@media screen and (min-width: 340px) and (max-width: 400px) {
 
 }**/
-    @media screen and (min-width: 340px) and (max-width: 420px) {
+    @media screen and (min-width: 320px) and (max-width: 420px) {
       iframe {
         position: relative;
         bottom: 400px !important;
@@ -12163,7 +12366,7 @@ display: none;
   z-index: 20; 
 }
      
-    @media (min-width: 340px) and (max-width: 487px) {
+    @media (min-width: 320px) and (max-width: 487px) {
     .footer-col2 .social-links a{
       display: inline-block;
       height: 30px;
@@ -12179,11 +12382,18 @@ display: none;
     .bte{
       white-space: wrap !important;
     }
+    .bee{
+      white-space: wrap !important;
+    }
     .footer-col2{
       position: relative;
-      right: 300px;
+      align-items: right;
+      align-content: right;
+      justify-content: center;
+      right: 320px;
       margin-bottom: 10px;
     }
+
     .copy{
       text-align: center;
       color: teal;
@@ -12225,6 +12435,9 @@ display: none;
       max-height: 130px;
       position: relative;
       top: 190px;
+  }
+  .footer-col{
+    width: 30%;
   }
   }
 
@@ -12793,7 +13006,7 @@ body.login-page #login{
     line-height: 33px;
   }
 }
-@media (min-width: 355px) and (max-width: 479px) {
+@media (min-width: 320px) and (max-width: 479px) {
   .txt{
     width: 110%;
 
@@ -12802,7 +13015,7 @@ body.login-page #login{
  
   .ct h2{
     border-radius: 14px;
-    margin-left: 250px;
+    margin-left: 240px;
     text-align: center !important;
     align-items: center !important;
     align-content: center !important;

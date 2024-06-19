@@ -12,7 +12,8 @@
   <link rel="icon" type="image/png" href="/static/images/logo.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AMCO</title>  <style>
+  <title>AMCO</title> 
+   <style>
         body {
             font-family: 'Poppins', sans-serif;
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -188,7 +189,8 @@ h2 {
   z-index: -100;
   bottom: 10px;
 }
-@media (min-width: 350px) and (max-width: 487px) {
+
+@media (min-width: 340px) and (max-width: 487px) {
             .footer{
                 top: 120px;
             }
@@ -218,6 +220,50 @@ h2 {
    .copy{
     position: relative;
     top: 30px !important;
+   }
+    .footer-col2 .social-links a:hover{
+      color: #24262b;
+      background-color: #ffffff;
+    }
+    .footer-col2{
+      width: 100%;
+      max-height: 130px;
+      position: relative;
+      top: 199px;
+  }
+  }
+  @media (min-width: 320px) and (max-width: 339px) {
+            .footer{
+                top: 20px;
+            }
+            
+    .footer-col2 .social-links a{
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      background-color: rgba(255,255,255,0.2);
+      margin: -16px 20px 80px 0;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
+    .footer-col2 .social-links{
+      display: flex;
+      position: relative;
+    }
+    
+   .footer-col{
+    width: 24% !important;
+    
+   }
+   .chd{
+   white-space: nowrap !important;
+   }
+   .copy{
+    position: relative;
+    top: -10px !important;
    }
     .footer-col2 .social-links a:hover{
       color: #24262b;
@@ -377,7 +423,7 @@ h2 {
             <h4>Contact</h4>
             <ul>
               <li>
-                <a href="mailto:amco18630@gmail.com">email<br>
+                <a href="mailto:amco18630@gmail.com" class="chd">email<br>
                 amco18630@gmail.com</a>
               </li>
               <li><a href="https://maps.app.goo.gl/J4CjWG4xNGg5QtnW6?g_st=atm" class="bte">Location<br>

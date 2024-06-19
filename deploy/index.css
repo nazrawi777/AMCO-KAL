@@ -1431,7 +1431,7 @@ html,body
   
       
 
-      @media (min-width: 340px) and (max-width: 421px) {
+      @media (min-width: 320px) and (max-width: 421px) {
         /*our team*/
         /*project*/
         
@@ -1673,7 +1673,7 @@ nav {
 .logo {
   width: 120px;
   position: relative;
-  left: -10px;
+  left: 10px;
   top: 0px;
   height: auto;
   transition: transform 0.3s ease;
@@ -1814,6 +1814,8 @@ nav ul li a:hover{
   .menu-icon{
       display: block;
       z-index: 999;
+      position: relative;
+      top: 10px;
   }
   #login{
     position: relative;
@@ -2093,7 +2095,7 @@ a {
   }
   }
 
-  @media (min-width: 340px) and (max-width: 501px) {
+  @media (min-width: 320px) and (max-width: 501px) {
     /*change2*/
     nav ul li a{
       text-decoration: none;
@@ -2112,8 +2114,9 @@ a {
       position: relative;
       align-items: center;  /* Center vertically */
       justify-content: space-between;  /* Space between elements */ 
-      right: -40px;
-      bottom: 74px;
+      margin-right: -20px;
+      bottom: 70px;
+      margin-top: 15px;
       border-radius: 25px;
       display: flex;
       cursor: pointer;
@@ -3426,7 +3429,7 @@ i#next {
 
 }
 /* Styles for iPhone (width up to 375px) */
-@media (min-width: 340px) and (max-width: 395px) {
+@media (min-width: 320px) and (max-width: 395px) {
   .trail189 {
     margin-left: -80px;
     height: 10px; /* Adjust height for iPhone */
@@ -5320,13 +5323,13 @@ iframe {
   }
 
 }
-@media (min-width: 340px) and (max-width: 399px) {
+@media (min-width: 320px) and (max-width: 399px) {
   .slide22{
     gap: 0px !important;
   }
 
 }
-@media (min-width: 340px) and (max-width: 399px) {
+@media (min-width: 320px) and (max-width: 399px) {
   .portfolio-section1 {
     width: 100%;
     margin-top: -1300px;
@@ -6379,7 +6382,7 @@ iframe {
         }
       }
 
-      @media (min-width: 340px) and (max-width: 399px) {
+      @media (min-width: 320px) and (max-width: 399px) {
         .cr1{
           display: flex;
           flex-direction: column;
@@ -6393,7 +6396,7 @@ iframe {
           background-color: #0C7885;
         }
       }
-      @media (min-width: 340px) and (max-width: 421px) {
+      @media (min-width: 320px) and (max-width: 421px) {
 
         
         
@@ -9517,7 +9520,7 @@ input[type=text]::placeholder, textarea::placeholder {
 
 
 
-    @media (min-width: 340px) and (max-width: 412px){
+    @media (min-width: 320px) and (max-width: 412px){
       .tri19 {
         background-color: teal;
         height: 6px;
@@ -11009,7 +11012,7 @@ display: none;
 
 
 
-                      @media (min-width: 340px) and (max-width: 420px) {
+                      @media (min-width: 320px) and (max-width: 420px) {
 
                            
                         
@@ -11229,7 +11232,7 @@ display: none;
                          }
 
                       }
-                      @media (min-width: 340px) and (max-width: 420px) {
+                      @media (min-width: 320px) and (max-width: 420px) {
                       .aboutr{
                         background-color: teal;
                         max-width: 285px;
@@ -11837,7 +11840,7 @@ display: none;
 /*@media screen and (min-width: 340px) and (max-width: 400px) {
 
 }**/
-    @media screen and (min-width: 340px) and (max-width: 420px) {
+    @media screen and (min-width: 320px) and (max-width: 420px) {
       iframe {
         position: relative;
         bottom: 400px !important;
@@ -12163,7 +12166,7 @@ display: none;
   z-index: 20; 
 }
      
-    @media (min-width: 340px) and (max-width: 487px) {
+    @media (min-width: 320px) and (max-width: 487px) {
     .footer-col2 .social-links a{
       display: inline-block;
       height: 30px;
@@ -12179,11 +12182,18 @@ display: none;
     .bte{
       white-space: wrap !important;
     }
+    .bee{
+      white-space: wrap !important;
+    }
     .footer-col2{
       position: relative;
-      right: 300px;
+      align-items: right;
+      align-content: right;
+      justify-content: center;
+      right: 320px;
       margin-bottom: 10px;
     }
+
     .copy{
       text-align: center;
       color: teal;
@@ -12225,6 +12235,9 @@ display: none;
       max-height: 130px;
       position: relative;
       top: 190px;
+  }
+  .footer-col{
+    width: 30%;
   }
   }
 
