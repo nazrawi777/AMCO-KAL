@@ -28,6 +28,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
+
 class ActionHistory(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     entity_type = db.Column(db.String(50))
@@ -60,6 +61,7 @@ class Product(db.Model):
         db.session.add(log_entry)
         db.session.commit()
 
+
 class AppliedJob(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     job_id = db.Column(db.Integer, nullable=False)
@@ -81,6 +83,8 @@ class AppliedJob(db.Model):
         db.session.commit()
 
 # Sample BlogPost model
+
+
 class BlogPost(db.Model):
     __tablename__ = 'blog_posts'
 
@@ -94,24 +98,29 @@ class BlogPost(db.Model):
         self.content = content
         self.author = author
 
+
 class Event(db.Model):
     __tablename__ = 'events'
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
-    description = db.Column(db.String(100), nullable=False)  # Add a description field
-    date = db.Column(db.Date, nullable=False) 
+    # Add a description field
+    description = db.Column(db.String(100), nullable=False)
+    date = db.Column(db.Date, nullable=False)
     location = db.Column(db.String(100), nullable=False)
 
     def __repr__(self):
         return f"<Event(title='{self.title}', date='{self.date}', location='{self.location}')>"
 
 # Sample NewsArticle model
+
+
 class NewsArticle(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
     content = db.Column(db.Text, nullable=False)
     author = db.Column(db.String(100), nullable=False)
+
 
 class Job(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -149,6 +158,7 @@ class Job(db.Model):
         db.session.add(log_entry)
         db.session.commit()
 
+
 class SliderDb(db.Model):
     __tablename__ = 'slider_db'
     id = db.Column(db.Integer, primary_key=True)
@@ -163,7 +173,8 @@ class SliderDb(db.Model):
             'url': self.url,
             'name': self.name
             # add other attributes if needed
-        } 
+        }
+
 
 class SlideVideoDb(db.Model):
     __tablename__ = 'slide_video'
@@ -180,13 +191,70 @@ class SlideVideoDb(db.Model):
             'name': self.name
             # add other attributes if needed
         }
-    
+
+
+class YoutubeVideosLinks(db.Model):
+    __tablename__ = 'youtube_videos'
+    id = db.Column(db.Integer, primary_key=True)
+    url = db.Column(db.String(400), nullable=False)
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            'url': self.url,
+        }
+
+
+class AboutSlide(db.Model):
+    __tablename__ = 'about_slide'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(200), nullable=False)
+    public_id = db.Column(db.String(200), nullable=False)
+    url = db.Column(db.String(200), nullable=False)
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'public_id': self.public_id,
+            'url': self.url,
+        }
+
+
+class ClientList(db.Model):
+    __tablename__ = 'client_list'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(200), nullable=False)
+    public_id = db.Column(db.String(200), nullable=False)
+    url = db.Column(db.String(200), nullable=False)
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'public_id': self.public_id,
+            'url': self.url,
+        }
+
+
 @app.route('/')
 @app.route('/home')
 def home():
-    slideImg =SliderDb.query.all()
+    slideImg = SliderDb.query.all()
     videos = SlideVideoDb.query.all()
-    return render_template('home.html',slideImg=slideImg,videoSlides=videos,i=0)
+
+    links = YoutubeVideosLinks.query.all()
+    client_list = ClientList.query.all()
+    about_img = AboutSlide.query.all()
+
+    datas = {
+        "links": links,
+        "client_list": client_list,
+        "about_img": about_img
+    }
+
+    return render_template('home.html', slideImg=slideImg, videoSlides=videos, i=0, data=datas)
+
 
 @app.route('/product/<int:product_id>')
 def product_detail(product_id):
@@ -203,10 +271,13 @@ def p_page():
     products = Product.query.all()
     return render_template('prod.html', products=products)
 
+
 app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg', 'gif'}
+
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
+
 
 # Set Cloudinary credentials
 app.config['CLOUDINARY_CLOUD_NAME'] = 'docffnxmn'
@@ -221,11 +292,11 @@ cloudinary.config(
 )
 
 
-@app.route('/login/admin',methods=['GET','POST'])
+@app.route('/login/admin', methods=['GET', 'POST'])
 def admin():
     if 'admin_logged_in' not in session or not session['admin_logged_in']:
         return redirect(url_for('login'))
-    
+
     if request.method == 'POST':
         if 'file' not in request.files:
             flash('No file part')
@@ -235,10 +306,11 @@ def admin():
             flash('No selected file')
             return redirect(request.url)
         if file and allowed_file(file.filename):
-        
+
             # Upload the file to Cloudinary
-            upload_result = cloudinary.uploader.upload(file, resource_type='auto')
-            
+            upload_result = cloudinary.uploader.upload(
+                file, resource_type='auto')
+
             newSlider = SliderDb(
                 name=file.filename,
                 public_id=upload_result['public_id'],
@@ -250,16 +322,25 @@ def admin():
 
             return "File successfully uploaded"
     products = Product.query.all()
-    slideImg =SliderDb.query.all()
+    slideImg = SliderDb.query.all()
     slideVideo = SlideVideoDb.query.all()
 
-    for obj in slideImg:
-        print(json.dumps(obj.to_dict()))
-    for obj in slideVideo:
-        print(json.dumps(obj.to_dict()))
-    return render_template('admin.html', products=products,slideImg=slideImg,slideVideo=slideVideo)
+    links = YoutubeVideosLinks.query.all()
+    client_list = ClientList.query.all()
+    about_img = AboutSlide.query.all()
 
-@app.route('/sidevideo/upload',methods=['POST'])
+    datas = {
+        "products": products,
+        "slideImg": slideImg,
+        "slideVideo": slideVideo,
+        "links": links,
+        "client_list": client_list,
+        "about_img": about_img
+    }
+    return render_template('admin.html', data=datas)
+
+
+@app.route('/sidevideo/upload', methods=['POST'])
 def upload_video():
     if request.method == 'POST':
         if 'file' not in request.files:
@@ -271,8 +352,9 @@ def upload_video():
             return redirect(request.url)
         if file:
             # Upload the file to Cloudinary
-            upload_result = cloudinary.uploader.upload(file, resource_type='auto')
-            
+            upload_result = cloudinary.uploader.upload(
+                file, resource_type='auto')
+
             newSlidevideo = SlideVideoDb(
                 name=file.filename,
                 public_id=upload_result['public_id'],
@@ -282,41 +364,131 @@ def upload_video():
             db.session.commit()
             flash('File successfully uploaded')
             if cloudinary:
-                return jsonify({ 'status': 'success', 'message': 'Slider upload successfully'})
-    return jsonify({ 'status': 'error', 'message': 'Something went wrong'})
-    
+                return jsonify({'status': 'success', 'message': 'Slider upload successfully'})
+    return jsonify({'status': 'error', 'message': 'Something went wrong'})
+
+
+@app.route('/youtube-link/upload', methods=['POST'])
+def upload_link():
+    if request.method == 'POST':
+        link = request.values.get('link')
+        print("*"*10, "link", "*"*10)
+        print(link)
+        if link != '':
+            newYoutubevideo = YoutubeVideosLinks(
+                url=request.values.get('link')
+            )
+            db.session.add(newYoutubevideo)
+            db.session.commit()
+            flash('Link successfully uploaded')
+            return jsonify({'status': 'success', 'message': 'Link upload successfully'})
+        flash('link is required')
+        return redirect(request.url)
+    return jsonify({'status': 'error', 'message': 'Something went wrong'})
+
+
+@app.route('/about-img/upload', methods=['POST'])
+def upload_about_img():
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['file']
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file:
+            # Upload the file to Cloudinary
+            upload_result = cloudinary.uploader.upload(
+                file, resource_type='auto')
+
+            newSlidevideo = AboutSlide(
+                name=file.filename,
+                public_id=upload_result['public_id'],
+                url=upload_result['secure_url']
+            )
+            db.session.add(newSlidevideo)
+            db.session.commit()
+            print('File successfully uploaded')
+            flash('File successfully uploaded')
+            if cloudinary:
+                return jsonify({'status': 'success', 'message': 'Slider upload successfully'})
+    return jsonify({'status': 'error', 'message': 'Something went wrong'})
+
+
+@app.route('/client-log/upload', methods=['POST'])
+def upload_client_img():
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['file']
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file:
+            # Upload the file to Cloudinary
+            upload_result = cloudinary.uploader.upload(
+                file, resource_type='auto')
+
+            newSlidevideo = ClientList(
+                name=file.filename,
+                public_id=upload_result['public_id'],
+                url=upload_result['secure_url']
+            )
+            db.session.add(newSlidevideo)
+            db.session.commit()
+            print('File successfully uploaded')
+            flash('File successfully uploaded')
+            if cloudinary:
+                return jsonify({'status': 'success', 'message': 'Slider upload successfully'})
+    return jsonify({'status': 'error', 'message': 'Something went wrong'})
 
 
 @app.route('/slide/delete/<string:id>', methods=['GET', 'POST'])
 def delete_slider(id):
     try:
-        if request.method == "POST": 
-            resource_type= request.values.get('type')
-            delete_result =""
-            if resource_type =='video':
+        if request.method == "POST":
+            resource_type = request.values.get('type')
+            delete_result = ""
+            if resource_type == 'video':
                 delete_result = cloudinary.uploader\
-                    .destroy(id, resource_type = "video")
+                    .destroy(id, resource_type="video")
+            elif request.values.get("type") == "link":
+                print(request.values.get("type"))
+                YoutubeVideosLinks.query.filter_by(id=id).delete()
+                db.session.commit()
+                return jsonify({'status': 'success', 'message': 'deleted successfully'})
             else:
                 delete_result = cloudinary.uploader\
-                .destroy(id)
+                    .destroy(id)
             print(delete_result)
             if delete_result['result'] == 'ok':
                 slider_type = request.values.get('type')
                 if slider_type == 'image':
                     SliderDb.query.filter_by(public_id=id).delete()
                     db.session.commit()
-                    return jsonify({ 'status': 'success', 'message': 'Slider deleted successfully'})
+                    return jsonify({'status': 'success', 'message': 'Slider deleted successfully'})
+                elif slider_type == 'about':
+                    AboutSlide.query.filter_by(public_id=id).delete()
+                    db.session.commit()
+                    return jsonify({'status': 'success', 'message': 'Slider deleted successfully'})
+                elif slider_type == 'logo':
+                    ClientList.query.filter_by(public_id=id).delete()
+                    db.session.commit()
+                    return jsonify({'status': 'success', 'message': 'Slider deleted successfully'})
                 elif slider_type == 'video':
                     SlideVideoDb.query.filter_by(public_id=id).delete()
                     db.session.commit()
-                    return jsonify({ 'status': 'success', 'message': 'Slider deleted successfully'})
+                    return jsonify({'status': 'success', 'message': 'Slider deleted successfully'})
                 else:
-                    return jsonify({ 'status': 'error', 'message': 'Failed to delete item'})
+                    return jsonify({'status': 'error', 'message': 'Failed to delete item'})
             else:
-                return jsonify({ 'status': 'error', 'message': 'Failed to delete item'})
+                return jsonify({'status': 'error', 'message': 'Failed to delete item'})
     except cloudinary.exceptions.Error as e:
-        return jsonify({ 'status': 'error', 'message': 'Failed to delete item'})
+        return jsonify({'status': 'error', 'message': 'Failed to delete item'})
     return redirect(request.url)
+
 
 @app.route('/admin/add_product', methods=['GET', 'POST'])
 def add_product():
@@ -331,21 +503,25 @@ def add_product():
             image_file = request.files['image']
             if image_file.filename != '':
                 filename = secure_filename(image_file.filename)
-                image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                image_path = os.path.join(
+                    app.config['UPLOAD_FOLDER'], filename)
                 image_file.save(image_path)
             else:
                 flash('No image selected.', 'error')
                 return redirect(request.url)
 
-        new_product = Product(name=name, price=price, image=filename, description=description)
+        new_product = Product(name=name, price=price,
+                              image=filename, description=description)
         db.session.add(new_product)
         db.session.commit()
-        
-        new_product.log_action('Added', f"Product '{name}' added successfully.")
+
+        new_product.log_action('Added', f"Product '{
+                               name}' added successfully.")
 
         flash('Product added successfully.', 'success')
         return redirect(url_for('admin'))
     return render_template('add_product.html')
+
 
 @app.route('/admin/edit_product/<int:product_id>', methods=['GET', 'POST'])
 def edit_product(product_id):
@@ -356,23 +532,25 @@ def edit_product(product_id):
         product.name = request.form['name']
         product.price = request.form['price']
         product.description = request.form['description']
-        
+
         if 'image' in request.files:
             image_file = request.files['image']
             if image_file.filename != '':
                 filename = secure_filename(image_file.filename)
-                image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                image_path = os.path.join(
+                    app.config['UPLOAD_FOLDER'], filename)
                 image_file.save(image_path)
                 product.image = filename
 
         db.session.commit()
         # Assuming you have a product instance named 'product'
-        product.log_action('Edited', f"Product '{product.name}' edited successfully.")
-
+        product.log_action('Edited', f"Product '{
+                           product.name}' edited successfully.")
 
         flash('Product updated successfully.', 'success')
         return redirect(url_for('admin'))
     return render_template('edit_product.html', product=product)
+
 
 @app.route('/admin/delete_product/<int:product_id>', methods=['POST'])
 def delete_product(product_id):
@@ -383,11 +561,12 @@ def delete_product(product_id):
     db.session.commit()
 
     # Assuming you have a product instance named 'product'
-    product.log_action('Deleted', f"Product '{product.name}' deleted successfully.")
-
+    product.log_action('Deleted', f"Product '{
+                       product.name}' deleted successfully.")
 
     flash('Product deleted successfully.', 'success')
     return redirect(url_for('admin'))
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -401,10 +580,12 @@ def login():
             flash('Invalid username or password.', 'error')
     return render_template('login.html')
 
+
 @app.route('/logout')
 def logout():
     session.pop('admin_logged_in', None)
     return redirect(url_for('login'))
+
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
@@ -417,9 +598,11 @@ def add_job():
         title = request.form['title']
         description = request.form['description']
         requirements = request.form['requirements']
-        deadline = datetime.strptime(request.form['deadline'], '%Y-%m-%dT%H:%M')
+        deadline = datetime.strptime(
+            request.form['deadline'], '%Y-%m-%dT%H:%M')
 
-        job = Job(title=title, description=description, requirements=requirements, deadline=deadline)
+        job = Job(title=title, description=description,
+                  requirements=requirements, deadline=deadline)
         db.session.add(job)
         db.session.commit()
 
@@ -440,10 +623,12 @@ def delete_job(job_id):
 
     return redirect(url_for('vadmin'))
 
+
 @app.route('/vacancy')
 def vacancy():
     jobs = Job.query.filter_by(is_active=True).all()
     return render_template('vacancy.html', jobs=jobs)
+
 
 @app.route('/search', methods=['GET', 'POST'])
 def search():
@@ -452,6 +637,7 @@ def search():
         jobs = Job.query.filter(Job.title.ilike(f'%{search_term}%')).all()
         return render_template('search_results.html', jobs=jobs, search_term=search_term)
     return redirect(url_for('home'))
+
 
 @app.route('/lagin', methods=['GET', 'POST'])
 def lagin():
@@ -467,10 +653,12 @@ def lagin():
 
     return render_template('lagin.html')
 
+
 @app.route('/lagout')
 def lagout():
     session.pop('admin_logged_in', None)
     return redirect(url_for('lagin'))
+
 
 @app.route('/apply/<int:job_id>', methods=['GET', 'POST'])
 def apply(job_id):
@@ -505,15 +693,18 @@ def apply(job_id):
 
     return render_template('apply.html', job=job, current_time=current_time)
 
+
 @app.route('/lagin/vadmin')
 def vadmin():
     jobs = Job.query.all()
     return render_template('vadmin.html', jobs=jobs)
 
+
 @app.route('/vadmin/applied_jobs/<int:job_id>')
 def applied_jobs(job_id):
     applied_jobs = AppliedJob.query.filter_by(job_id=job_id).all()
     return render_template('applied_jobs.html', applied_jobs=applied_jobs, job_id=job_id)
+
 
 @app.route('/vadmin/delete_applied_job/<int:applied_job_id>', methods=['POST'])
 def delete_applied_job(applied_job_id):
@@ -521,15 +712,18 @@ def delete_applied_job(applied_job_id):
     db.session.delete(applied_job)
     db.session.commit()
 
-    applied_job.log_action('Deleted', f"Applied job with ID '{applied_job_id}' deleted successfully.")
+    applied_job.log_action('Deleted', f"Applied job with ID '{
+                           applied_job_id}' deleted successfully.")
 
     return redirect(url_for('applied_jobs', job_id=applied_job.job_id))
+
 
 @app.route('/download_cv/<path:cv_path>')
 def download_cv(cv_path):
     cv_directory = app.config['UPLOAD_FOLDER']
     filename = os.path.basename(cv_path)
     return send_from_directory(cv_directory, filename, as_attachment=True)
+
 
 class Admin(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -547,7 +741,6 @@ def bloog():
     return render_template('c.html', blog_posts=blog_posts, events=events, news_articles=news_articles)
 
 
-
 @app.route('/bagin', methods=['GET', 'POST'])
 def bagin():
     if request.method == 'POST':
@@ -560,10 +753,12 @@ def bagin():
             flash('Invalid username or password.', 'error')
     return render_template('bagin.html')
 
+
 @app.route('/bagout')
 def bagout():
     session.pop('admin_logged_in', None)
     return redirect(url_for('home'))
+
 
 @app.route('/badmin')
 def badmin():
@@ -573,6 +768,8 @@ def badmin():
     return render_template('badmin.html', posts=posts, articles=articles, events=events)
 
 # Blog post routes
+
+
 @app.route('/badmin/blog/create', methods=['GET', 'POST'])
 def create_blog_post():
     if request.method == 'POST':
@@ -586,6 +783,7 @@ def create_blog_post():
         return redirect(url_for('badmin'))
     return render_template('create_blog_post.html')
 
+
 @app.route('/badmin/blog/edit/<int:id>', methods=['GET', 'POST'])
 def edit_blog_post(id):
     post = BlogPost.query.get(id)
@@ -598,15 +796,18 @@ def edit_blog_post(id):
         return redirect(url_for('badmin'))  # Changed from 'admin' to 'badmin'
     return render_template('edit_blog_post.html', post=post)
 
+
 @app.route('/badmin/blog/delete/<int:id>', methods=['POST'])
 def delete_blog_post(id):
     post = BlogPost.query.get(id)
     db.session.delete(post)
     db.session.commit()
     flash('Blog post deleted successfully', 'success')
-    return redirect(url_for('badmin')) 
+    return redirect(url_for('badmin'))
 
 # Event routes
+
+
 @app.route('/badmin/events/create', methods=['GET', 'POST'])
 def create_event():
     if request.method == 'POST':
@@ -614,12 +815,14 @@ def create_event():
         description = request.form['description']
         date = datetime.strptime(request.form['date'], '%Y-%m-%d')
         location = request.form['location']
-        new_event = Event(title=title, description=description, date=date, location=location)
+        new_event = Event(title=title, description=description,
+                          date=date, location=location)
         db.session.add(new_event)
         db.session.commit()
         flash('Event created successfully', 'success')
         return redirect(url_for('badmin'))
     return render_template('create_event.html')
+
 
 @app.route('/badmin/events/edit/<int:id>', methods=['GET', 'POST'])
 def edit_event(id):
@@ -634,6 +837,7 @@ def edit_event(id):
         return redirect(url_for('badmin'))  # Changed from 'admin' to 'badmin'
     return render_template('edit_event.html', event=event)
 
+
 @app.route('/badmin/events/delete/<int:id>', methods=['POST'])
 def delete_event(id):
     event = Event.query.get(id)
@@ -643,6 +847,8 @@ def delete_event(id):
     return redirect(url_for('badmin'))  # Changed from 'admin' to 'badmin'
 
 # News article routes
+
+
 @app.route('/badmin/news/create', methods=['GET', 'POST'])
 def create_news_article():
     if request.method == 'POST':
@@ -656,6 +862,7 @@ def create_news_article():
         return redirect(url_for('badmin'))
     return render_template('create_news_article.html')
 
+
 @app.route('/badmin/news/edit/<int:id>', methods=['GET', 'POST'])
 def edit_news_article(id):
     article = NewsArticle.query.get(id)
@@ -668,6 +875,7 @@ def edit_news_article(id):
         return redirect(url_for('badmin'))
     return render_template('edit_news_article.html', article=article)
 
+
 @app.route('/badmin/news/delete/<int:id>', methods=['POST'])
 def delete_news_article(id):
     article = NewsArticle.query.get(id)
@@ -676,20 +884,23 @@ def delete_news_article(id):
     flash('News article deleted successfully', 'success')
     return redirect(url_for('badmin'))
 
+
 @app.route('/sagin/super')
 def super_view():
     if 'admin_logged_in' not in session or not session['admin_logged_in']:
         return redirect(url_for('sagin'))
-    
-    actions = ActionHistory.query.order_by(ActionHistory.timestamp.desc()).all()
-    
+
+    actions = ActionHistory.query.order_by(
+        ActionHistory.timestamp.desc()).all()
+
     return render_template('all.html', actions=actions)
+
 
 @app.route('/sagin/delete_action/<int:action_id>', methods=['POST'])
 def delete_action(action_id):
     if 'admin_logged_in' not in session or not session['admin_logged_in']:
         return redirect(url_for('sagin'))
-    
+
     action = ActionHistory.query.get_or_404(action_id)
     db.session.delete(action)
     db.session.commit()
@@ -709,10 +920,12 @@ def sagin():
             flash('Invalid username or password.', 'error')
     return render_template('sagin.html')
 
+
 @app.route('/sagout')
 def sagout():
     session.pop('admin_logged_in', None)
     return redirect(url_for('home'))
+
 
 class TeamMember(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -723,18 +936,20 @@ class TeamMember(db.Model):
     def __repr__(self):
         return f"TeamMember(id={self.id}, name='{self.name}', job_title='{self.job_title}')"
 
+
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
+
 
 @app.route('/tagin/team/add', methods=['POST'])
 def add_member():
     name = request.form['name']
-    
+
     if 'job_title' in request.form:
         job_title = request.form['job_title']
     else:
         return "The 'job_title' field is missing from the request.", 400
-    
+
     photo = request.files.get('photo')
 
     if not photo:
@@ -747,17 +962,20 @@ def add_member():
         photo.save(photo_path)
         photo_url = url_for('uploaded_file', filename=filename)
 
-        new_member = TeamMember(name=name, job_title=job_title, photo_url=photo_url)
+        new_member = TeamMember(
+            name=name, job_title=job_title, photo_url=photo_url)
         db.session.add(new_member)
         db.session.commit()
         return redirect(url_for('team'))
     else:
         return 'Invalid file type.', 400
 
+
 @app.route('/about')
 def about():
     team_members = TeamMember.query.all()
     return render_template('about.html', team_members=team_members)
+
 
 @app.route('/tagin/team/edit/<int:member_id>', methods=['GET', 'POST'])
 def edit_member(member_id):
@@ -775,6 +993,7 @@ def edit_member(member_id):
         return redirect(url_for('team'))
     return render_template('edit_member.html', member=member)
 
+
 @app.route('/tagin/team/delete/<int:member_id>', methods=['GET'])
 def delete_member(member_id):
     member = TeamMember.query.get(member_id)
@@ -782,6 +1001,7 @@ def delete_member(member_id):
         db.session.delete(member)
         db.session.commit()
     return redirect(url_for('team'))
+
 
 @app.route('/tagin', methods=['GET', 'POST'])
 def tagin():
@@ -797,6 +1017,7 @@ def tagin():
 
     return render_template('tagin.html')
 
+
 @app.route('/tagout')
 def tagout():
     session.pop('admin_logged_in', None)
@@ -807,6 +1028,7 @@ def tagout():
 def team():
     team_members = TeamMember.query.all()
     return render_template('team.html', team_members=team_members)
+
 
 if __name__ == '__main__':
     with app.app_context():

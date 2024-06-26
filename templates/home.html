@@ -68,12 +68,18 @@
 
 
   <div class="social-widget">
-    <a href="#" class="social-icon " data-social="Telegram"><i class="fab fa-telegram"></i><span class="social-name">Telegram</span></a>
-    <a href="https://www.instagram.com/amco_interiorfurniture/?igsh=MTR5b3dubWJibm9qdw%3D%3D" class="social-icon " data-social="Instagram"><i class="fab fa-instagram"></i><span class="social-name">Instagram</span></a>
-    <a href="https://www.facebook.com/profile.php?id=61559804274395" class="social-icon " data-social="Facebook"><i class="fab fa-facebook"></i><span class="social-name">Facebook</span></a>
-    <a href="#" class="social-icon " data-social="LinkedIn"><i class="fab fa-linkedin"></i><span class="social-name">LinkedIn</span></a>
-    <a href="https://www.youtube.com/@Amco-kv7zz" class="social-icon " data-social="YouTube"><i class="fab fa-youtube"></i><span class="social-name">YouTube</span></a>
-    <a href="https://www.tiktok.com/@amco_interiorfurniture?_t=8mXEfzKb4HV&_r=1" class="social-icon " data-social="TikTok"><i class="fab fa-tiktok"></i><span class="social-name">TikTok</span></a>
+    <a href="#" class="social-icon " data-social="Telegram"><i class="fab fa-telegram"></i><span
+        class="social-name">Telegram</span></a>
+    <a href="https://www.instagram.com/amco_interiorfurniture/?igsh=MTR5b3dubWJibm9qdw%3D%3D" class="social-icon "
+      data-social="Instagram"><i class="fab fa-instagram"></i><span class="social-name">Instagram</span></a>
+    <a href="https://www.facebook.com/profile.php?id=61559804274395" class="social-icon " data-social="Facebook"><i
+        class="fab fa-facebook"></i><span class="social-name">Facebook</span></a>
+    <a href="#" class="social-icon " data-social="LinkedIn"><i class="fab fa-linkedin"></i><span
+        class="social-name">LinkedIn</span></a>
+    <a href="https://www.youtube.com/@Amco-kv7zz" class="social-icon " data-social="YouTube"><i
+        class="fab fa-youtube"></i><span class="social-name">YouTube</span></a>
+    <a href="https://www.tiktok.com/@amco_interiorfurniture?_t=8mXEfzKb4HV&_r=1" class="social-icon "
+      data-social="TikTok"><i class="fab fa-tiktok"></i><span class="social-name">TikTok</span></a>
   </div>
 
   <!-- Page Content -->
@@ -142,10 +148,9 @@
       <i class="fa-solid fa-arrow-left button" id="prev"></i>
       <div class="image-container">
         <div class="carousel">
-          <img src="/static/images/byd.png" alt="" />
-          <img src="/static/images/EI7A3699.jpg" />
-          <img src="/static/images/byd.png" />
-
+          {% for img in data["about_img"] %}
+          <img src="{{img.url}}" alt="" />
+          {% endfor %}
         </div>
         <i class="fa-solid fa-arrow-right button" id="next"></i>
       </div>
@@ -158,7 +163,7 @@
 
 
 
-    
+
 
 
 
@@ -283,93 +288,93 @@
           </div>
         </div> -->
         <div id="next1"> > </div>
-        <div id="prev1"> <
-        </div>
-        <!--crud videolider-->
-      </div>
-
-      <div class="servv">
-        <div class="image-co1umn20">
-          <img src="/static/images/servi3.png" alt="Your Image" class="image210" />
-        </div>
-        <div class="text-co1umn20">
-          <h1>Furniture
-            Manufacturing
-          </h1>
-          <p>AMCO specializes in professional furniture<br />
-            manufacturing, offering a wide range of<br />
-            unique designs, trend setting workmanship,<br />
-            and top-quality products. Our dedicated<br />
-            manufacturing plant spans across a total<br />
-            area of 3000 square meters of land,<br />
-            equipped with state of the art technology<br />
-            and advanced machinery.
-          </p>
-        </div>
-      </div>
-      <img src="/static/images/c19.png" alt="Your Image" class="imagec1220" />
-      <div class="serv">
-        <div class="image-co1umn">
-          <img src="/static/images/servi1.png" alt="Your Image" class="image20" />
+        <div id="prev1">
+          < </div>
+            <!--crud videolider-->
         </div>
 
-        <div class="text-co1umn">
-          <h1>Construction</h1>
-          <p>At AMCO, we prioritize quality in all aspects of our<br />
-            construction projects. From meticulous materials<br />
-            selection to exceptional craftsmanship, we are<br />
-            committed to upholding high standards. We<br />
-            believe that quality construction not only<br />
-            guarantees durable and long-lasting buildings<br />
+        <div class="servv">
+          <div class="image-co1umn20">
+            <img src="/static/images/servi3.png" alt="Your Image" class="image210" />
+          </div>
+          <div class="text-co1umn20">
+            <h1>Furniture
+              Manufacturing
+            </h1>
+            <p>AMCO specializes in professional furniture<br />
+              manufacturing, offering a wide range of<br />
+              unique designs, trend setting workmanship,<br />
+              and top-quality products. Our dedicated<br />
+              manufacturing plant spans across a total<br />
+              area of 3000 square meters of land,<br />
+              equipped with state of the art technology<br />
+              and advanced machinery.
+            </p>
+          </div>
+        </div>
+        <img src="/static/images/c19.png" alt="Your Image" class="imagec1220" />
+        <div class="serv">
+          <div class="image-co1umn">
+            <img src="/static/images/servi1.png" alt="Your Image" class="image20" />
+          </div>
+
+          <div class="text-co1umn">
+            <h1>Construction</h1>
+            <p>At AMCO, we prioritize quality in all aspects of our<br />
+              construction projects. From meticulous materials<br />
+              selection to exceptional craftsmanship, we are<br />
+              committed to upholding high standards. We<br />
+              believe that quality construction not only<br />
+              guarantees durable and long-lasting buildings<br />
               but,also leads to client satisfaction.
-          </p>
+            </p>
 
-        </div>
-        <img src="/static/images/c19.png" alt="Your Image" class="image220" />
-      </div>
-
-      <div class='feature'>
-
-        <div class="rec4">
-          <a href="/prod">
-            <img src="/static/images/5.png" alt="Photo 1" />
-          </a>
-        </div>
-        <div class="rec5">
-          <a href="/prod">
-            <img src="/static/images/4.png" alt="Photo 1" />
-          </a>
-        </div>
-        <div class="niw">
-          <div class='rec7'></div>
-          <h1>INTERIOR DESIGN</h1>
-          <div class='rec8'>
-            <h2>FURNITURE</h2>
           </div>
-          <div class="dot-container">
-            <div class="dot1"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+          <img src="/static/images/c19.png" alt="Your Image" class="image220" />
+        </div>
+
+        <div class='feature'>
+
+          <div class="rec4">
+            <a href="/prod">
+              <img src="/static/images/5.png" alt="Photo 1" />
+            </a>
           </div>
-          <div class='rec219'></div>
-          <button class='nnnn'> PRODUCTS</button>
+          <div class="rec5">
+            <a href="/prod">
+              <img src="/static/images/4.png" alt="Photo 1" />
+            </a>
+          </div>
+          <div class="niw">
+            <div class='rec7'></div>
+            <h1>INTERIOR DESIGN</h1>
+            <div class='rec8'>
+              <h2>FURNITURE</h2>
+            </div>
+            <div class="dot-container">
+              <div class="dot1"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class='rec219'></div>
+            <button class='nnnn'> PRODUCTS</button>
+          </div>
+          <div class='cti'>
+            <h1>We aim for excellence across all industries <br />
+              we engage with in Ethiopia</h1>
+            <img src="https://www.visionplusbusiness.it/materiale/header-about.jpg" alt="Your Image" class="nity" />
+            <div class="color-overlay"></div>
+          </div>
         </div>
-        <div class='cti'>
-          <h1>We aim for excellence across all industries <br />
-            we engage with in Ethiopia</h1>
-          <img src="https://www.visionplusbusiness.it/materiale/header-about.jpg" alt="Your Image" class="nity" />
-          <div class="color-overlay"></div>
+        <div class="rectangle">
+          <div class="hiv">
+            <a href="/prod">
+              <h2>All Products</h2>
+            </a>
+            <button class="next-button"><i class="fas fa-arrow-right"></i></button>
+          </div>
         </div>
       </div>
-      <div class="rectangle">
-        <div class="hiv">
-          <a href="/prod">
-          <h2>All Products</h2>
-        </a>
-          <button class="next-button"><i class="fas fa-arrow-right"></i></button>
-        </div>
-      </div>
-    </div>
 
   </section>
   <section id="portfolio" class="portfolio-section">
@@ -380,21 +385,15 @@
       <!-- Radio buttons for navigation -->
       <div class="custom-slider-container11">
         <div class="slides22">
+
+          {% for video in data["links"] %}
+
           <div class="slide21">
-            <iframe src="https://www.youtube.com/embed/IuxOlxYyvkA" frameborder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+            <iframe src="{{ video.url }}" frameborder="0" allowfullscreen></iframe>
           </div>
-          <div class="slide21">
-            <iframe src="https://www.youtube.com/embed/wN4TvnFtcBs" frameborder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="slide21">
-            <iframe src="https://www.youtube.com/embed/IuxOlxYyvkA" frameborder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
+
+          {% endfor %}
+
         </div>
       </div>
 
@@ -403,15 +402,21 @@
         <h2>Our Clients</h2>
         <div class="scroll imgx">
           <div class="scrolling-content">
-            <img src="	https://www.brootech.com/wp-content/uploads/2016/01/Awash-Bank.png" alt="">
-            <img src="https://dashenbanksc.com/wp-content/uploads/Dashen-Bank-Logo-Addis-Ababa-Ethiopia.png" alt="">
+
+            {% for logo in data["client_list"] %}
+            <img src="{{logo.url}}" alt="{{ logo.name }}">
+            {% endfor %}
+
+            <!-- <img src="https://dashenbanksc.com/wp-content/uploads/Dashen-Bank-Logo-Addis-Ababa-Ethiopia.png" alt="">
             <img src="https://ethiopiansharemarket.com/images/share/United-Bank-Ethiopia.jpg" alt="">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wogagen_Bank.png/220px-Wogagen_Bank.png" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wogagen_Bank.png/220px-Wogagen_Bank.png"
+              alt=""> -->
             <!-- Duplicate the set of images -->
-            <img src="	https://www.brootech.com/wp-content/uploads/2016/01/Awash-Bank.png" alt="">
+            <!-- <img src="	https://www.brootech.com/wp-content/uploads/2016/01/Awash-Bank.png" alt="">
             <img src="https://dashenbanksc.com/wp-content/uploads/Dashen-Bank-Logo-Addis-Ababa-Ethiopia.png" alt="">
             <img src="https://ethiopiansharemarket.com/images/share/United-Bank-Ethiopia.jpg" alt="">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wogagen_Bank.png/220px-Wogagen_Bank.png" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wogagen_Bank.png/220px-Wogagen_Bank.png"
+              alt=""> -->
 
           </div>
         </div>
@@ -480,14 +485,14 @@
           <ul>
             <li>
               <a href="mailto:amco18630@gmail.com">email<br>
-              amco18630@gmail.com</a>
+                amco18630@gmail.com</a>
             </li>
             <li><a href="https://maps.app.goo.gl/J4CjWG4xNGg5QtnW6?g_st=atm" class="bte">Location<br>
-              New Bata Complex, next to Getfam Hotel 
-              @ Zemen Bank Branch 4th floor </a>
+                New Bata Complex, next to Getfam Hotel
+                @ Zemen Bank Branch 4th floor </a>
             </li>
             <li><a href="tel:0945371779">phone <br />
-              0945371779</a>
+                0945371779</a>
             </li>
           </ul>
         </div>
@@ -495,16 +500,19 @@
           <h4>follow us</h4>
           <div class="social-links">
             <a href="https://www.facebook.com/profile.php?id=61559804274395"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/amco_interiorfurniture/?igsh=MTR5b3dubWJibm9qdw%3D%3D"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/amco_interiorfurniture/?igsh=MTR5b3dubWJibm9qdw%3D%3D"><i
+                class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.tiktok.com/@amco_interiorfurniture?_t=8mXEfzKb4HV&_r=1"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.tiktok.com/@amco_interiorfurniture?_t=8mXEfzKb4HV&_r=1"><i
+                class="fab fa-tiktok"></i></a>
           </div>
         </div>
       </div>
       <div class="copy">
-        Copyright 2024 © || 
-        <a href="https://www.instagram.com/namikdevelopment/?igsh=dG5pbzIxdDdzaTUz" class="namik">Designed By NAMIK DEVELOPMENT</a>
-          
+        Copyright 2024 © ||
+        <a href="https://www.instagram.com/namikdevelopment/?igsh=dG5pbzIxdDdzaTUz" class="namik">Designed By NAMIK
+          DEVELOPMENT</a>
+
       </div>
     </div>
   </footer>
@@ -602,14 +610,14 @@
       });
     });
   </script>
-      <script>
-        document.querySelectorAll('.slide21 iframe').forEach(iframe => {
-          iframe.addEventListener('click', (e) => {
-            console.log('Iframe clicked');
-            // Additional functionality here
-          });
-        });
-      </script>
+  <script>
+    document.querySelectorAll('.slide21 iframe').forEach(iframe => {
+      iframe.addEventListener('click', (e) => {
+        console.log('Iframe clicked');
+        // Additional functionality here
+      });
+    });
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const menuIcon = document.querySelector('.menu-icon');
@@ -838,59 +846,59 @@
     });
 
     /* hoMEjs*/
-    document.addEventListener("DOMContentLoaded", function() {
-            let slideIndex = 0;
-            const slides = document.getElementsByClassName("myslide");
+    document.addEventListener("DOMContentLoaded", function () {
+      let slideIndex = 0;
+      const slides = document.getElementsByClassName("myslide");
 
-            function showSlide(index) {
-                if (slides.length === 0) {
-                    console.error("No elements with class 'myslide' found.");
-                    return;
-                }
+      function showSlide(index) {
+        if (slides.length === 0) {
+          console.error("No elements with class 'myslide' found.");
+          return;
+        }
 
-                for (let i = 0; i < slides.length; i++) {
-                    if (slides[i] && slides[i].classList) {
-                        slides[i].classList.remove("active");
-                    }
-                }
+        for (let i = 0; i < slides.length; i++) {
+          if (slides[i] && slides[i].classList) {
+            slides[i].classList.remove("active");
+          }
+        }
 
-                if (slides[index] && slides[index].classList) {
-                    slides[index].classList.add("active");
-                } else {
-                    console.error(`Slide at index ${index} does not exist or has no classList.`);
-                }
-            }
+        if (slides[index] && slides[index].classList) {
+          slides[index].classList.add("active");
+        } else {
+          console.error(`Slide at index ${index} does not exist or has no classList.`);
+        }
+      }
 
-            function slidefun() {
-                if (slides.length === 0) {
-                    console.error("No elements with class 'myslide' found.");
-                    return;
-                }
+      function slidefun() {
+        if (slides.length === 0) {
+          console.error("No elements with class 'myslide' found.");
+          return;
+        }
 
-                for (let i = 0; i < slides.length; i++) {
-                    if (slides[i] && slides[i].classList) {
-                        slides[i].className = slides[i].className.replace(" active", "");
-                    }
-                }
+        for (let i = 0; i < slides.length; i++) {
+          if (slides[i] && slides[i].classList) {
+            slides[i].className = slides[i].className.replace(" active", "");
+          }
+        }
 
-                if (slides[slideIndex] && slides[slideIndex].classList) {
-                    slides[slideIndex].className += " active";
-                } else {
-                    console.error(`Slide at index ${slideIndex} does not exist or has no classList.`);
-                }
+        if (slides[slideIndex] && slides[slideIndex].classList) {
+          slides[slideIndex].className += " active";
+        } else {
+          console.error(`Slide at index ${slideIndex} does not exist or has no classList.`);
+        }
 
-                slideIndex = (slideIndex + 1) % slides.length;
-            }
+        slideIndex = (slideIndex + 1) % slides.length;
+      }
 
-            function autoSlide() {
-                slidefun();
-                setInterval(slidefun, 3000); // Change slide every 3 seconds
-            }
+      function autoSlide() {
+        slidefun();
+        setInterval(slidefun, 3000); // Change slide every 3 seconds
+      }
 
-            autoSlide();
-        }, { passive: true }); // Adding the passive option to the event listener
+      autoSlide();
+    }, { passive: true }); // Adding the passive option to the event listener
 
-        
+
     /*email */
 
     emailjs.init('D3VuuvmzMea1ZpQ3l');
@@ -1053,13 +1061,13 @@
 
 </body>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-  const linkElement = document.querySelector('.ct-link');
+  document.addEventListener("DOMContentLoaded", function () {
+    const linkElement = document.querySelector('.ct-link');
 
-  linkElement.addEventListener('click', function(event) {
-    window.location.href = this.href;
+    linkElement.addEventListener('click', function (event) {
+      window.location.href = this.href;
+    });
   });
-});
 </script>
 <script>
   function toggleDropdown() {
