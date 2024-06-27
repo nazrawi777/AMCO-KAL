@@ -297,6 +297,9 @@ def admin():
     if 'admin_logged_in' not in session or not session['admin_logged_in']:
         return redirect(url_for('login'))
 
+    for val in YoutubeVideosLinks.query.all():
+        print(val.to_dict())
+
     if request.method == 'POST':
         if 'file' not in request.files:
             flash('No file part')

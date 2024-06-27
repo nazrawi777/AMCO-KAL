@@ -389,9 +389,11 @@
           {% for video in data["links"] %}
 
           <div class="slide21">
-            <iframe src="{{ video.url }}" frameborder="0" allowfullscreen></iframe>
-          </div>
+            <iframe width="560" height="315" src="{{video.url}}" title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+          </div>
           {% endfor %}
 
         </div>
