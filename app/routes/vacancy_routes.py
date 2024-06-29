@@ -4,15 +4,18 @@ from datetime import datetime
 from app import db
 from app.model.model import Job, AppliedJob
 import os
+from dotenv import load_dotenv
+
 
 vacancy_bp = Blueprint('vacancy', __name__)
+load_dotenv()
 
 
 @vacancy_bp.route('/vadmin/add_job', methods=['GET', 'POST'])
 def add_job():
     if 'admin_logged_in' not in session or not session['admin_logged_in']:
         return redirect(url_for('login'))
-    
+
     if request.method == 'POST':
         title = request.form['title']
         description = request.form['description']
@@ -106,7 +109,7 @@ def apply(job_id):
         gender = request.form['gender']
         age = request.form['age']
         cv = request.files['cv']
-        cv.save(os.path.join("uploads", cv.filename))
+        cv.save(os.path.join(os.getenv('UPLOAD_FOLDER'), cv.filename))
         applied_job = AppliedJob(
             job_id=job_id,
             first_name=first_name,

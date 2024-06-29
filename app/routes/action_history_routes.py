@@ -1,4 +1,4 @@
-from app.model.model import ActionHistory
+from app.model.model import ActionHistory, User
 from flask import Blueprint, render_template, redirect, url_for, session, request, flash
 from app import db
 
@@ -9,8 +9,10 @@ action_history_bp = Blueprint('action_history', __name__)
 def super_view():
     if 'admin_logged_in' not in session or not session['admin_logged_in']:
         return redirect(url_for('action_history.sagin'))
-    actions = ActionHistory.query.order_by(ActionHistory.timestamp.desc()).all()
-    return render_template('all.html', actions=actions)
+    actions = ActionHistory.query.order_by(
+        ActionHistory.timestamp.desc()).all()
+    users = User.query.all()
+    return render_template('all.html', actions=actions, users=users)
 
 
 @action_history_bp.route('/sagin/delete_action/<int:action_id>', methods=['POST'])
@@ -29,11 +31,19 @@ def sagin():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        if username == 'admin' and password == 'admin':
-            session['admin_logged_in'] = True
-            return redirect(url_for('action_history.super_view'))
+
+        if not username or not password:
+            flash('Please enter both username and password.', 'error')
         else:
-            flash('Invalid username or password.', 'error')
+            user = User.query.filter_by(
+                username=username, password=password).first()
+            if user and user.role == 'admin':
+                session['admin_logged_in'] = True
+                session['admin_id'] = user.id
+                session['admin_username'] = user.username
+                return redirect(url_for('action_history.super_view'))
+            else:
+                flash('Invalid username or password.', 'error')
     return render_template('sagin.html')
 
 

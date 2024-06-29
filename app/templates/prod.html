@@ -331,7 +331,7 @@
             {% for product in products %}
             <div class="item">
               <div class="image">
-                <a href="{{ url_for('product_detail', product_id=product.id) }}">
+                <a href="{{ url_for('product.product_detail', product_id=product.id) }}">
                   <img src="{{ url_for('uploaded_file', filename=product.image) }}" alt="{{ product.name }}" width="100">
               </a>
               

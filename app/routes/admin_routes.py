@@ -2,7 +2,7 @@
 from flask import Blueprint, render_template, redirect, url_for, session, request, flash
 from app import db
 import cloudinary
-from app.model.model import SliderDb, SlideVideoDb, YoutubeVideosLinks, ClientList, AboutSlide, Product
+from app.model.model import SliderDb, SlideVideoDb, YoutubeVideosLinks, ClientList, AboutSlide, Product, User
 from app.utils import allowed_file
 
 admin_bp = Blueprint('admin', __name__)
@@ -56,8 +56,15 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        if username == 'admin' and password == 'admin':
+
+    if not username or not password:
+        flash('Please enter both username and password.', 'error')
+    else:
+        find_user = User.query.filter_by(username=username).first()
+        if find_user and find_user.password == password:
             session['admin_logged_in'] = True
+            session['username'] = username
+            session['role'] = find_user.role
             return redirect(url_for('admin.admin'))
         else:
             flash('Invalid username or password.', 'error')

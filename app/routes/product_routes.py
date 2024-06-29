@@ -4,8 +4,10 @@ from app import db
 from app.model.model import Product
 from app.utils import allowed_file
 import os
+from dotenv import load_dotenv
 
 product_bp = Blueprint('product', __name__)
+load_dotenv()
 
 
 @product_bp.route('/product/<int:product_id>')
@@ -35,14 +37,15 @@ def add_product():
         image_file = request.files.get('image')
         if image_file and allowed_file(image_file.filename):
             filename = secure_filename(image_file.filename)
-            image_path = os.path.join("uploads", filename)
+            image_path = os.path.join(os.getenv('UPLOAD_FOLDER'), filename)
             image_file.save(image_path)
             new_product = Product(name=name, price=price,
                                   image=filename, description=description)
             db.session.add(new_product)
             db.session.commit()
-            new_product.log_action('Added', f"Product '{
+            new_product.log_action('Added', f"Product'{
                                    name}' added successfully.")
+
             flash('Product added successfully.', 'success')
             return redirect(url_for('admin.admin'))
         else:
@@ -63,7 +66,7 @@ def edit_product(product_id):
         image_file = request.files.get('image')
         if image_file and allowed_file(image_file.filename):
             filename = secure_filename(image_file.filename)
-            image_path = os.path.join('uploads', filename)
+            image_path = os.path.join(os.getenv('UPLOAD_FOLDER'), filename)
             image_file.save(image_path)
             product.image = filename
         db.session.commit()

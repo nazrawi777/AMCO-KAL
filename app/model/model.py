@@ -4,6 +4,14 @@ from app import db
 from datetime import datetime
 
 
+class User(db.Model):
+    __tablename__ = 'user'
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(250), nullable=False)
+    password = db.Column(db.Text, nullable=False)
+    role = db.Column(db.String(250), default="user", nullable=False)
+
+
 class ClientList(db.Model):
     id = Column(Integer, primary_key=True)
     name = Column(String(100), nullable=False)
@@ -39,7 +47,7 @@ class SliderDb(db.Model):
 
 class ActionHistory(db.Model):
     id = Column(Integer, primary_key=True)
-    timestamp = Column(DateTime, default=datetime.utcnow)
+    timestamp = Column(DateTime, default=datetime.now)
     action = Column(String(50), nullable=False)
     description = Column(String(255), nullable=False)
 
