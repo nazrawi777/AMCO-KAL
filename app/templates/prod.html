@@ -4,7 +4,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AMCO</title>
+    <meta name="description" content="Discover AMCO Interior Design for top-quality furniture and exceptional interior design services in Addis Ababa, Ethiopia. Visit our store for the best furniture prices and designs. Find furniture in Ethiopia, a furniture store in Addis Ababa, and interior design services.">
+    <title>AMCO Interior Design | Furniture in Ethiopia, Addis Ababa</title>
+    <meta name="keywords" content="AMCO Interior Design, Furniture in Ethiopia, Furniture Store in Addis Ababa, Furniture in Addis Ababa with Price, Furniture in Addis, Furniture House in Addis Ababa, Furniture Shops in Addis Ababa, Furniture Design Ethiopia, Interior Design Addis Ababa">  
     <link rel="icon" type="image/png" href="/static/images/logo.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
@@ -15,254 +17,253 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <style>
-   
-        .title {
-            font-size: xx-large;
-            text-align: center;
-            margin-top: 30px;
-        }
-        @media (min-width: 1156px) and (max-width: 1399px) {
-          .title {
-            font-size: xx-large;
-            text-align: center;
-        }
-
+    <style>
+      .title {
+          font-size: xx-large;
+          text-align: center;
+          margin-top: 30px;
       }
-      
+      @media (min-width: 1156px) and (max-width: 1399px) {
+        .title {
+          font-size: xx-large;
+          text-align: center;
+      }
 
-        .listProduct .item img {
-    width: 100%;
-    height: 250px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image covers the area */
-    filter: drop-shadow(0 50px 20px #0009);
+    }
+    
+
+      .listProduct .item img {
+  width: 100%;
+  height: 250px; /* Set a fixed height */
+  object-fit: cover; /* Ensure the image covers the area */
+  filter: drop-shadow(0 50px 20px #0009);
 }
 
-        .listProduct {
-          margin-top: 50px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
+      .listProduct {
+        margin-top: 50px;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px;
+      }
 
-        .listProduct .item {
-            background-color: #EEEEE6;
-            padding: 20px;
-            border-radius: 20px;
-            max-width: 80%;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-        }
+      .listProduct .item {
+          background-color: #EEEEE6;
+          padding: 20px;
+          border-radius: 20px;
+          max-width: 80%;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+      }
 
-        .listProduct .item:hover {
-            border: 4px solid #03dac5;
-            border-radius: 25px;
-            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2); /* Box shadow with black color */
-            transition: transform 0.3s ease;
-        }
+      .listProduct .item:hover {
+          border: 4px solid #03dac5;
+          border-radius: 25px;
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2); /* Box shadow with black color */
+          transition: transform 0.3s ease;
+      }
 
-        .listProduct .item:hover {
-            transform: translateY(-10px);
-        }
+      .listProduct .item:hover {
+          transform: translateY(-10px);
+      }
 
-        .listProduct .item h2 {
-            font-weight: 500;
-            font-size: large;
-        }
+      .listProduct .item h2 {
+          font-weight: 500;
+          font-size: large;
+      }
 
-        .listProduct .item .price {
-            letter-spacing: 7px;
-            font-size: small;
-        }
+      .listProduct .item .price {
+          letter-spacing: 7px;
+          font-size: small;
+      }
 
-        /* detail page */
-        .detail {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 50px;
-            text-align: left;
-        }
+      /* detail page */
+      .detail {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 50px;
+          text-align: left;
+      }
 
-        .detail .image img {
-            width: 100%;
-        }
+      .detail .image img {
+          width: 100%;
+      }
 
-        .detail .image {
-            position: relative;
-        }
+      .detail .image {
+          position: relative;
+      }
 
-        .detail .image::before {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            content: '';
-            background-color: #94817733;
-            z-index: -1;
-            border-radius: 190px 100px 170px 180px;
-            left: calc(50% - 150px);
-            top: 50px;
-        }
+      .detail .image::before {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          content: '';
+          background-color: #94817733;
+          z-index: -1;
+          border-radius: 190px 100px 170px 180px;
+          left: calc(50% - 150px);
+          top: 50px;
+      }
 
-        .detail .name {
-            font-size: xxx-large;
-            padding: 40px 0 0 0;
-            margin: 0 0 10px 0;
-        }
+      .detail .name {
+          font-size: xxx-large;
+          padding: 40px 0 0 0;
+          margin: 0 0 10px 0;
+      }
 
-        .detail .price {
-            font-weight: bold;
-            font-size: x-large;
-            letter-spacing: 7px;
-            margin-bottom: 20px;
-            font-family: poppins, sans-serif;
-        }
+      .detail .price {
+          font-weight: bold;
+          font-size: x-large;
+          letter-spacing: 7px;
+          margin-bottom: 20px;
+          font-family: poppins, sans-serif;
+      }
 
-        .detail .buttons {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
+      .detail .buttons {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 20px;
+      }
 
-        .detail .buttons button {
-            background-color: #eee;
-            border: none;
-            padding: 15px 20px;
-            border-radius: 20px;
-            font-family: Poppins;
-            font-size: large;
-        }
+      .detail .buttons button {
+          background-color: #eee;
+          border: none;
+          padding: 15px 20px;
+          border-radius: 20px;
+          font-family: Poppins;
+          font-size: large;
+      }
 
-        .detail .buttons svg {
-            width: 15px;
-        }
+      .detail .buttons svg {
+          width: 15px;
+      }
 
-        .detail .buttons span {
-            background-color: #555454;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            margin-left: 20px;
-        }
+      .detail .buttons span {
+          background-color: #555454;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          margin-left: 20px;
+      }
 
-        .detail .buttons button:nth-child(2) {
-            background-color: #2F2F2F;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #eee;
-            box-shadow: 0 10px 20px #2F2F2F77;
-        }
+      .detail .buttons button:nth-child(2) {
+          background-color: #2F2F2F;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #eee;
+          box-shadow: 0 10px 20px #2F2F2F77;
+      }
 
-        .detail .description {
-            font-weight: 300;
-            
-        }
-        
-        /* // ipad */
-        @media only screen and (max-width: 992px) {
-    .listProduct {
-        grid-template-columns: repeat(3, 2fr); /* Adjust number of columns */
-    }
-    .detail {
-        grid-template-columns: 1fr; /* Stack the detail sections */
-        text-align: center;
-    }
-    .detail .image img {
-        width: 100%;
-        height: auto; /* Adjust image height for smaller screens */
-    }
-
+      .detail .description {
+          font-weight: 300;
+          
+      }
+      
+      /* // ipad */
+      @media only screen and (max-width: 992px) {
+  .listProduct {
+      grid-template-columns: repeat(3, 2fr); /* Adjust number of columns */
   }
+  .detail {
+      grid-template-columns: 1fr; /* Stack the detail sections */
+      text-align: center;
+  }
+  .detail .image img {
+      width: 100%;
+      height: auto; /* Adjust image height for smaller screens */
+  }
+
+}
 /* mobile */
 @media only screen and (max-width: 768px) {
-  .listProduct {
-  
-    align-items: center;
-    justify-content: center;
-        grid-template-columns: .5fr; /* Adjust number of columns */
-    }
-    .detail .name {
-        font-size: x-large;
-        margin: 0;
-    }
-    .detail .buttons button {
-        font-size: small;
-    }
-    .detail .buttons {
-        justify-content: center;
-    }
-    .listProduct .item img {
-    width: 60%;
-    max-height: 150px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image covers the area */
-    filter: drop-shadow(0 50px 20px #0009);
+.listProduct {
+
+  align-items: center;
+  justify-content: center;
+      grid-template-columns: .5fr; /* Adjust number of columns */
+  }
+  .detail .name {
+      font-size: x-large;
+      margin: 0;
+  }
+  .detail .buttons button {
+      font-size: small;
+  }
+  .detail .buttons {
+      justify-content: center;
+  }
+  .listProduct .item img {
+  width: 60%;
+  max-height: 150px; /* Set a fixed height */
+  object-fit: cover; /* Ensure the image covers the area */
+  filter: drop-shadow(0 50px 20px #0009);
 }
 }
 .name {
-            font-size: 18px;
-            font-weight: bold;
-            color: #11474D;
-            margin-top: 10px;
-        }
+          font-size: 18px;
+          font-weight: bold;
+          color: #11474D;
+          margin-top: 10px;
+      }
 
-        .description {
-            display: none; /* Hide the description by default */
-        }
-        .price {
-            font-size: 16px;
-            color: #11474D;
-            margin-top: 5px;
-        }
+      .description {
+          display: none; /* Hide the description by default */
+      }
+      .price {
+          font-size: 16px;
+          color: #11474D;
+          margin-top: 5px;
+      }
 
-        .description {
-            font-size: 14px;
-            color: #666;
-            margin-top: 5px;
-            
-        }
-        #top{
-  position: relative;
-  height: 15px;
-  z-index: -100;
-  bottom: 10px;
-}
-        
-        @media (min-width: 320px) and (max-width: 476px) {
-  .footer{
-    position: relative;
-    top: 10px !important;
-    height: 340px;
-  }
-  .footer-col2{
-      position: relative;
-      margin-top: 10px;
-      
-      line-height: 40px !important;
-    }
-   
-
-    .copy{
-      text-align: center;
-      color: teal;
-      position: relative;
-      top: 100px;
-      font-family: poppins, sans-serif;
-    }
-   
-
-  }
-
-  .footer{
-  position: relative;
-  top: 30px;
-}
-       
+      .description {
+          font-size: 14px;
+          color: #666;
+          margin-top: 5px;
           
-    </style>
+      }
+      #top{
+position: relative;
+height: 15px;
+z-index: -100;
+bottom: 10px;
+}
+      
+      @media (min-width: 320px) and (max-width: 476px) {
+.footer{
+  position: relative;
+  top: 10px !important;
+  height: 340px;
+}
+.footer-col2{
+    position: relative;
+    margin-top: 10px;
+    
+    line-height: 40px !important;
+  }
+ 
+
+  .copy{
+    text-align: center;
+    color: teal;
+    position: relative;
+    top: 100px;
+    font-family: poppins, sans-serif;
+  }
+ 
+
+}
+
+.footer{
+position: relative;
+top: 50px;
+}
+     
+        
+  </style>
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body class="product-page">
@@ -298,7 +299,7 @@
       <div class="menu-icon">
         <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
       </div>
-      <a href="tel:+251 91 160 2877">
+      <a href="tel:+251952333336">
         <div class="call">
           <h2>Call Us</h2>
           <div class="phone">
@@ -314,7 +315,7 @@
   </header>
 
   <div class="social-widget">
-    <a href="#" class="social-icon " data-social="Telegram"><i class="fab fa-telegram"></i><span class="social-name">Telegram</span></a>
+    <a href="https://t.me/amcointerior" class="social-icon " data-social="Telegram"><i class="fab fa-telegram"></i><span class="social-name">Telegram</span></a>
     <a href="https://www.instagram.com/amco_interiorfurniture/?igsh=MTR5b3dubWJibm9qdw%3D%3D" class="social-icon " data-social="Instagram"><i class="fab fa-instagram"></i><span class="social-name">Instagram</span></a>
     <a href="https://www.facebook.com/profile.php?id=61559804274395" class="social-icon " data-social="Facebook"><i class="fab fa-facebook"></i><span class="social-name">Facebook</span></a>
     <a href="#" class="social-icon " data-social="LinkedIn"><i class="fab fa-linkedin"></i><span class="social-name">LinkedIn</span></a>
@@ -376,8 +377,8 @@
                 New Bata Complex, next to Getfam Hotel 
                 @ Zemen Bank Branch 4th floor </a>
               </li>
-              <li><a href="tel:0945371779">phone <br />
-                0945371779</a>
+              <li><a href="tel:+251952333337 ">phone <br />
+                +251952333337 </a>
               </li>
             </ul>
           </div>

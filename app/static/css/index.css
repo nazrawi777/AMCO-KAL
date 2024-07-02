@@ -8,7 +8,6 @@ html,body
   scroll-behavior: smooth;
 }
 
-
 .arrow{
   position: fixed;
   bottom: 80px;
@@ -2333,7 +2332,7 @@ a {
 }
 
 
-@media (min-width: 1215px) and (max-width: 1399px) {
+@media (min-width: 1215px) and (max-width: 1999px) {
   .call {
     width: 110px;
     height: 41px;
@@ -4153,7 +4152,7 @@ i#next {
   .image220{
     width: 227px;
     position: relative;
-    top: 235px;
+    top: 105px;
     left: 0px;
     height: 360px;
     border-radius: 10px;
@@ -4717,7 +4716,16 @@ iframe {
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  
+  .arrow-container {
+    position: absolute;
+    width: 100%;
+    right: 6.5% !important;
+    top: 50% !important;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }  
   
   .portfolio-image {
     width: 200px;
@@ -4777,43 +4785,25 @@ iframe {
   }
 
 }
+@media (min-width: 768px) and (max-width: 768px) {
+.arrow-container {
+  position: absolute;
+  width: 100%;
+  right: 6.5% !important;
+  top: 50% !important;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+}
 @media (min-width: 770px) and (max-width: 991px) {
   .portfolio-section1 {
     width: 100%;
     Margin-top: 140px;
     height: 400px;
   }
-  .custom-slider-container11 {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    top: 420px;
-  }
   
-  .slides22 {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%; /* Adjust this width if you add more slides */
-   gap: 20px !important;
-   position: relative;
-   top: 330px;
-   margin-right: 50px !important;
-  }
-  
-  .slide21 {
-    flex: 0 0 30% !important; /* Each slide takes up 20% of the width since there are 5 slides */
-    cursor: pointer;
-  }
-  
-  .slide21 iframe {
-    width: 100% !important;
-    height: 300px !important;
-    z-index: 99;
-    display: block;
-    position: relative;
-    top: 0px;
-    right: 70px !important;
-}
 
   
   /* Hide radio buttons */
@@ -4869,7 +4859,16 @@ iframe {
     background-color: #555;
   }
   
-  
+  .arrow-container {
+    position: absolute;
+    width: 100%;
+    right: 8.5% !important;
+    top: 50% !important;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
   
   .portfolio-section h1 {
     text-align: center;
@@ -4993,6 +4992,23 @@ iframe {
     position: relative;
     bottom: 400px;
   }
+  .slides22 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 90%;
+    gap: 10px;
+    position: relative;
+    top: 30px;
+    margin-left: 70px;
+    z-index: 20;
+  }
+  
+  .slide21 {
+    box-sizing: border-box;
+    padding: 40px;
+    gap: 0px;
+    cursor: pointer;
+  }
   .slide21 iframe {
     width: 100% !important;
     height: 300px !important;
@@ -5000,11 +5016,9 @@ iframe {
     display: block;
     position: relative;
     top: 0px;
+    margin-left: 17px;
 }
-.slide21 {
-  flex: 0 0 30%;
-  z-index: 22;
-}
+
 .hiv{
   position: relative;
   bottom: 700px !important;
@@ -5109,14 +5123,14 @@ iframe {
     position: relative;
     width: 100%;
     overflow: hidden;
-    top: 420px;
+    top: 20px;
   }
   
   .slides22 {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%; /* Adjust this width if you add more slides */
-   gap: 50px;
+   gap: 30px;
    position: relative;
    top: 330px;
    margin-left: 20px;
@@ -5224,6 +5238,16 @@ iframe {
     object-fit: cover;
     gap: 10px;
   }
+  .arrow-container {
+    position: absolute;
+    width: 100%;
+    right: -2.5% !important;
+    top: 65% !important;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
   .portfolio-section h1 {
     text-align: center;
     font-size: 29px;
@@ -5277,21 +5301,39 @@ iframe {
   }
   .custom-slider-container11{
     z-index: 40;
+    padding-bottom: 40px;
   }
   .slide22{
-    z-index: 300;
     display: block;
+    position: relative;
   }
   .slide21{
     z-index: 30;
+    position: relative;
+    left: 90px;
+
   }
+  .slides22 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 90%;
+    gap: -150px !important;
+    position: relative;
+    top: 100px;
+    z-index: 20;
+  }
+  
+ 
   .slide21 iframe {
-    width: 100% !important;
-    height: 200px !important;
-    z-index: 99;
+    height: 220px !important;
+    z-index: 110;
     display: block;
     position: relative;
     top: 0px;
+    cursor: pointer;
+    position: relative;
+    bottom: 40px !important;
+
 }
   
   .portfolio-section h1 {
@@ -5300,13 +5342,14 @@ iframe {
     position: relative;
      font-family: poppins, sans-serif;
     color: teal;
+    margin-bottom: 70px;
   }
   
   .portfolio-section p {
     text-align: center;
     font-size: 13px;
     position: relative;
-    bottom: -40px;
+    bottom: 10px !important;
     color: teal;
   }
   .portfolio-images {
@@ -5336,8 +5379,28 @@ iframe {
     z-index: 10;
     height: 100px;
   }
+  .arrow-container {
+    position: absolute;
+    width: 100%;
+    right: -2.5% !important;
+    top: 65% !important;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
 }
 @media (min-width: 400px) and (max-width: 442px) {
+  .arrow-container {
+    position: absolute;
+    width: 100%;
+    right: -2.5% !important;
+    top: 65% !important;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
   .portfolio-section1 {
     width: 100%;
     margin-top: -1100px;
@@ -5373,21 +5436,13 @@ iframe {
   .ourclients{
     position: relative;
     top: 40px;
+
   }
   .ourclients h2{
     font-size: 20px !important;
   }
-  .slide21{
-    height: 100px !important;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  }
-  .slide21 iframe {
-    width: 100%;
-    background-color: white;
-    height: 130px !important;
-  }
+
+
   #video1{
     background-color: white;
     position: relative;
@@ -5396,11 +5451,11 @@ iframe {
   .slides22 {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 70%;
-    gap: 15px !important;
+    width: 90% !important;
+    gap: -60px !important;
     height: 200px;
     position: relative !important;
-    top: 30px;
+    top: -10px !important;
     right: 60px !important;
     background-color: white !important;
 }
@@ -5428,7 +5483,41 @@ iframe {
   .slide22{
     gap: 0px !important;
   }
-
+  .arrow-container {
+    position: absolute;
+    width: 100%;
+    right: -1.5% !important;
+    top: 65% !important;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  .arrowh {
+    cursor: pointer;
+    background-color: lightblue;
+    color: teal;
+    font-size: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    border-radius: 50%;
+    margin-top: 20px;
+    user-select: none;
+    z-index: 100;
+  }
+  
+  .arrow-left {
+    margin-left: 2px;
+    margin-top: 20px;
+  }
+  
+  .arrow-right {
+    margin-right: 2px;
+    margin-top: 20px;
+  }
+  
 }
 @media (min-width: 320px) and (max-width: 399px) {
   .portfolio-section1 {
@@ -5437,6 +5526,7 @@ iframe {
     height: 800px;
     position: relative;
     bottom: 100px;
+    
   }
   .ourclients{
     position: relative;
@@ -5445,9 +5535,7 @@ iframe {
   .ourclients h2{
     font-size: 20px !important;
   }
-  .slide21{
-    height: 100px !important;
-  }
+ 
   .image220 {
     max-width: 107px;
     position: relative;
@@ -5464,6 +5552,9 @@ iframe {
   .slide21 iframe {
     width: 100%;
     height: 130px !important;
+    position: relative;
+    
+
   }
   .slides22 {
     display: flex;
@@ -5472,8 +5563,8 @@ iframe {
     gap: 15px !important;
     height: 200px;
     position: relative;
-    top: 30px;
-    right: 60px !important;
+    top: -10px !important;
+    right: 80px !important;
 }
   .scroll img {
     width: 100px;
@@ -5553,7 +5644,7 @@ iframe {
   position: relative;
   top: 470px;
   width: 100%;
-  height: 650px;
+  height: 850px;
 }
 
 .ourpro{
@@ -5604,14 +5695,14 @@ iframe {
   background-color: white;
   position: relative;
   color: #5c7375; /* Text color */
-  width: 880px;
+  width: 800px;
   border-radius: 10px;
   overflow: hidden;
   flex-direction: column; /* Ensures content is centered vertically */
-  height: 450px;
+  height: 420px;
   left: -510px;
   font-size: 30px;
-  top: 20px;
+  top: -30px;
   align-content: center;
   text-align: center;
   align-items: center;
@@ -5628,16 +5719,16 @@ iframe {
   flex-direction: column; 
   position: relative;
   color: #fff; /* Text color */
-  width: 880px;
+  width: 800px;
   align-content: center;
   text-align: center;
   align-items: center;
   justify-content: center;
   z-index: 1; 
   margin-left: -210px;
-  height: 450px;
+  height: 420px;
   left: -150px;
-  top: 20px;
+  top: -30px;
   align-content: center;
   text-align: center;
   font-size: 30px;
@@ -6532,8 +6623,8 @@ iframe {
           font-family: poppins, sans-serif;
           position: relative !important;
           width: 100%;
-          height: 700px;
-          z-index: 20;
+          height: 400px;
+          
         }
         .section5{
           height: 0px;
@@ -6543,10 +6634,12 @@ iframe {
         #countingCr3{
           position: relative;
           top: 10px;
+          font-size: 25px;
         }
         #countingCr6{
           position: relative;
-          top: 10px;
+          top: 0px;
+          font-size: 25px;
         }
         .ourpro{
           font: bold;
@@ -6633,6 +6726,8 @@ iframe {
               }
               .cr6 h3{
                 font-size: 18px;
+                position: relative;
+                bottom: 14px;
               }
         }
 
@@ -6644,16 +6739,18 @@ iframe {
             font-family: poppins, sans-serif;
             position: relative;
             width: 100%;
-            height: 800px;
+            height: 400px;
             z-index: 20;
           }
           #countingCr3{
             position: relative;
-            top: 10px;
+            top: 0px;
+            font-size: 25px;
           }
           #countingCr6{
             position: relative;
-            top: 10px;
+            top: 0px;
+            font-size: 25px;
           }
           .ourpro{
             font: bold;
@@ -6755,10 +6852,14 @@ iframe {
              font-size: 22px;
           }
           .cr3 h3{
-            font-size: 18px;
+            font-size: 16px;
+            position: relative;
+            bottom: 17px !important;
                 }
                 .cr6 h3{
-                  font-size: 18px;
+                  font-size: 16px;
+                  position: relative;
+                  bottom: 20px !important;
                 }
           }
 
@@ -7153,7 +7254,26 @@ input[type=text]::placeholder, textarea::placeholder {
   body.scrolled .crollToTopBtn {
     display: block;
   }
-
+  @media (min-width: 768px) and (max-width: 768px) {
+    .arrow1 {
+      
+        right: 31px !important;
+        bottom: 30px;
+    }
+}
+@media (min-width: 768px) and (max-width: 768px) {
+  .ourpro {
+      font-weight: bolder;
+      font-size: 30px !important;
+      height: 40px;
+      color: teal;
+      position: relative;
+      text-align: center;
+      top: 490px !important;
+      width: 100%;
+      z-index: 20;
+  }
+}
   /* Style the arrow icon */
   /* Styles for scroll-to-top button */
 
@@ -12341,13 +12461,7 @@ display: none;
   margin-top: -80px  !important;
   z-index: 90;
 }
-.slide21{
-  height: 100px !important;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  margin-left: 30px;
-}
+
 .slide21 iframe {
   width: 100%;
   background-color: white;
@@ -12497,7 +12611,7 @@ display: none;
 .scroll .scrolling-content {
   display: flex;
   gap: 20px;
-  animation: scrollAnim 25s linear infinite;
+  animation: scrollAnim 17s linear infinite;
 }
 
 .scroll img {
@@ -12753,41 +12867,97 @@ input[name="slider2"]:checked + .custom-dots1 label {
 
 
 
+
+
 .custom-slider-container11 {
   position: relative;
   width: 100%;
   overflow: hidden;
   top: 20px;
-  
 }
 
 .slides22 {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
-  gap: 50px;
+  gap: 10px;
   position: relative;
   top: 30px;
-  margin-left: 90px;
+  margin-left: 70px;
   z-index: 20;
 }
 
 .slide21 {
-  flex: 0 0 26%;
-  z-index: 22;
+  box-sizing: border-box;
+  padding: 40px;
+  gap: 0px;
+  cursor: pointer;
+}
+
+.arrow-container {
+  position: absolute;
+  width: 100%;
+  right: 5%;
+  top: 50%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 1024px) {
+  .slide21 {
+    flex: 1 0 calc(32% - 10px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .slide21 {
+    flex: 1 0 calc(50% - 20px);
+  }
+}
+@media (max-width: 575px) {
+  .slide21 {
+    flex: 1 0 calc(100% - 20px);
+  }
+}
+
+.arrowh {
+  cursor: pointer;
+  background-color: lightblue;
+  color: teal;
+  font-size: 24px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 15px;
+  border-radius: 50%;
+  margin-top: 20px;
+  user-select: none;
+  z-index: 100;
+}
+
+.arrow-left {
+  margin-left: -3px;
+  margin-top: 20px;
+}
+
+.arrow-right {
+  margin-right: 2px;
+  margin-top: 20px;
 }
 
 .slide21 iframe {
-  width: 100%;
-  height: 230px;
-  pointer-events: auto;
-  z-index: 24; /* Ensure pointer events are enabled */
+  width: 100% !important;
+  height: 220px !important;
+  z-index: 199;
+  display: block;
+  position: relative;
+  top: 0px;
+  right: 70px !important;
+  cursor: pointer;
 }
 
-/* Hide radio buttons */
-input[name="slider22"] {
-  display: none;
-}
 
 /* Navigation dots */
 .custom-dots11 {
@@ -12796,7 +12966,110 @@ input[name="slider22"] {
   left: 50%;
   transform: translateX(-50%);
 }
+@media (min-width: 768px) and (max-width: 768px) {
+  .cti h1 {
+      color: white;
+      font-size: 25px;
+      width: 100%;
+      height: 100px;
+      position: relative;
+      font-family: poppins, sans-serif;
+      top: 190px;
+      text-align: center;
+      -webkit-text-stroke: 0.03vw white;
+      background-size: cover;
+      background-clip: text;
+      color: transparent;
+      -webkit-background-clip: text;
+  }
+}
+@media (min-width: 768px) and (max-width: 768px) {
+  .niw .rec8 {
+      Max-width: 350px;
+      height: 4px;
+      background-color: teal;
+      position: relative;
+      left: 24.3rem;
+      bottom: 150px;
+  }
+}
+@media (min-width: 768px) and (max-width: 768px) {
+  .next-button {
+      background-color: transparent;
+      border: none;
+     height: 20px !important;
+     width: 30px !important;
+      color: black;
+      font-size: 28px !important;
+      cursor: pointer;
+      z-index: 10 !important;
+      margin-right: 10px;
+  }
+  .next-button i{
+    z-index: 20;
+    display: block;
+    color: white;
+    position: relative;
+    bottom: 6px  !important;
+  }
+  .hiv {
+    display: flex;
+    align-items: center;
+    bottom: 680px;
+    position: relative;
+    background-color: teal;
+    border-radius: 20px;
+    width: 14%;
+    left: 280px;
+    height: 40px;
+    justify-content: space-between;
+    z-index: 9;
+    cursor: pointer;
+    white-space: wrap;
+}
 
+}
+@media (max-width: 359px) {
+.rec5 {
+  max-width: 150px;
+  max-height: 120px;
+  background-color: teal;
+  position: relative;
+  bottom: -2.5rem;
+  left: 10rem;
+  border-bottom: 2px solid;
+  border-color: white;
+}
+}
+
+@media (max-width: 359px) {
+  .niw .rec8 {
+      Max-width: 140px;
+      height: 4px;
+      background-color: teal;
+      position: relative;
+      left: 10rem;
+      bottom: 34px;
+  }
+}
+
+@media (max-width: 359px) {
+  .cti h1 {
+      color: white;
+      font-size: 12px;
+      width: 100%;
+      height: 100px;
+      position: relative;
+      font-family: poppins, sans-serif;
+      top: 30px;
+      text-align: center;
+      -webkit-text-stroke: 0.03vw white;
+      background-size: cover;
+      background-clip: text;
+      color: transparent;
+      -webkit-background-clip: text;
+  }
+}
 .custom-dots11 label {
   cursor: pointer;
   display: inline-block;
@@ -12874,7 +13147,7 @@ body.about-page #about {
 
 /* Portfolio page active link */
 body.about-page #portfolio {
-  color: red; /* Active color for Portfolio link */
+  color: black; /* Active color for Portfolio link */
   font-weight: bold;
 }
 
@@ -13059,3 +13332,116 @@ body.login-page #login{
     font-size: 8px; 
   }
 }
+
+ @media only screen and (min-width: 1400px) {
+      .section1{
+            align-items: center !important;
+            align-content: center !important;
+            align-self: center !important;
+        }
+        .imagec1220 {
+          width: 227px;
+          position: relative;
+          top: 350px;
+          left: 1220px !important;
+          height: 360px;
+      }
+      .image220 {
+        width: 227px;
+        position: relative;
+        top: 105px !important;
+        left: -.1px !important;
+        height: 360px;
+        border-radius: 10px;
+    }
+    .slider1-container .slideone {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      object-fit: cover;
+      background-color: teal !important;
+      height: 116%;
+  }
+  .rec219{
+    background-color: teal;
+    max-width: 900px;
+    height: 10px;
+    position: relative;
+    right: -30px !important;
+    top: -40rem !important;
+  }
+  .feature {
+    position: relative;
+    bottom: -2rem;
+    height: 450px;
+    font-family: poppins, sans-serif;
+    padding-top: -220px;
+    padding-left: 150px !important;
+    align-items: center !important;
+    align-self: center !important;
+    align-content: center !important;
+}
+  .nnnn{
+    max-width:200px;
+    height: 65px;
+    position: relative;
+    left: 420px !important;
+    top: -42.5rem !important;
+    color: white;
+    background-color: teal;
+    font-size: 17px;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white; /* Adjust the shadow as needed */
+  }
+  .hiv {
+    display: flex;
+    align-items: center;
+    bottom: 780px;
+    position: relative;
+    background-color: teal;
+    border-radius: 20px;
+    width: 10%;
+    left: 1250px !important;
+    height: 40px;
+    justify-content: space-between;
+    z-index: 99;
+    cursor: pointer;
+}
+.cti {
+  align-items: center !important;
+  align-self: center !important;
+  align-content: center !important;
+  width: 100% !important;
+  right: 150px !important;
+  position: relative;
+  max-height: 370px;
+  top: -21rem !important;
+  z-index: 10;
+}
+.cti h1{
+  color: white;
+  font-size: 40px !important;
+  margin-right: 150px !important;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  font-family: poppins, sans-serif;
+  top: 300px !important;
+  -webkit-text-stroke: 0.03vw white;
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.nity{
+  width: 110% !important;
+  max-height: 540px !important;
+  padding-bottom: 0px;
+  margin-right: 150px !important;
+  margin-top: -50px;
+  z-index: 90;
+}
+      }

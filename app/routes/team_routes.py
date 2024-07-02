@@ -71,7 +71,7 @@ def tagin():
             session['admin_logged_in'] = True
             return redirect(url_for('team.tagin'))
         else:
-            return render_template('lagin.html', error='Invalid username or password')
+            return render_template('tagin.html', error='Invalid username or password')
     return render_template('tagin.html')
 
 
@@ -79,7 +79,6 @@ def tagin():
 def tagout():
     session.pop('admin_logged_in', None)
     return redirect(url_for('team.tagin'))
-
 
 @team_bp.route('/tagin/team')
 def team():

@@ -12674,7 +12674,7 @@ body.about-page #about {
 
 /* Portfolio page active link */
 body.about-page #portfolio {
-  color: red; /* Active color for Portfolio link */
+  color: black; /* Active color for Portfolio link */
   font-weight: bold;
 }
 
