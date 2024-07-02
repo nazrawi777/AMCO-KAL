@@ -4397,7 +4397,7 @@ input, textarea, button {
       width: 227px;
       position: relative;
       top: 350px;
-      left: 1120px;
+      left: 1144px;
       height: 360px;
     }
   /* end Service secondpaert*/
@@ -13144,7 +13144,47 @@ body.about-page #about {
   color: black; /* Active color for About Us link */
   font-weight: bold;
 }
+@media (min-width: 481px) and (max-width: 768px) {
 
+  .arrow1 {
+    right: 30px !important;
+    bottom: 30px;
+  }
+
+  .arrow a, .arrow1 a {
+    height: 30px;
+    width: 28px;
+  }
+
+  .arrow a span, .arrow1 a span {
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  .arrow1 a span {
+    line-height: 30px;
+  }
+  
+  .txt{
+    width: 100%;
+  }
+  .txt h1{
+    color: teal; /* blue */
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: relative;
+    right: 100px;
+
+  }
+  .txt p{
+    font-weight: bold;
+    font-size: 12px;
+    width: 100%;
+    position: relative;
+    right: 100px;
+  }
+  
+}
 /* Portfolio page active link */
 body.about-page #portfolio {
   color: black; /* Active color for Portfolio link */

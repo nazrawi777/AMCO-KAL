@@ -12706,10 +12706,9 @@ body.login-page #login{
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
-
+@media (min-width: 481px) and (max-width: 768px) {
   .arrow1 {
-    right: 15px;
+    right: 35px !important;
     bottom: 30px;
   }
 

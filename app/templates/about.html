@@ -2584,22 +2584,22 @@ bottom: 10px;
         </div>
  
 
-            <div class="container998">
-              <h3>Meet Our Team</h3>
-              <div class="card__container998">
-              
-                {% for member in team_members %}
-                 <article class="card__article">
-                    <img src="{{ member.photo_url }}" alt="{{ member.name }}" class="card__img999">
-     
-                    <div class="card__data">
-                       <p class="card__description">{{ member.job_title }}</p>
-                       <h2 class="card__title">{{ member.name }}</h2>
-                    </div>
-                 </article>
-                 {% endfor %}
+        <div class="container998">
+          <h3>Meet Our Team</h3>
+          <div class="card__container998">
+          
+            {% for member in team_members %}
+             <article class="card__article">
+                <img src="{{ member.photo_url }}" alt="{{ member.name }}" class="card__img999">
+ 
+                <div class="card__data">
+                   <p class="card__description">{{ member.job_title }}</p>
+                   <h2 class="card__title">{{ member.name }}</h2>
+                </div>
+             </article>
+             {% endfor %}
 
-           </div>
+       </div>
         
 <div></div>
            <footer class="footer" id="footer">
