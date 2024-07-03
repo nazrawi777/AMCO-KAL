@@ -70,8 +70,7 @@ def edit_product(product_id):
             image_file.save(image_path)
             product.image = filename
         db.session.commit()
-        product.log_action('Edited', f"Product '{
-                           product.name}' edited successfully.")
+        product.log_action('Edited',f"Product '{product.name}' edited successfully.")
         flash('Product updated successfully.', 'success')
         return redirect(url_for('admin.admin'))
     return render_template('edit_product.html', product=product)
@@ -84,7 +83,6 @@ def delete_product(product_id):
     product = Product.query.get_or_404(product_id)
     db.session.delete(product)
     db.session.commit()
-    product.log_action('Deleted', f"Product '{
-                       product.name}' deleted successfully.")
+    product.log_action('Deleted',f"Product '{product.name}' deleted successfully")
     flash('Product deleted successfully.', 'success')
     return redirect(url_for('admin.admin'))

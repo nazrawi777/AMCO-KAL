@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, redirect, url_for, session, request, flash
 from werkzeug.utils import secure_filename
 from app import db
-from app.model.model import TeamMember
+from app.model.model import TeamMember,User
 from app.utils import allowed_file
 import os
 from dotenv import load_dotenv
@@ -67,11 +67,18 @@ def tagin():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        if username == 'admin' and password == 'admin':
-            session['admin_logged_in'] = True
-            return redirect(url_for('team.tagin'))
+    
+        if not username or not password:
+            flash('Please enter both username and password.', 'error')
         else:
-            return render_template('tagin.html', error='Invalid username or password')
+            find_user = User.query.filter_by(username=username).first()
+            if find_user and find_user.password == password:
+                session['admin_logged_in'] = True
+                session['username'] = username
+                session['role'] = find_user.role
+                return redirect(url_for('team.team'))
+            else:
+                return render_template('tagin.html', error='Invalid username or password')
     return render_template('tagin.html')
 
 

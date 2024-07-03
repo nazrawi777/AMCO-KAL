@@ -127,8 +127,7 @@
           <td>{{ user.username }}</td>
           <td>{{ user.role }}</td>
           <td class="d-flex align-items-center justify-content-around">
-            <button type="button" class="btn btn-primary">update</button>
-            <button type="button" class="btn btn-danger" data-id="{{ user.id }}" id="deleteBtn">delete</button>
+            <button type="button" class="btn btn-danger deleteBtn" data-ids="{{ user.id }}">delete</button>
           </td>
         </tr>
         {% endfor %}
@@ -189,7 +188,6 @@
       </button>
     </div>
     <div class="toast-body">
-
     </div>
   </div>
 
@@ -269,9 +267,11 @@
 
       })
 
-      $("#deleteBtn").click(function () {
+      $(".deleteBtn").on("click",function () {
 
-        const userId = $(this).data('id');
+        const userId = $(this).data('ids');
+
+        console.log(userId)
 
         $.ajax({
           url: '/user/' + userId,
@@ -285,8 +285,12 @@
             );
           }
         });
+        
 
       });
+
+
+      
     });
 
 

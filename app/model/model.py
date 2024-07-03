@@ -1,5 +1,5 @@
-# model.py
 from sqlalchemy import Column, Integer, String, Boolean, DateTime
+
 from app import db
 from datetime import datetime
 

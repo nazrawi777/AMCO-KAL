@@ -2,8 +2,9 @@
 from flask import Blueprint, render_template, redirect, url_for, session, request, flash
 from datetime import datetime
 from app import db
-from app.model.model import Job, AppliedJob
+from app.model.model import Job, AppliedJob,User
 import os
+
 from dotenv import load_dotenv
 
 
@@ -60,11 +61,18 @@ def lagin():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        if username == 'admin' and password == 'admin':
-            session['admin_logged_in'] = True
-            return redirect(url_for('vacancy.vadmin'))
+
+        if not username or not password:
+            flash('Please enter both username and password.', 'error')
         else:
-            return render_template('lagin.html', error='Invalid username or password')
+            find_user = User.query.filter_by(username=username).first()
+            if find_user and find_user.password == password:
+                session['admin_logged_in'] = True
+                session['username'] = username
+                session['role'] = find_user.role
+                return redirect(url_for('vacancy.vadmin'))
+            else:
+                return render_template('lagin.html', error='Invalid username or password')
     return render_template('lagin.html')
 
 
@@ -91,8 +99,7 @@ def delete_applied_job(applied_job_id):
     applied_job = AppliedJob.query.get(applied_job_id)
     db.session.delete(applied_job)
     db.session.commit()
-    applied_job.log_action('Deleted', f"Applied job with ID '{
-                           applied_job_id}' deleted successfully.")
+    applied_job.log_action('Deleted', f"Applied job with ID '{applied_job_id}' deleted successfully.")
     return redirect(url_for('vacancy.applied_jobs', job_id=applied_job.job_id))
 
 

@@ -51,5 +51,9 @@ def create_app():
 
     with app.app_context():
         db.create_all()
+        from app.model.model import User
+        '''n = User(username='kal',password='kal123',role='admin')
+        db.session.add(n)
+        db.session.commit()'''
 
     return app

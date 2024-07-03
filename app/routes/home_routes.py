@@ -1,6 +1,6 @@
 # routes/home_routes.py
 from flask import Blueprint, render_template, url_for
-from app.model.model import SliderDb, SlideVideoDb, YoutubeVideosLinks, ClientList, AboutSlide
+from app.model.model import SliderDb, SlideVideoDb, YoutubeVideosLinks, ClientList, AboutSlide,User
 
 home_bp = Blueprint('home', __name__)
 

@@ -20,7 +20,6 @@ def user(id):
 @user_bp.route('/user', methods=['POST'])
 def create_user():
     data = request.get_json()
-
     if not data:
         return jsonify({"message": "No data provided", 'error': 'No data provided'}), 400
 
@@ -59,9 +58,8 @@ def update_user(id):
 
 @user_bp.route('/user/<int:id>', methods=['DELETE'])
 def delete_user(id):
-    # Example: Delete user from the database (pseudo-code)
-    user = User.query.get(id)
     if user:
-        db.session.delete(user)
+        User.query.filter_by(id=id).delete()
         db.session.commit()
-    return jsonify({'message': f'User with ID {id} deleted successfully'})
+        return jsonify({'message': f'User with ID {id} deleted successfully'})
+    return jsonify({'message':'somthing went wromg please try again'})
