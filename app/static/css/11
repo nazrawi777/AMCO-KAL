@@ -12189,7 +12189,7 @@ display: none;
      .image220 {
       max-width: 57px;
       position: relative;
-      top: 11px;
+      top: 111px;
       border-width: 4px;
       border-bottom: 6px solid transparent;
       left: 5px;
