@@ -4325,8 +4325,12 @@ input, textarea, button {
       width: 100%;
       height: 570px;
       left: -2px;
+      background-image: url(/static/images/bmw.png);
       font-family: poppins, sans-serif;
-    background-color: teal;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    
     }
     
     .image-co1umn20 {
@@ -4530,7 +4534,7 @@ display: none;
   left: 31rem;
   border-radius: 50%;
   margin-right: 10px; 
-  background-color: white;
+  background-color: transparent;
   bottom: 88px;
 }
 
@@ -5326,7 +5330,7 @@ iframe {
  
   .slide21 iframe {
     height: 220px !important;
-    z-index: 110;
+    z-index: 199;
     display: block;
     position: relative;
     top: 0px;
@@ -5477,16 +5481,10 @@ iframe {
   .portfolio-image:nth-child(-n+2) {
     order: -1; /* Move the first two images to the beginning */
   }
-
-}
-@media (min-width: 320px) and (max-width: 399px) {
-  .slide22{
-    gap: 0px !important;
-  }
   .arrow-container {
     position: absolute;
     width: 100%;
-    right: -1.5% !important;
+    right: -5.5% !important;
     top: 65% !important;
     z-index: 100;
     display: flex;
@@ -5495,7 +5493,36 @@ iframe {
   }
   .arrowh {
     cursor: pointer;
-    background-color: lightblue;
+    background-color: transparent !important;
+    color: teal;
+    font-size: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    border-radius: 50%;
+    margin-top: 20px;
+    user-select: none;
+    z-index: 100;
+  }
+}
+@media (min-width: 320px) and (max-width: 399px) {
+  .slide22{
+    gap: 0px !important;
+  }
+  .arrow-container {
+    position: absolute;
+    width: 100%;
+    right: -5.5% !important;
+    top: 65% !important;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  .arrowh {
+    cursor: pointer;
+    background-color: transparent !important;
     color: teal;
     font-size: 24px;
     padding-top: 5px;
@@ -5537,9 +5564,9 @@ iframe {
   }
  
   .image220 {
-    max-width: 107px;
+    max-width: 57px;
     position: relative;
-    top: 110px;
+    top: 118px;
     border-width: 4px;
     border-bottom: 6px solid transparent;
     left: 5px;
@@ -5553,6 +5580,7 @@ iframe {
     width: 100%;
     height: 130px !important;
     position: relative;
+    z-index: 199;
     
 
   }
@@ -7306,11 +7334,13 @@ input[type=text]::placeholder, textarea::placeholder {
 /* 5 */
 @media screen and (max-width: 800px){
   .section0{
-    height: 500px;
+    height: 360px;
   }
   .myslide{
-		height: 500px;
+    margin-top: 10px;
+		height: 360px;
 	}
+
   .ct h2{
     border-radius: 10px;
     margin-left: 330px;
@@ -8349,7 +8379,11 @@ input[type=text]::placeholder, textarea::placeholder {
       max-height: 490px;
       left: -2px;
       font-family: poppins, sans-serif;
-    background-color: teal;
+      background-image: url(/static/images/bmw.png);
+      font-family: poppins, sans-serif;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
     
     .image-co1umn20 {
@@ -8551,7 +8585,11 @@ input[type=text]::placeholder, textarea::placeholder {
       max-height: 300px;
       left: -2px;
       font-family: poppins, sans-serif;
-    background-color: teal;
+      background-image: url(/static/images/bmw.png);
+      font-family: poppins, sans-serif;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
     
     .image-co1umn20 {
@@ -8749,7 +8787,7 @@ input[type=text]::placeholder, textarea::placeholder {
         max-height: 400px;
         left: -2px;
         font-family: poppins, sans-serif;
-      background-color: teal;
+        background-image: url(/static/images/bmw.png);
       z-index: 40;
       }
       
@@ -8950,7 +8988,12 @@ input[type=text]::placeholder, textarea::placeholder {
           max-height: 390px;
           left: -2px;
           font-family: poppins, sans-serif;
-        background-color: teal;
+          background-image: url(/static/images/bmw.png);
+          font-family: poppins, sans-serif;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        
         }
         
         .image-co1umn20 {
@@ -9249,7 +9292,11 @@ input[type=text]::placeholder, textarea::placeholder {
           max-height: 300px;
           left: -2px;
           font-family: poppins, sans-serif;
-        background-color: teal;
+          background-image: url(/static/images/bmw.png);
+          font-family: poppins, sans-serif;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
         }
         
         .image-co1umn20 {
@@ -9449,7 +9496,11 @@ input[type=text]::placeholder, textarea::placeholder {
             max-height: 400px;
             left: -2px;
             font-family: poppins, sans-serif;
-          background-color: teal;
+            background-image: url(/static/images/bmw.png);
+            font-family: poppins, sans-serif;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto;
           z-index: 40;
           }
           
@@ -9585,7 +9636,7 @@ input[type=text]::placeholder, textarea::placeholder {
     
     
     .image220{
-      max-width: 107px;
+      max-width: 57px;
       position: relative;
       top: 113px;
       left: 5px;
@@ -9680,7 +9731,11 @@ input[type=text]::placeholder, textarea::placeholder {
         max-height: 200px;
         left: 0px;
         font-family: poppins, sans-serif;
-      background-color: teal;
+        background-image: url(/static/images/bmw.png);
+        font-family: poppins, sans-serif;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain !important;
       z-index: 40;
       }
       
@@ -9932,8 +9987,11 @@ input[type=text]::placeholder, textarea::placeholder {
           max-height: 200px;
           left: 0px;
           font-family: poppins, sans-serif;
-        background-color: teal;
-        z-index: 40;
+          background-image: url(/static/images/bmw.png);
+          font-family: poppins, sans-serif;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain !important;
         }
         
         .image-co1umn20 {
@@ -10203,7 +10261,7 @@ display: none;
   left: 23rem;
   border-radius: 50%;
   margin-right: 10px; 
-  background-color: white;
+  background-color: transparent;
   bottom: 88px;
 }
 
@@ -10568,7 +10626,7 @@ display: none;
           left: 23rem;
           border-radius: 50%;
           margin-right: 10px; 
-          background-color: white;
+          background-color: transparent;
           bottom: 88px;
         }
         
@@ -10864,7 +10922,7 @@ display: none;
                   left: 13rem;
                   border-radius: 50%;
                   margin-right: 10px; 
-                  background-color: white;
+                  background-color: transparent;
                   bottom: 88px;
                 }
                 
@@ -11144,7 +11202,7 @@ display: none;
                           left: 8rem;
                           border-radius: 50%;
                           margin-right: 10px; 
-                          background-color: white;
+                          background-color: transparent;
                           bottom: 20px;
                         }
                         
@@ -11431,7 +11489,7 @@ display: none;
                           left: 7rem;
                           border-radius: 50%;
                           margin-right: 10px; 
-                          background-color: white;
+                          background-color: transparent;
                           bottom: 18px;
                         }
                         
@@ -11788,7 +11846,7 @@ display: none;
 
   @media (min-width: 421px) and (max-width: 441px) {
     .nity{
-      width: 100%;
+      width: 110%;
       max-height: 200px;
       padding-bottom: 0px;
       margin-top: -150px;
@@ -12129,9 +12187,9 @@ display: none;
       bottom: 544px !important;
      }
      .image220 {
-      max-width: 107px;
+      max-width: 57px;
       position: relative;
-      top: 110px;
+      top: 11px;
       border-width: 4px;
       border-bottom: 6px solid transparent;
       left: 5px;
@@ -12150,7 +12208,7 @@ display: none;
       z-index: 7;
   }
   .nity{
-  width: 100%;
+  width: 110%;
   height: 180px;
   padding-bottom: 0px;
   margin-top: -240px;
@@ -12171,9 +12229,9 @@ display: none;
       top: 90px !important;
     } 
       .image220 {
-        max-width: 107px;
+        max-width: 57px;
         position: relative;
-        top: 110px;
+        top: 114px;
         border-width: 4px;
         border-bottom: 6px solid transparent;
         left: 5px;
@@ -12295,7 +12353,7 @@ display: none;
       z-index: 7;
   }
   .nity{
-  width: 100%;
+  width: 110%;
   height: 180px;
   padding-bottom: 0px;
   margin-top: -240px;
@@ -12466,6 +12524,7 @@ display: none;
   width: 100%;
   background-color: white;
   height: 130px !important;
+  z-index: 199;
 }
 }
 .ourpro{
@@ -12493,6 +12552,7 @@ display: none;
       color: #ffffff;
       transition: all 0.5s ease;
     }
+
     .bte{
       white-space: wrap !important;
     }
@@ -12512,7 +12572,7 @@ display: none;
       text-align: center;
       color: teal;
       position: relative;
-      top: 50px;
+      top: 80px;
       font-family: poppins, sans-serif;
     }
    
@@ -12557,7 +12617,12 @@ display: none;
 
 
 
-
+@media screen and (min-width: 423px) and (max-width: 430px) {
+.copy{
+  position: relative;
+  top: 120px !important;
+} 
+}
     
   /*
   .zoom-animation{
