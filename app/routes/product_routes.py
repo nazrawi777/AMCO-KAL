@@ -43,8 +43,7 @@ def add_product():
                                   image=filename, description=description)
             db.session.add(new_product)
             db.session.commit()
-            new_product.log_action('Added', f"Product'{
-                                   name}' added successfully.")
+            new_product.log_action('Added', f'''Product'{name}'added successfully.''')
 
             flash('Product added successfully.', 'success')
             return redirect(url_for('admin.admin'))
