@@ -333,7 +333,7 @@ top: 50px;
             <div class="item">
               <div class="image">
                 <a href="{{ url_for('product.product_detail', product_id=product.id) }}">
-                  <img src="{{ url_for('uploaded_file', filename=product.image) }}" alt="furniture in addis ababa with price" width="100">
+                  <img src="{{ url_for('uploaded_file', filename=product.image) }}" alt="{{ product.name }}" width="100">
               </a>
               
               </div>
