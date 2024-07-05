@@ -695,7 +695,7 @@
     <div class="title">PRODUCT DETAILS</div>
     <div class="detail">
       <div class="image">
-        <img src="{{ url_for('uploaded_file', filename=product.image) }}" alt="furniture in addis ababa with price">
+        <img src="{{ url_for('uploaded_file', filename=product.image) }}" alt="{{ product.name }}">
       </div>
       <div class="content">
         <h1 class="name">{{ product.name }}</h1>
