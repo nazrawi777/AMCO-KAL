@@ -9,7 +9,7 @@
   <title>AMCO Interior Design | Furniture in Ethiopia, Addis Ababa</title>
   <meta name="keywords" content="AMCO Interior Design, Furniture in Ethiopia, Furniture Store in Addis Ababa, Furniture in Addis Ababa with Price, Furniture in Addis, Furniture House in Addis Ababa, Furniture Shops in Addis Ababa, Furniture Design Ethiopia, Interior Design Addis Ababa">
   <link rel="icon" type="image/png" href="/static/images/byd.png">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -698,7 +698,7 @@
     <div class="title">PRODUCT DETAILS</div>
     <div class="detail">
       <div class="image">
-        <img src="{{ url_for('uploaded_file', filename=product.image) }}" alt="{{ product.name }}">
+        <img src="{{ product.image }}" alt="{{ product.name }}">
       </div>
       <div class="content">
         <h1 class="name">{{ product.name }}</h1>
