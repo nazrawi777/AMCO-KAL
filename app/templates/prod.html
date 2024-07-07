@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -329,82 +328,74 @@ top: 50px;
    
     <div id="top"> </div>
 
-    <div class="container">
-        <div class="title" >PRODUCT LIST</div>
-        <div class="listProduct">
-            {% for product in products %}
-            <div class="item">
-              <div class="image">
-                <a href="{{ url_for('product.product_detail', product_id=product.id) }}">
-                  <img src="{{ url_for('uploaded_file', filename=product.image) }}" alt="{{ product.name }}" width="100">
-              </a>
-              
-              </div>
-                <div class="name">{{ product.name }}</div>
-                <div class="price">{{ product.price }} Birr</div>
-               
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-    <footer class="footer" id="footer">
-      <div class="container">
-        <div class="row">
-          <div class="footer-col">
-            <h4>company</h4>
-            <ul>
-              <li><a href="/about">about us</a></li>
-              <li><a href="/home">our services</a></li>
-              <li><a href="/prod">produts</a></li>
-              <li><a href="/home">portfolio</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Amco</h4>
-            <ul>
-              <li><a href="/prod">Our furniture </a></li>
-              <li><a href="/bloog" id="blog">Blog</a></li>
-              <li><a href="/bloog" id="blog">News</a></li>
-              <li><a href="/bloog" id="blog">Event</a></li>
-  
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Contact</h4>
-            <ul>
-              <li>
-                <a href="mailto:contact@amcointeriordesign.com">email<br>
-               contact@amcointeriordesign.com</a>
-              </li>
-              <li><a href="https://maps.app.goo.gl/J4CjWG4xNGg5QtnW6?g_st=atm" class="bte">Location<br>
-                New Bata Complex, next to Getfam Hotel 
-                @ Zemen Bank Branch 4th floor </a>
-              </li>
-              <li><a href="tel:+251952333337 ">phone <br />
-                +251952333337 </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-col2">
-            <h4>follow us</h4>
-            <div class="social-links">
-              <a href="https://www.facebook.com/profile.php?id=61559804274395"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://www.instagram.com/amco_interiorfurniture/?igsh=MTR5b3dubWJibm9qdw%3D%3D"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://www.tiktok.com/@amco_interiorfurniture?_t=8mXEfzKb4HV&_r=1"><i class="fab fa-tiktok"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="copy">
-          Copyright 2024 © || 
-          <a href="https://www.instagram.com/namikdevelopment/?igsh=dG5pbzIxdDdzaTUz" class="namik">Designed By NAMIK DEVELOPMENT</a>
-            
-        </div>
-      </div>
-    </footer>
-  
-  
-    <script>
+<div class="container">
+<div class="title">PRODUCT LIST</div>
+
+<div class="listProduct">{% for product in products %}
+<div class="item">
+<div class="image"><a href="{{ url_for('product.product_detail', product_id=product.id) }}"><img alt="{{ product.name }}" src="{{ product.image }}" width="100" /> </a></div>
+
+<div class="name">{{ product.name }}</div>
+
+<div class="price">{{ product.price }} Birr</div>
+</div>
+{% endfor %}</div>
+</div>
+
+<footer class="footer" id="footer">
+<div class="container">
+<div class="row">
+<div class="footer-col">
+<h4>company</h4>
+
+<ul>
+	<li><a href="/about">about us</a></li>
+	<li><a href="/home">our services</a></li>
+	<li><a href="/prod">produts</a></li>
+	<li><a href="/home">portfolio</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h4>Amco</h4>
+
+<ul>
+	<li><a href="/prod">Our furniture </a></li>
+	<li><a href="/bloog" id="blog">Blog</a></li>
+	<li><a href="/bloog" id="blog">News</a></li>
+	<li><a href="/bloog" id="blog">Event</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h4>Contact</h4>
+
+<ul>
+	<li><a href="mailto:contact@amcointeriordesign.com">email<br />
+	contact@amcointeriordesign.com</a></li>
+	<li><a class="bte" href="https://maps.app.goo.gl/J4CjWG4xNGg5QtnW6?g_st=atm">Location<br />
+	New Bata Complex, next to Getfam Hotel @ Zemen Bank Branch 4th floor </a></li>
+	<li><a href="tel:+251952333337 ">phone<br />
+	+251952333337 </a></li>
+</ul>
+</div>
+
+<div class="footer-col2">
+  <h4>follow us</h4>
+  <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=61559804274395" class="fab fa-facebook-f"></a>
+      <a href="https://www.instagram.com/amco_interiorfurniture/?igsh=MTR5b3dubWJibm9qdw%3D%3D" class="fab fa-instagram"></a>
+      <a href="https://www.tiktok.com/@amco_interiorfurniture?_t=8mXEfzKb4HV&_r=1" class="fab fa-tiktok"></a>
+      <a href="https://t.me/amcointerior" class="fab fa-telegram"></a>
+  </div>
+</div>
+
+</div>
+
+<div class="copy">Copyright 2024 &copy; || <a class="namik" href="https://www.instagram.com/namikdevelopment/?igsh=dG5pbzIxdDdzaTUz">Designed By NAMIK DEVELOPMENT</a></div>
+</div>
+</footer>
+<script>
       let menuList = document.getElementById("menuList")
       menuList.style.maxHeight = "0px";
       function toggleMenu(){
@@ -415,11 +406,7 @@ top: 50px;
           else{
               menuList.style.maxHeight = "0px";
           }
-      }</script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <script>document.addEventListener('DOMContentLoaded', function() {
+      }</script><script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script><script src="https://cdn.emailjs.com/dist/email.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><script>document.addEventListener('DOMContentLoaded', function() {
       const images = document.querySelectorAll('.gallery-image');
       const videoModal = document.getElementById('video-modal');
       const videoContainer = document.getElementById('video-container');
@@ -465,8 +452,7 @@ top: 50px;
         }
       });
     });
-    </script>
-    <script>
+    </script><script>
       document.querySelectorAll('iframe').forEach(iframe => {
           // Adding a message event listener to detect video play and pause events
           window.addEventListener('message', function(event) {
@@ -496,9 +482,7 @@ top: 50px;
               sendMessage('addEventListener', 'onStateChange');
           });
       });
-  </script>
-  
-  <script>
+  </script><script>
     document.addEventListener('DOMContentLoaded', function() {
       const menuIcon = document.querySelector('.menu-icon');
       const navLinks = document.querySelector('.nav-links');
@@ -913,10 +897,7 @@ top: 50px;
           nextBtn.click();
       }, 5000);
     });
-  </script>
-  
-
-<script>
+  </script><script>
     document.addEventListener('DOMContentLoaded', function() {
         const menuIcon = document.querySelector('.menu-icon');
         const navLinks = document.querySelector('.nav-links');
@@ -957,8 +938,7 @@ top: 50px;
     }
 
     
-</script>
-</body>
+</script></body>
 <script>
   function toggleDropdown() {
     var dropdown = document.getElementById("dropdownMenu");
@@ -986,123 +966,4 @@ top: 50px;
       }
     }
   }
-</script>
-</html>
-<!--
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    <img src="/static/images/logo.png" alt="Logo" height="30">
-                </a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="/home">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="/prod">Products</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="/">Vacancy</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/lagin"><span class="glyphicon glyphicon-user"></span></a></li>
-            </ul>
-        </div>
-    </nav>
-   a{
-    color: unset;
-    text-decoration: none;
-}
-.container1234{
-    width: 900px;
-    margin: auto;
-    max-width: 90vw;
-    text-align: center;
-    padding-top: 10px;
-}
-.title{
-    font-size: xx-large;
-    padding: 20px 0;
-}
-.detail{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    text-align: left;
-}
-.detail .image img{
-    width: 100%;
-}
-.detail .image{
-    position: relative;
-}
-.detail .image::before{
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    content: '';
-    background-color: #94817733;
-    z-index: -1;
-    border-radius: 190px 100px 170px 180px;
-    left: calc(50% - 170px);
-    top: 50px;
-
-}
-.detail .name{
-    font-size: xxx-large;
-    padding: 40px 0 0 0;
-    margin: 0 0 10px 0;
-}
-.detail .price{
-    font-weight: bold;
-    font-size: x-large;
-    letter-spacing: 7px;
-    margin-bottom: 20px;
-}
-.detail .buttons{
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-.detail .buttons button{
-    background-color: #eee;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 20px;
-    font-family: Poppins;
-    font-size: large;
-}
-.detail .buttons svg{
-    width: 15px;
-}
-.detail .buttons span{
-    background-color: #555454;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    margin-left: 20px;
-}
-.detail .buttons button:nth-child(2){
-    background-color: #2F2F2F;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #eee;
-    box-shadow: 0 10px 20px #2F2F2F77;
-}
-.detail .description{
-    font-weight: 300;
-}
-
-
-      
-
-
-
-        
-
-
-    -->
+</script></html>
