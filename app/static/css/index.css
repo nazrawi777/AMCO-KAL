@@ -2355,8 +2355,8 @@ a {
   .call h2 {
     position: relative;
     font-size: 16px;
-    left: 42px;
-    bottom: 1.3px;
+    left: 45px;
+    bottom: 5.3px;
     color: lightgreen;
   }
 }
@@ -2499,8 +2499,8 @@ a {
 	color: #fff;
 	letter-spacing: 2px;
 	line-height: 35px;
-	top: 40%;
-	left: 15%;
+	top: 70%;
+	left: -5%;
 	-webkit-animation-name: posi;
   	-webkit-animation-duration: 2s;
   	animation-name: posi;
@@ -2539,6 +2539,8 @@ a {
 .ct{
   cursor: pointer;
   height: 30px;
+  position: relative;
+  left: 0px;
   background-color: teal;
   text-align: center;
   border-radius: 25px;
@@ -13388,6 +13390,7 @@ body.login-page #login{
 @media (min-width: 320px) and (max-width: 479px) {
   .txt{
     width: 110%;
+    margin-top: 60px;
 
     
   }
@@ -13517,7 +13520,7 @@ body.login-page #login{
   right: 150px !important;
   position: relative;
   max-height: 370px;
-  top: -21rem !important;
+  top: -22rem !important;
   z-index: 10;
 }
 .cti h1{
@@ -13528,7 +13531,7 @@ body.login-page #login{
   height: 100px;
   position: relative;
   font-family: poppins, sans-serif;
-  top: 300px !important;
+  top: 140px !important;
   -webkit-text-stroke: 0.03vw white;
   background-size: cover;
   background-clip: text;
@@ -13540,7 +13543,7 @@ body.login-page #login{
   max-height: 540px !important;
   padding-bottom: 0px;
   margin-right: 150px !important;
-  margin-top: -50px;
+  margin-top: -160px;
   z-index: 90;
 }
       }
